@@ -5,7 +5,7 @@ import {
   Status,
   Type,
   Zone,
-} from '@eso-status/types-dev';
+} from '@eso-status/types';
 import ForumMessageElement from '../src/classes/ForumMessageElement';
 import { forumMessagePattern, slugPattern } from './pattern';
 

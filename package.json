@@ -42,7 +42,8 @@
   "homepage": "https://github.com/eso-status/forum-message-dev#readme",
   "devDependencies": {
     "@eso-status/types": "1.0.0",
-    "@types/jest": "27.0.3",
+    "@types/jest": "^27.0.3",
+    "@types/node": "16.11.11",
     "@typescript-eslint/eslint-plugin": "5.5.0",
     "@typescript-eslint/parser": "5.5.0",
     "@typescript-eslint/typescript-estree": "5.5.0",

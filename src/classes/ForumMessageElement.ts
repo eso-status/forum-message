@@ -6,7 +6,7 @@ import {
   Status,
   Type,
   Zone,
-} from '@eso-status/types-dev';
+} from '@eso-status/types';
 
 /**
  * Class with methode for ForumMessage element
