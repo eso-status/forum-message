@@ -1,4 +1,4 @@
-import { RawEsoStatus } from '@eso-status/types-dev';
+import { RawEsoStatus } from '@eso-status/types';
 /**
  * Connector used to get data from https://forums.elderscrollsonline.com/ and https://forums.elderscrollsonline.com/en/categories/pts
  */

@@ -6,7 +6,7 @@ import {
   Status,
   Type,
   Zone,
-} from '@eso-status/types-dev';
+} from '@eso-status/types';
 
 /**
  * Methode used to generate date test with day and month

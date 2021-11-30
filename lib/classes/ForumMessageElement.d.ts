@@ -1,5 +1,5 @@
 import { Moment } from 'moment';
-import { Support, Slug, Status, Type, Zone } from '@eso-status/types-dev';
+import { Support, Slug, Status, Type, Zone } from '@eso-status/types';
 /**
  * Class with methode for ForumMessage element
  */

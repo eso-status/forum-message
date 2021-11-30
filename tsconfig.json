@@ -8,6 +8,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "lib": [
       "ES2020",
+    ],
+    "types": [
+      "node",
+      "jest",
     ]
   },
   "include": ["src"],

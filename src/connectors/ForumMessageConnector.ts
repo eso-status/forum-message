@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import {
   RawEsoStatus,
   Slug,
-} from '@eso-status/types-dev';
+} from '@eso-status/types';
 import ForumMessageElement from '../classes/ForumMessageElement';
 
 /**

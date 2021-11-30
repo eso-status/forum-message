@@ -1,4 +1,4 @@
-import { RawEsoStatus } from '@eso-status/types-dev';
+import { RawEsoStatus } from '@eso-status/types';
 import ForumMessageConnector from './connectors/ForumMessageConnector';
 
 /**

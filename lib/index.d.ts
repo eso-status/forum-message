@@ -1,4 +1,4 @@
-import { RawEsoStatus } from '@eso-status/types-dev';
+import { RawEsoStatus } from '@eso-status/types';
 /**
  * Class of Forum Message
  */
