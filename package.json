@@ -1,0 +1,62 @@
+{
+  "name": "@eso-status/forum-message",
+  "version": "1.0.0",
+  "description": "Library used to get servers status of The elders scrolls Online game with https://forums.elderscrollsonline.com/ and https://forums.elderscrollsonline.com/en/categories/pts",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint tests src --ext .ts",
+    "lint:fix": "eslint tests src --ext .ts --fix",
+    "build": "rm -R -f lib/* && tsc",
+    "test": "jest",
+    "start": "node .",
+    "dev": "npm run lint && npm run build && npm run start",
+    "dev:test": "npm run lint && npm run build && npm run test",
+    "watch": "nodemon --exec npm run dev",
+    "watch:test": "nodemon --exec npm run dev:test"
+  },
+  "files": [
+    "lib/classes/ForumMessageElement.d.ts",
+    "lib/classes/ForumMessageElement.js",
+    "lib/connectors/ForumMessageConnector.d.ts",
+    "lib/connectors/ForumMessageConnector.js",
+    "lib/index.d.ts",
+    "lib/index.js",
+    ".npmrc",
+    "LICENSE.md",
+    "package.json",
+    "README.md"
+  ],
+  "engineStrict": true,
+  "engines": {
+    "node": "^10.18.0 || ^12.14.0 || >=14.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:eso-status/forum-message-dev.git"
+  },
+  "author": "@dov118 <contact@dov118.dev> (https://dov118.dev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eso-status/forum-message-dev/issues"
+  },
+  "homepage": "https://github.com/eso-status/forum-message-dev#readme",
+  "devDependencies": {
+    "@eso-status/types-dev": "git+https://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:x-oauth-basic@github.com/eso-status/types-dev.git",
+    "@types/jest": "27.0.2",
+    "@typescript-eslint/eslint-plugin": "5.3.1",
+    "@typescript-eslint/parser": "5.3.1",
+    "@typescript-eslint/typescript-estree": "5.3.1",
+    "eslint": "8.2.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jest": "25.2.4",
+    "jest": "27.3.1",
+    "nodemon": "2.0.15",
+    "ts-jest": "27.0.7",
+    "typescript": "4.4.4"
+  },
+  "dependencies": {
+    "axios": "0.24.0",
+    "moment": "2.29.1"
+  }
+}
