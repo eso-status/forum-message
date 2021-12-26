@@ -143,7 +143,8 @@ export default class ForumMessageElement {
     } if (type === 'service') {
       return rawData.includes('ESO Store')
         || rawData.includes('Account System')
-        || rawData.includes('account system');
+        || rawData.includes('account system')
+        || rawData.includes('ESO Website');
     }
 
     return false;
@@ -171,7 +172,7 @@ export default class ForumMessageElement {
         || rawData.includes('PTS')
         || rawData.includes('the megaservers');
     } if (support === 'web') {
-      return false;
+      return rawData.includes('ESO Website');
     } if (support === 'store') { // OK
       return rawData.includes('Crown Store')
         || rawData.includes('ESO Store')
@@ -210,7 +211,7 @@ export default class ForumMessageElement {
     } if (zone === 'pts') { // OK
       return rawData.includes('PTS');
     } if (zone === 'site') {
-      return false;
+      return rawData.includes('ESO Website');
     } if (zone === 'forum') {
       return false;
     } if (zone === 'crown') {
@@ -299,7 +300,7 @@ export default class ForumMessageElement {
         .set('milliseconds', 0)
         .utcOffset(0));
     } else {
-      const dateTime: RegExpExecArray | null = /([a-zA-Z]{3,9}) ([0-9]{1,2}), [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} EDT \(([0-9]{1,2}):([0-9]{1,2}) UTC\) [–|-] [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} EDT \(([0-9]{1,2}):([0-9]{1,2}) UTC\)/.exec(rawDate);
+      const dateTime: RegExpExecArray | null = /([a-zA-Z]{3,9}) ([0-9]{1,2}), [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\) [–|-] [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\)/.exec(rawDate);
       const month: number = Number(moment().month(dateTime && dateTime.length >= 1 ? String(dateTime[1]) : '').format('M')) - 1;
       const day: number = dateTime && dateTime.length >= 1 ? Number(dateTime[2]) : 0;
 
@@ -378,7 +379,7 @@ export default class ForumMessageElement {
    * @return Status Status of raw data
    */
   public static getStatus(rawData: string): Status {
-    if (rawData.includes('unavailable') || rawData.includes('[IN PROGRESS]')) {
+    if (rawData.includes('unavailable') || rawData.includes('[IN PROGRESS]') || rawData.includes('[EXTENDED]')) {
       return 'down';
     } if (rawData.includes('[COMPLETE]') || rawData.includes('is now available') || rawData.includes('are now available') || rawData.includes('maintenance is complete') || rawData.includes('resolved at this time') || rawData.includes('has been resolved') || rawData.includes('currently available.')) {
       return 'up';

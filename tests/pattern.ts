@@ -1528,6 +1528,162 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [],
     },
   },
+  {
+    raw: '• ESO Website for maintenance – December 8, 7:00AM EST (12:00 UTC) - 3:00PM EST (20:00 UTC) ',
+    result: {
+      rawDate: 'December 8, 7:00AM EST (12:00 UTC) - 3:00PM EST (20:00 UTC) ',
+      slug: [
+        'service_web_site',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('months', getDateWithDayNumber(12, 8).get('months'))
+          .set('date', getDateWithDayNumber(12, 8).get('date'))
+          .set('hours', 12)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('months', getDateWithDayNumber(12, 8).get('months'))
+          .set('date', getDateWithDayNumber(12, 8).get('date'))
+          .set('hours', 20)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: '• [IN PROGRESS] ESO Website for maintenance – December 8, 7:00AM EST (12:00 UTC) - 3:00PM EST (20:00 UTC)',
+    result: {
+      rawDate: 'December 8, 7:00AM EST (12:00 UTC) - 3:00PM EST (20:00 UTC)',
+      slug: [
+        'service_web_site',
+      ],
+      status: 'down',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('months', getDateWithDayNumber(12, 8).get('months'))
+          .set('date', getDateWithDayNumber(12, 8).get('date'))
+          .set('hours', 12)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('months', getDateWithDayNumber(12, 8).get('months'))
+          .set('date', getDateWithDayNumber(12, 8).get('date'))
+          .set('hours', 20)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: '• [EXTENDED] ESO Website for maintenance – December 8, 7:00AM EST (12:00 UTC) - 6:00PM EST (23:00 UTC)',
+    result: {
+      rawDate: 'December 8, 7:00AM EST (12:00 UTC) - 6:00PM EST (23:00 UTC)',
+      slug: [
+        'service_web_site',
+      ],
+      status: 'down',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('months', getDateWithDayNumber(12, 8).get('months'))
+          .set('date', getDateWithDayNumber(12, 8).get('date'))
+          .set('hours', 12)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('months', getDateWithDayNumber(12, 8).get('months'))
+          .set('date', getDateWithDayNumber(12, 8).get('date'))
+          .set('hours', 23)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: '• [COMPLETE] ESO Website for maintenance – December 8, 7:00AM EST (12:00 UTC) - 3:00PM EST (20:00 UTC) ',
+    result: {
+      rawDate: 'December 8, 7:00AM EST (12:00 UTC) - 3:00PM EST (20:00 UTC) ',
+      slug: [
+        'service_web_site',
+      ],
+      status: 'up',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('months', getDateWithDayNumber(12, 8).get('months'))
+          .set('date', getDateWithDayNumber(12, 8).get('date'))
+          .set('hours', 12)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('months', getDateWithDayNumber(12, 8).get('months'))
+          .set('date', getDateWithDayNumber(12, 8).get('date'))
+          .set('hours', 20)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: 'We are currently investigating issues with the ESO Store and Account System. We will update as new information becomes available.',
+    result: {
+      rawDate: '',
+      slug: [
+        'service_store_eso',
+        'service_system_account',
+      ],
+      status: 'issues',
+      dates: [],
+    },
+  },
+  {
+    raw: 'In response to the ongoing issue, the ESO Store and Account System are currently unavailable while we perform maintenance.',
+    result: {
+      rawDate: '',
+      slug: [
+        'service_store_eso',
+        'service_system_account',
+      ],
+      status: 'down',
+      dates: [],
+    },
+  },
+  {
+    raw: 'The issue is resolved, and the ESO Store and Account System are now available. Thank you for your patience!',
+    result: {
+      rawDate: '',
+      slug: [
+        'service_store_eso',
+        'service_system_account',
+      ],
+      status: 'up',
+      dates: [],
+    },
+  },
 ];
 
 /**
