@@ -1684,6 +1684,37 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [],
     },
   },
+  {
+    raw: '• [EXTENDED] PC/Mac: NA and EU megaservers for maintenance – January 10, 4:00AM EST (9:00 UTC) – 10:00AM EST (15:00 UTC)',
+    result: {
+      rawDate: 'January 10, 4:00AM EST (9:00 UTC) – 10:00AM EST (15:00 UTC)',
+      slug: [
+        'server_pc_na',
+        'server_pc_eu',
+      ],
+      status: 'down',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 10).get('years'))
+          .set('months', getDateWithDayNumber(1, 10).get('months'))
+          .set('date', getDateWithDayNumber(1, 10).get('date'))
+          .set('hours', 9)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 10).get('years'))
+          .set('months', getDateWithDayNumber(1, 10).get('months'))
+          .set('date', getDateWithDayNumber(1, 10).get('date'))
+          .set('hours', 15)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
 ];
 
 /**
