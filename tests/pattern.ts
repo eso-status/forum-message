@@ -1715,6 +1715,66 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       ],
     },
   },
+  {
+    raw: '• PlayStation®: NA megaserver for maintenance – January 19, 2:00AM EST (7:00 UTC) – 12:00PM EST (17:00 UTC)',
+    result: {
+      rawDate: 'January 19, 2:00AM EST (7:00 UTC) – 12:00PM EST (17:00 UTC)',
+      slug: [
+        'server_ps_na',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('months', getDateWithDayNumber(1, 19).get('months'))
+          .set('date', getDateWithDayNumber(1, 19).get('date'))
+          .set('hours', 7)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('months', getDateWithDayNumber(1, 19).get('months'))
+          .set('date', getDateWithDayNumber(1, 19).get('date'))
+          .set('hours', 17)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: '• PlayStation®: EU megaserver for maintenance – January 19, 6:00AM EST (11:00 UTC) – 10:00AM EST (15:00 UTC)',
+    result: {
+      rawDate: 'January 19, 6:00AM EST (11:00 UTC) – 10:00AM EST (15:00 UTC)',
+      slug: [
+        'server_ps_eu',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('months', getDateWithDayNumber(1, 19).get('months'))
+          .set('date', getDateWithDayNumber(1, 19).get('date'))
+          .set('hours', 11)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('months', getDateWithDayNumber(1, 19).get('months'))
+          .set('date', getDateWithDayNumber(1, 19).get('date'))
+          .set('hours', 15)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
 ];
 
 /**
