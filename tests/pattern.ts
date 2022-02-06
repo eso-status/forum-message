@@ -1895,6 +1895,96 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       ],
     },
   },
+  {
+    raw: '• ESO Store for maintenance – January 27, 2:30PM EST (19:30 UTC) – 3:30PM EST (20:30 UTC)',
+    result: {
+      rawDate: 'January 27, 2:30PM EST (19:30 UTC) – 3:30PM EST (20:30 UTC)',
+      slug: [
+        'service_store_eso',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('months', getDateWithDayNumber(1, 27).get('months'))
+          .set('date', getDateWithDayNumber(1, 27).get('date'))
+          .set('hours', 19)
+          .set('minutes', 30)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('months', getDateWithDayNumber(1, 27).get('months'))
+          .set('date', getDateWithDayNumber(1, 27).get('date'))
+          .set('hours', 20)
+          .set('minutes', 30)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: '• [IN PROGRESS] ESO Store for maintenance – January 27, 2:30PM EST (19:30 UTC) – 3:30PM EST (20:30 UTC)',
+    result: {
+      rawDate: 'January 27, 2:30PM EST (19:30 UTC) – 3:30PM EST (20:30 UTC)',
+      slug: [
+        'service_store_eso',
+      ],
+      status: 'down',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('months', getDateWithDayNumber(1, 27).get('months'))
+          .set('date', getDateWithDayNumber(1, 27).get('date'))
+          .set('hours', 19)
+          .set('minutes', 30)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('months', getDateWithDayNumber(1, 27).get('months'))
+          .set('date', getDateWithDayNumber(1, 27).get('date'))
+          .set('hours', 20)
+          .set('minutes', 30)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: '• [COMPLETE] ESO Store for maintenance – January 27, 2:30PM EST (19:30 UTC) – 3:30PM EST (20:30 UTC)',
+    result: {
+      rawDate: 'January 27, 2:30PM EST (19:30 UTC) – 3:30PM EST (20:30 UTC)',
+      slug: [
+        'service_store_eso',
+      ],
+      status: 'up',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('months', getDateWithDayNumber(1, 27).get('months'))
+          .set('date', getDateWithDayNumber(1, 27).get('date'))
+          .set('hours', 19)
+          .set('minutes', 30)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('months', getDateWithDayNumber(1, 27).get('months'))
+          .set('date', getDateWithDayNumber(1, 27).get('date'))
+          .set('hours', 20)
+          .set('minutes', 30)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
 ];
 
 /**
