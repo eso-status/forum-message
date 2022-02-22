@@ -285,8 +285,8 @@ export default class ForumMessageElement {
         .set('seconds', 0)
         .set('milliseconds', 0)
         .utcOffset(0));
-    } else if (rawDate.includes('EDT / ')) {
-      const dateTime: RegExpExecArray | null = /EDT \/ ([0-9]{1,2}):([0-9]{1,2}) UTC/.exec(rawDate);
+    } else if (rawDate.includes('EDT / ') || rawDate.includes('EST / ')) {
+      const dateTime: RegExpExecArray | null = /E[D|S]T \/ ([0-9]{1,2}):([0-9]{1,2}) UTC/.exec(rawDate);
 
       // getDateWithHours
       list.push(moment()
@@ -300,7 +300,7 @@ export default class ForumMessageElement {
         .set('milliseconds', 0)
         .utcOffset(0));
     } else {
-      const dateTime: RegExpExecArray | null = /([a-zA-Z]{3,9}) ([0-9]{1,2}), [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\) [–|-] [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\)/.exec(rawDate);
+      const dateTime: RegExpExecArray | null = /([a-zA-Z]{3,9}) ([0-9]{1,2})[ ]?, [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\) [–|-] [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\)/.exec(rawDate);
       const month: number = Number(moment().month(dateTime && dateTime.length >= 1 ? String(dateTime[1]) : '').format('M')) - 1;
       const day: number = dateTime && dateTime.length >= 1 ? Number(dateTime[2]) : 0;
 

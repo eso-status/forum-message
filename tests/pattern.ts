@@ -1985,6 +1985,140 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       ],
     },
   },
+  {
+    raw: 'Due to a hardware issue, the North American PlayStation® megaserver will be taken offline for maintenance at 1:30PM EST / 18:30 UTC.',
+    result: {
+      rawDate: '1:30PM EST / 18:30 UTC.',
+      slug: [
+        'server_ps_na',
+      ],
+      status: 'issues',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithHours(18, 30).get('years'))
+          .set('months', getDateWithHours(18, 30).get('months'))
+          .set('date', getDateWithHours(18, 30).get('date'))
+          .set('hours', 18)
+          .set('minutes', 30)
+          .set('seconds', 0)
+          .set('milliseconds', 0)
+          .utcOffset(0),
+      ],
+    },
+  },
+  {
+    raw: 'Due to a hardware issue, the North American PlayStation® megaserver is currently unavailable while we perform maintenance.',
+    result: {
+      rawDate: '',
+      slug: [
+        'server_ps_na',
+      ],
+      status: 'down',
+      dates: [],
+    },
+  },
+  {
+    raw: 'The hardware issue is resolved, and the North American PlayStation® megaserver is now available. Thank you for your patience!',
+    result: {
+      rawDate: '',
+      slug: [
+        'server_ps_na',
+      ],
+      status: 'up',
+      dates: [],
+    },
+  },
+  {
+    raw: '• Xbox: EU megaserver for maintenance – February 16 , 6:00AM EST (11:00 UTC) – 10:00AM EST (15:00 UTC)',
+    result: {
+      rawDate: 'February 16 , 6:00AM EST (11:00 UTC) – 10:00AM EST (15:00 UTC)',
+      slug: [
+        'server_xbox_eu',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('months', getDateWithDayNumber(2, 16).get('months'))
+          .set('date', getDateWithDayNumber(2, 16).get('date'))
+          .set('hours', 11)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('months', getDateWithDayNumber(2, 16).get('months'))
+          .set('date', getDateWithDayNumber(2, 16).get('date'))
+          .set('hours', 15)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: '• [IN PROGRESS] Xbox: EU megaserver for maintenance – February 16 , 6:00AM EST (11:00 UTC) – 10:00AM EST (15:00 UTC)',
+    result: {
+      rawDate: 'February 16 , 6:00AM EST (11:00 UTC) – 10:00AM EST (15:00 UTC)',
+      slug: [
+        'server_xbox_eu',
+      ],
+      status: 'down',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('months', getDateWithDayNumber(2, 16).get('months'))
+          .set('date', getDateWithDayNumber(2, 16).get('date'))
+          .set('hours', 11)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('months', getDateWithDayNumber(2, 16).get('months'))
+          .set('date', getDateWithDayNumber(2, 16).get('date'))
+          .set('hours', 15)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: '• [COMPLETE] Xbox: EU megaserver for maintenance – February 16 , 6:00AM EST (11:00 UTC) – 10:00AM EST (15:00 UTC)',
+    result: {
+      rawDate: 'February 16 , 6:00AM EST (11:00 UTC) – 10:00AM EST (15:00 UTC)',
+      slug: [
+        'server_xbox_eu',
+      ],
+      status: 'up',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('months', getDateWithDayNumber(2, 16).get('months'))
+          .set('date', getDateWithDayNumber(2, 16).get('date'))
+          .set('hours', 11)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('months', getDateWithDayNumber(2, 16).get('months'))
+          .set('date', getDateWithDayNumber(2, 16).get('date'))
+          .set('hours', 15)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
 ];
 
 /**
