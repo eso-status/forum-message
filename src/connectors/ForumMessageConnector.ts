@@ -1,9 +1,11 @@
-import axios, { AxiosResponse } from 'axios';
+import { AxiosResponse } from 'axios';
 import {
   RawEsoStatus,
   Slug,
 } from '@eso-status/types';
 import ForumMessageElement from '../classes/ForumMessageElement';
+
+const axios = require('axios');
 
 /**
  * Connector used to get data from https://forums.elderscrollsonline.com/ and https://forums.elderscrollsonline.com/en/categories/pts
@@ -76,6 +78,7 @@ export default class ForumMessageConnector {
    * @return Promise<string> Raw content from remote specific url
    */
   public static async getRawRemoteContent(url: string): Promise<string> {
+    // @ts-ignore
     const response: AxiosResponse<string> = await axios.get<string>(url);
 
     return response?.status === 200 && !(!response?.data) ? String(response?.data) : '';
