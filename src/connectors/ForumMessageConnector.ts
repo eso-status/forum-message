@@ -176,7 +176,8 @@ export default class ForumMessageConnector {
     return rawMessageSplit
       .filter((item: string): boolean => item !== ''
       && !item.includes('Maintenance for the week')
-      && !item.includes('No maintenance'))
+      && !item.includes('No maintenance')
+      && !item.includes('PC/Mac: No NA megaserver maintenance'))
       .map((item: string): string => {
         let line: string = item;
         line = line.replace('\n', '');
