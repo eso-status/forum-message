@@ -1,6 +1,6 @@
 {
   "name": "@eso-status/forum-message",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Library used to get servers status of The elders scrolls Online game with https://forums.elderscrollsonline.com/ and https://forums.elderscrollsonline.com/en/categories/pts",
   "main": "lib/index.js",
   "scripts": {
