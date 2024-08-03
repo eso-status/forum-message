@@ -157,7 +157,7 @@ export default class ForumMessageConnector {
   public static splitRawMessage(mergedRawMessage: string): string[] {
     const list: string[] = [];
     mergedRawMessage.split('<br />').forEach((item: string): void => {
-      list.push(...item.split('<br>'));
+      list.push(...item.split('<br/>'));
     });
 
     return list;
