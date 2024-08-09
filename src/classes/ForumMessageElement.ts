@@ -136,6 +136,8 @@ export default class ForumMessageElement {
   public static isType(type: Type, rawData: string): boolean {
     if (type === 'server') {
       return rawData.includes('megaserver')
+        || rawData.includes('NA megaservers')
+        || rawData.includes('EU megaservers')
         || rawData.includes('the megaservers')
         || rawData.includes('PTS')
         || rawData.includes('PlayStation')
@@ -163,13 +165,19 @@ export default class ForumMessageElement {
   public static isSupport(support: Support, rawData: string): boolean {
     if (support === 'xbox') { // OK
       return rawData.includes('Xbox')
+        || rawData.includes('· NA megaservers')
+        || rawData.includes('· EU megaservers')
         || rawData.includes('the megaservers');
     } if (support === 'ps') { // OK
       return rawData.includes('PlayStation')
+        || rawData.includes('· NA megaservers')
+        || rawData.includes('· EU megaservers')
         || rawData.includes('the megaservers');
     } if (support === 'pc') { // OK
       return rawData.includes('PC/Mac')
         || rawData.includes('PTS')
+        || rawData.includes('· NA megaservers')
+        || rawData.includes('· EU megaservers')
         || rawData.includes('the megaservers');
     } if (support === 'web') {
       return rawData.includes('ESO Website');
@@ -300,7 +308,10 @@ export default class ForumMessageElement {
         .set('milliseconds', 0)
         .utcOffset(0));
     } else {
-      const dateTime: RegExpExecArray | null = /([a-zA-Z]{3,9}) ([0-9]{1,2})[ ]?, [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\) [–|-] [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\)/.exec(rawDate);
+      let dateTime: RegExpExecArray | null = /([a-zA-Z]{3,9}) ([0-9]{1,2})[ ]?, [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\) [–|-] [0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} E[D|S]T \(([0-9]{1,2}):([0-9]{1,2}) UTC\)/.exec(rawDate);
+      if (rawDate.includes('UTC (')) {
+        dateTime = /([a-zA-Z]{3,9}) ([0-9]{1,2})[ ]?, ([0-9]{1,2}):([0-9]{1,2}) UTC \([0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} EDT\) [–|-] ([0-9]{1,2}):([0-9]{1,2}) UTC \([0-9]{1,2}:[0-9]{1,2}[a-zA-Z]{1,2} EDT\)/.exec(rawDate);
+      }
       const month: number = Number(moment().month(dateTime && dateTime.length >= 1 ? String(dateTime[1]) : '').format('M')) - 1;
       const day: number = dateTime && dateTime.length >= 1 ? Number(dateTime[2]) : 0;
 

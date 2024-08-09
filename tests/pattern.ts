@@ -2119,6 +2119,70 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       ],
     },
   },
+  {
+    raw: '· NA megaservers for maintenance – August 7, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    result: {
+      rawDate: 'August 7, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+      slug: [
+        'server_pc_na',
+        'server_xbox_na',
+        'server_ps_na',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(8, 7).get('years'))
+          .set('months', getDateWithDayNumber(8, 7).get('months'))
+          .set('date', getDateWithDayNumber(8, 7).get('date'))
+          .set('hours', 8)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(8, 7).get('years'))
+          .set('months', getDateWithDayNumber(8, 7).get('months'))
+          .set('date', getDateWithDayNumber(8, 7).get('date'))
+          .set('hours', 16)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  {
+    raw: '· EU megaservers for maintenance – August 7, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+    result: {
+      rawDate: 'August 7, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+      slug: [
+        'server_pc_eu',
+        'server_xbox_eu',
+        'server_ps_eu',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(8, 7).get('years'))
+          .set('months', getDateWithDayNumber(8, 7).get('months'))
+          .set('date', getDateWithDayNumber(8, 7).get('date'))
+          .set('hours', 8)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', getDateWithDayNumber(8, 7).get('years'))
+          .set('months', getDateWithDayNumber(8, 7).get('months'))
+          .set('date', getDateWithDayNumber(8, 7).get('date'))
+          .set('hours', 16)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
 ];
 
 /**
