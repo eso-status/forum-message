@@ -12,48 +12,16 @@ const axios = require('axios');
  */
 export default class ForumMessageConnector {
   /**
-   * URLs to get remote content
-   *
-   * @public
-   * @static
-   *
-   * @return string[] URLs to get remote content
-   */
-  public static urls = [
-    'https://forums.elderscrollsonline.com/',
-    'https://forums.elderscrollsonline.com/en/categories/pts',
-  ];
-
-  /**
    * Methode used to get the list of raw element from remote website
    *
    * @public
    * @static
    *
+   * @param url string Url to use to get list of raw element from remote specific url
+   *
    * @return Promise<RawEsoStatus[]> List of raw element from remote website
    */
-  public static async getRemoteContent(): Promise<RawEsoStatus[]> {
-    const list: RawEsoStatus[] = [];
-
-    let remoteContent: RawEsoStatus[] = await ForumMessageConnector.getRemoteContentByUrl(ForumMessageConnector.urls[0]);
-    list.push(...remoteContent);
-
-    remoteContent = await ForumMessageConnector.getRemoteContentByUrl(ForumMessageConnector.urls[1]);
-    list.push(...remoteContent);
-
-    return ForumMessageConnector.removeDuplicate(list);
-  }
-
-  /**
-   * Methode used to get the list of raw element from remote specific url
-   *
-   * @public
-   * @static
-   *
-   * @param url string Url to use to get list of raw element from remote specific url
-   * @return Promise<RawEsoStatus[]> List of raw element from remote specific url
-   */
-  public static async getRemoteContentByUrl(url: string): Promise<RawEsoStatus[]> {
+  public static async getRemoteContent(url: string): Promise<RawEsoStatus[]> {
     const rawRemoteContent: string = await ForumMessageConnector.getRawRemoteContent(url);
     const rawWarningMessage: string = ForumMessageConnector.getRawWarningMessage(rawRemoteContent);
     const rawAlertMessage: string = ForumMessageConnector.getRawAlertMessage(rawRemoteContent);
@@ -175,38 +143,15 @@ export default class ForumMessageConnector {
   public static sortRawMessageList(rawMessageSplit: string[]): string[] {
     return rawMessageSplit
       .filter((item: string): boolean => item !== ''
-      && !item.includes('Maintenance for the week')
-      && !item.includes('No maintenance')
-      && !item.includes('PC/Mac: No NA megaserver maintenance'))
+        && !item.includes('Maintenance for the week')
+        && !item.includes('No maintenance')
+        && !item.includes('PC/Mac: No NA megaserver maintenance'))
       .map((item: string): string => {
         let line: string = item;
         line = line.replace('\n', '');
         return line;
       })
       .filter((item: string): boolean => item !== '' && item !== ' ');
-  }
-
-  /**
-   * Methode used to remove duplicate of raw content
-   *
-   * @public
-   * @static
-   *
-   * @param remoteContent RawEsoStatus[] List of raw element from remote website
-   * @return RawEsoStatus[] Raw content list without duplicate
-   */
-  public static removeDuplicate(remoteContent: RawEsoStatus[]): RawEsoStatus[] {
-    const list: RawEsoStatus[] = [];
-
-    remoteContent.forEach((item: RawEsoStatus): void => {
-      if (list[item.raw[0]] === undefined) {
-        list[item.raw[0]] = item;
-      } else {
-        list[item.raw[0]].sources.push(item.sources[0]);
-      }
-    });
-
-    return Object.values(<any>list);
   }
 
   /**
