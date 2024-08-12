@@ -9,3 +9,5 @@ jest.config.js
 nodemon.json
 package-lock.json
 tsconfig.json
+/coverage/
+/tsconfig.build.tsbuildinfo

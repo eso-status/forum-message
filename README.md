@@ -1,11 +1,16 @@
 # eso-status/forum-message
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=bugs)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=coverage)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
+
 [![npm](https://img.shields.io/npm/v/@eso-status/forum-message)](https://www.npmjs.com/package/@eso-status/forum-message)
-[![license](https://img.shields.io/npm/l/@eso-status/forum-message)](https://github.com/eso-status/forum-message/blob/master/LICENSE.md)
+[![license](https://img.shields.io/npm/l/@eso-status/forum-message)](https://github.com/eso-status/connector/blob/master/LICENSE.md)
 <img src="https://img.shields.io/npm/dt/@eso-status/forum-message" alt="Downloads" />
-[![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/eso-status/forum-message)](https://lgtm.com/projects/g/eso-status/forum-message/context:javascript)
 <img src="https://img.shields.io/node/v/@eso-status/forum-message" alt="Node version" />
-[![Build Status](https://github.com/eso-status/forum-message/workflows/CI/badge.svg)](https://github.com/eso-status/forum-message/actions/workflows/CI.yaml)
-[![Delivery Status](https://github.com/eso-status/forum-message/workflows/CD/badge.svg)](https://github.com/eso-status/forum-message/actions/workflows/CD.yaml)
 
 eso-status/forum-message is a library for getting and formatting data can founded in [https://forums.elderscrollsonline.com/](https://forums.elderscrollsonline.com/) and [https://forums.elderscrollsonline.com/en/categories/pts](https://forums.elderscrollsonline.com/en/categories/pts)
 
