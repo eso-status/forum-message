@@ -8,9 +8,12 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
 
 [![npm](https://img.shields.io/npm/v/@eso-status/forum-message)](https://www.npmjs.com/package/@eso-status/forum-message)
-[![license](https://img.shields.io/npm/l/@eso-status/forum-message)](https://github.com/eso-status/connector/blob/master/LICENSE.md)
+[![license](https://img.shields.io/npm/l/@eso-status/forum-message)](https://github.com/eso-status/forum-message/blob/master/LICENSE.md)
 <img src="https://img.shields.io/npm/dt/@eso-status/forum-message" alt="Downloads" />
 <img src="https://img.shields.io/node/v/@eso-status/forum-message" alt="Node version" />
+
+[![Build Status](https://github.com/eso-status/forum-message/workflows/CI/badge.svg)](https://github.com/eso-status/forum-message/actions/workflows/CI.yaml)
+[![Build Status](https://github.com/eso-status/forum-message/workflows/CD/badge.svg)](https://github.com/eso-status/forum-message/actions/workflows/CD.yaml)
 
 eso-status/forum-message is a library for getting and formatting data can founded in [https://forums.elderscrollsonline.com/](https://forums.elderscrollsonline.com/) and [https://forums.elderscrollsonline.com/en/categories/pts](https://forums.elderscrollsonline.com/en/categories/pts)
 
