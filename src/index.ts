@@ -1,36 +1,18 @@
 import { RawEsoStatus } from '@eso-status/types';
-import ForumMessageConnector from './connectors/ForumMessageConnector';
+import { ForumMessageURL } from './const';
+import { SourceUrl } from './type/sourceUrl.type';
+import Connector from './connector';
 
-export const ForumMessageURL = 'https://forums.elderscrollsonline.com/';
-export const ForumMessagePTSURL =
-  'https://forums.elderscrollsonline.com/en/categories/pts';
+export default class ForumMessage {
+  public static async getData(): Promise<RawEsoStatus[]>;
+  public static async getData(url?: SourceUrl): Promise<RawEsoStatus[]>;
 
-/**
- * Class of Forum Message
- */
-export class ForumMessage {
-  /**
-   * Methode used to get Forum Message data
-   *
-   * @public
-   * @static
-   *
-   * @return Promise<RawEsoStatus[]> Forum Message elements
-   */
-  public static async getData(
-    url: string = ForumMessageURL,
-  ): Promise<RawEsoStatus[]> {
-    const remoteContent: RawEsoStatus[] =
-      await ForumMessageConnector.getRemoteContent(url);
-    const slugOfRawContent: RawEsoStatus[] =
-      ForumMessageConnector.getRawContentWithSlug(remoteContent);
-    const rawContentBySlug: RawEsoStatus[] =
-      ForumMessageConnector.splitRawContentBySlug(slugOfRawContent);
-    const rawContentWithRawDate: RawEsoStatus[] =
-      ForumMessageConnector.getRawContentWithRawDate(rawContentBySlug);
-    const data: RawEsoStatus[] = ForumMessageConnector.getData(
-      rawContentWithRawDate,
-    );
-    return ForumMessageConnector.sortData(data);
+  public static async getData(url?: SourceUrl): Promise<RawEsoStatus[]> {
+    let urlToUsed: SourceUrl = url;
+    if (!url) {
+      urlToUsed = ForumMessageURL;
+    }
+
+    return (await Connector.init(urlToUsed)).rawEsoStatus;
   }
 }
