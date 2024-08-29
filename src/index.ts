@@ -5,7 +5,7 @@ import Connector from './connector';
 
 export default class ForumMessage {
   public static async getData(): Promise<RawEsoStatus[]>;
-  public static async getData(url: SourceUrl): Promise<RawEsoStatus[]>;
+  public static async getData(url?: SourceUrl): Promise<RawEsoStatus[]>;
 
   public static async getData(url?: SourceUrl): Promise<RawEsoStatus[]> {
     let urlToUsed: SourceUrl = url;

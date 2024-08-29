@@ -1,5 +1,5 @@
 import { RawEsoStatus } from '@eso-status/types';
-import { SourceUrl } from '../../lib/type/sourceUrl.type';
+import { SourceUrl } from 'src/type/sourceUrl.type';
 
 export interface PatternItem {
   date: string;
