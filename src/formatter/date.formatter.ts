@@ -112,7 +112,7 @@ export default class DateFormatter {
         .set('years', date.get('years'))
         .set('months', date.get('months'))
         .set('date', date.get('dates'))
-        .set('hours', this.getRawSpecialHour())
+        .set('hours', this.getRawClassicHour1())
         .set('minutes', this.getRawSpecialMinute())
         .set('seconds', 0)
         .set('milliseconds', 0)
@@ -133,12 +133,6 @@ export default class DateFormatter {
     }
 
     return current;
-  }
-
-  private getRawSpecialHour(): number {
-    const split: string[] = this.rawDate.split('(');
-    const split1: string[] = split[1].split(':');
-    return Number(split1[0]);
   }
 
   private getRawSpecialMinute(): number {

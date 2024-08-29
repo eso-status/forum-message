@@ -20,7 +20,6 @@ export default class Connector {
 
     this.getWarningMessages();
     this.getAlertMessages();
-    // this.getCasualMessages();
     this.cleanRaw();
     this.splitRaw();
     this.filterRaw();
@@ -128,17 +127,4 @@ export default class Connector {
         }
       });
   }
-
-  // public getCasualMessages(): void {
-  //   this.remoteContent
-  //     .split('<div class="DismissMessage CasualMessage">')
-  //     .filter((item: string, index: number): boolean => index !== 0)
-  //     .forEach((item: string): void => {
-  //       const resultRemoveAfter: string[] = item.split('</div>');
-  //
-  //       if (resultRemoveAfter.length >= 2) {
-  //         this.raw.push(resultRemoveAfter[0]);
-  //       }
-  //     });
-  // }
 }
