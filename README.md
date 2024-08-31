@@ -16,7 +16,7 @@
 [![Build Status](https://github.com/eso-status/forum-message/workflows/CI/badge.svg)](https://github.com/eso-status/forum-message/actions/workflows/CI.yaml)
 [![Build Status](https://github.com/eso-status/forum-message/workflows/CD/badge.svg)](https://github.com/eso-status/forum-message/actions/workflows/CD.yaml)
 
-eso-status/forum-message is a library for retrieving and formatting data, which can be found at [https://help.elderscrollsonline.com/app/answers/detail/a_id/4320](https://help.elderscrollsonline.com/app/answers/detail/a_id/4320).
+eso-status/forum-message is a library for retrieving and formatting data, which can be found at [https://forums.elderscrollsonline.com](https://forums.elderscrollsonline.com) or [https://forums.elderscrollsonline.com/en/categories/pts](https://forums.elderscrollsonline.com/en/categories/pts).
 
 ## Table of Contents
 - [Install](#install)
