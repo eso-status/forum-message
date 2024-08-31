@@ -1,4 +1,5 @@
 # eso-status/forum-message
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=bugs)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=eso-status_forum-message&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=eso-status_forum-message)
@@ -15,139 +16,155 @@
 [![Build Status](https://github.com/eso-status/forum-message/workflows/CI/badge.svg)](https://github.com/eso-status/forum-message/actions/workflows/CI.yaml)
 [![Build Status](https://github.com/eso-status/forum-message/workflows/CD/badge.svg)](https://github.com/eso-status/forum-message/actions/workflows/CD.yaml)
 
-eso-status/forum-message is a library for getting and formatting data can founded in [https://forums.elderscrollsonline.com/](https://forums.elderscrollsonline.com/) and [https://forums.elderscrollsonline.com/en/categories/pts](https://forums.elderscrollsonline.com/en/categories/pts)
+eso-status/forum-message is a library for retrieving and formatting data, which can be found at [https://help.elderscrollsonline.com/app/answers/detail/a_id/4320](https://help.elderscrollsonline.com/app/answers/detail/a_id/4320).
 
 ## Table of Contents
-- [How to get it ?](#how-to-get-it-)
-- [How to use it ?](#how-to-use-it-)
-- [Returned data format](#returned-data-format-)
+- [Install](#install)
+- [Usage](#usage)
+- [Return exemple](#return-exemple)
 
-### How to get it ?
+### Install
 ```shell
 npm i @eso-status/forum-message
 ```
 
-### How to use it ?
-- TypeScript
-```typescript
-import { RawEsoStatus } from '@eso-status/types';
-import { ForumMessage } from "@eso-status/forum-message";
-
-ForumMessage.getData().then((data: RawEsoStatus[]): void => {
-  
-}).catch((error: Error): void => {
-  
-});
-```
-- JavaScript
+### Usage
 ```javascript
-const { ForumMessage } = require('@eso-status/forum-message');
+import ForumMessage from '@eso-status/forum-message';
+import { RawEsoStatus } from '@eso-status/types';
+import { ForumMessageURL } from '@eso-status/forum-message/const';
 
-ForumMessage.getData().then(function (data) {
-  
-}).catch(function (error) {
-  
-});
+// Forum HomePage
+const rawEsoStatus: RawEsoStatus = await ForumMessage.getData();
+
+// Forum PTS Category
+const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
 ```
-
-### Returned data format ?
+### Return exemple
 ```text
 [
   {
-    sources: [
-      'https://forums.elderscrollsonline.com/en/categories/pts',
-      'https://forums.elderscrollsonline.com/'
+    sources: [ 'https://forums.elderscrollsonline.com' ],
+    raw: [
+      '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)'
     ],
-    raw: '• PC/Mac: NA and EU megaservers for patch maintenance – July 26, 4:00AM EDT (8:00 UTC) – 8:00AM EDT (12:00 UTC)',
-    slugs: [ 'server_pc_na' ],
-    rawDate: 'July 26, 4:00AM EDT (8:00 UTC) – 8:00AM EDT (12:00 UTC)',
-    date: [ Moment<2021-07-26T06:00:00Z>, Moment<2021-07-26T10:00:00Z> ],
-    type: 'server',
-    support: 'pc',
-    zone: 'na',
-    status: 'planned'
-  },
-  {
-    sources: [
-      'https://forums.elderscrollsonline.com/en/categories/pts',
-      'https://forums.elderscrollsonline.com/'
-    ],
-    raw: '• PC/Mac: NA and EU megaservers for patch maintenance – July 26, 4:00AM EDT (8:00 UTC) – 8:00AM EDT (12:00 UTC)',
     slugs: [ 'server_pc_eu' ],
-    rawDate: 'July 26, 4:00AM EDT (8:00 UTC) – 8:00AM EDT (12:00 UTC)',
-    date: [ Moment<2021-07-26T06:00:00Z>, Moment<2021-07-26T10:00:00Z> ],
     type: 'server',
     support: 'pc',
     zone: 'eu',
-    status: 'planned'
+    status: 'planned',
+    rawSlug: 'PC/Mac: NA and EU megaservers for'
   },
   {
-    sources: [
-      'https://forums.elderscrollsonline.com/en/categories/pts',
-      'https://forums.elderscrollsonline.com/'
+    sources: [ 'https://forums.elderscrollsonline.com' ],
+    raw: [
+      '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)'
     ],
-    raw: '• Xbox: NA and EU megaservers for patch maintenance – July 28, 6:00AM EDT (10:00 UTC) – 10:00AM EDT (14:00 UTC)',
-    slugs: [ 'server_xbox_na' ],
-    rawDate: 'July 28, 6:00AM EDT (10:00 UTC) – 10:00AM EDT (14:00 UTC)',
-    date: [ Moment<2021-07-28T08:00:00Z>, Moment<2021-07-28T12:00:00Z> ],
+    slugs: [ 'server_pc_na' ],
     type: 'server',
-    support: 'xbox',
+    support: 'pc',
     zone: 'na',
-    status: 'planned'
+    status: 'planned',
+    rawSlug: 'PC/Mac: NA and EU megaservers for'
   },
   {
-    sources: [
-      'https://forums.elderscrollsonline.com/en/categories/pts',
-      'https://forums.elderscrollsonline.com/'
+    sources: [ 'https://forums.elderscrollsonline.com' ],
+    raw: [
+      '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)'
     ],
-    raw: '• Xbox: NA and EU megaservers for patch maintenance – July 28, 6:00AM EDT (10:00 UTC) – 10:00AM EDT (14:00 UTC)',
     slugs: [ 'server_xbox_eu' ],
-    rawDate: 'July 28, 6:00AM EDT (10:00 UTC) – 10:00AM EDT (14:00 UTC)',
-    date: [ Moment<2021-07-28T08:00:00Z>, Moment<2021-07-28T12:00:00Z> ],
     type: 'server',
     support: 'xbox',
     zone: 'eu',
-    status: 'planned'
+    status: 'planned',
+    rawSlug: 'Xbox: NA and EU megaservers for',
+    rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
   },
   {
-    sources: [
-      'https://forums.elderscrollsonline.com/en/categories/pts',
-      'https://forums.elderscrollsonline.com/'
+    sources: [ 'https://forums.elderscrollsonline.com' ],
+    raw: [
+      '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)'
     ],
-    raw: '• PlayStation®: NA and EU megaservers for patch maintenance – July 28, 6:00AM EDT (10:00 UTC) – 10:00AM EDT (14:00 UTC)',
-    slugs: [ 'server_ps_na' ],
-    rawDate: 'July 28, 6:00AM EDT (10:00 UTC) – 10:00AM EDT (14:00 UTC)',
-    date: [ Moment<2021-07-28T08:00:00Z>, Moment<2021-07-28T12:00:00Z> ],
+    slugs: [ 'server_xbox_na' ],
     type: 'server',
-    support: 'ps',
+    support: 'xbox',
     zone: 'na',
-    status: 'planned'
+    status: 'planned',
+    rawSlug: 'Xbox: NA and EU megaservers for',
+    rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
   },
   {
-    sources: [
-      'https://forums.elderscrollsonline.com/en/categories/pts',
-      'https://forums.elderscrollsonline.com/'
+    sources: [ 'https://forums.elderscrollsonline.com' ],
+    raw: [
+      '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)'
     ],
-    raw: '• PlayStation®: NA and EU megaservers for patch maintenance – July 28, 6:00AM EDT (10:00 UTC) – 10:00AM EDT (14:00 UTC)',
     slugs: [ 'server_ps_eu' ],
-    rawDate: 'July 28, 6:00AM EDT (10:00 UTC) – 10:00AM EDT (14:00 UTC)',
-    date: [ Moment<2021-07-28T08:00:00Z>, Moment<2021-07-28T12:00:00Z> ],
     type: 'server',
     support: 'ps',
     zone: 'eu',
-    status: 'planned'
+    status: 'planned',
+    rawSlug: 'PlayStation®: NA and EU megaservers for',
+    rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
+  },
+  {
+    sources: [ 'https://forums.elderscrollsonline.com' ],
+    raw: [
+      '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)'
+    ],
+    slugs: [ 'server_ps_na' ],
+    type: 'server',
+    support: 'ps',
+    zone: 'na',
+    status: 'planned',
+    rawSlug: 'PlayStation®: NA and EU megaservers for',
+    rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
+  },
+  {
+    sources: [ 'https://forums.elderscrollsonline.com' ],
+    raw: [
+      '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)'
+    ],
+    slugs: [ 'service_store_eso' ],
+    type: 'service',
+    support: 'store',
+    zone: 'eso',
+    status: 'planned',
+    rawSlug: 'ESO Store and Account System for',
+    rawDate: 'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    dates: [ Moment<2024-09-04T14:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
+  },
+  {
+    sources: [ 'https://forums.elderscrollsonline.com' ],
+    raw: [
+      '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)'
+    ],
+    slugs: [ 'service_system_account' ],
+    type: 'service',
+    support: 'system',
+    zone: 'account',
+    status: 'planned',
+    rawSlug: 'ESO Store and Account System for',
+    rawDate: 'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    dates: [ Moment<2024-09-04T14:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
   },
   {
     sources: [ 'https://forums.elderscrollsonline.com/en/categories/pts' ],
-    raw: 'We will be performing maintenance for patch 7.1.2 on the PTS on Monday at 2:00AM EDT (06:00 UTC). ',
+    raw: [
+      'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC). '
+    ],
     slugs: [ 'server_pc_pts' ],
-    rawDate: 'Monday at 2:00AM EDT (06:00 UTC). ',
-    date: [ Moment<2021-07-24T04:00:00Z> ],
     type: 'server',
     support: 'pc',
     zone: 'pts',
-    status: 'planned'
+    status: 'planned',
+    rawSlug: 'PTS',
+    rawDate: 'Thursday at 9:00AM EDT (13:00 UTC). ',
+    dates: [ Moment<2024-09-05T13:00:00Z> ],
+    rawStatus: 'We will be performing maintenance'
   }
 ]
 ```
-
