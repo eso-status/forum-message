@@ -12,9 +12,19 @@ import { RemoteServiceSystemAccountRawSlug } from '../type/remoteServiceSystemAc
 import { RemoteServiceWebSiteRawSlug } from '../type/remoteServiceWebSiteRawSlug.type';
 import SlugMatch from './slug.match';
 
+/**
+ * Class permettant d'identifier la liste des slugs contenu dans une annonce du forum ESO
+ */
 export default class SlugIdentifier {
+  /**
+   * Liste des informations de slugs trouvé dans l'annonce du forum ESO
+   */
   public slugMatches: SlugMatch[];
 
+  /**
+   * Liste des slugs dont on doit tester la présence dans l'annonce du forum ESO
+   * @private
+   */
   private readonly slugList: Slug[] = [
     'server_pc_eu',
     'server_pc_na',
@@ -28,54 +38,107 @@ export default class SlugIdentifier {
     'service_web_site',
   ];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_pc_eu
+   * @private
+   */
   private readonly ServerPcEuMatchesList: RemoteServerPcEuRawSlug[] = [
     'PC/Mac: EU megaserver for',
     'PC/Mac: NA and EU megaservers for',
   ];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_pc_na
+   * @private
+   */
   private readonly ServerPcNaMatchesList: RemoteServerPcNaRawSlug[] = [
     'PC/Mac: NA megaserver for',
     'PC/Mac: NA and EU megaservers for',
   ];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_pc_pts
+   * @private
+   */
   private readonly ServerPcPtsMatchesList: RemoteServerPcPtsRawSlug[] = ['PTS'];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_ps_eu
+   * @private
+   */
   private readonly ServerPsEuMatchesList: RemoteServerPsEuRawSlug[] = [
     'PlayStation®: NA and EU megaservers for',
   ];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_ps_na
+   * @private
+   */
   private readonly ServerPsNaMatchesList: RemoteServerPsNaRawSlug[] = [
     'PlayStation®: NA and EU megaservers for',
   ];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_xbox_eu
+   * @private
+   */
   private readonly ServerXboxEuMatchesList: RemoteServerXboxEuRawSlug[] = [
     'Xbox: NA and EU megaservers for',
   ];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_xbox_na
+   * @private
+   */
   private readonly ServerXboxNaMatchesList: RemoteServerXboxNaRawSlug[] = [
     'Xbox: NA and EU megaservers for',
   ];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug service_store_eso
+   * @private
+   */
   private readonly ServiceStoreEsoMatchesList: RemoteServiceStoreEsoRawSlug[] =
     ['ESO Store and Account System for'];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug service_system_account
+   * @private
+   */
   private readonly ServiceSystemAccountMatchesList: RemoteServiceSystemAccountRawSlug[] =
     ['ESO Store and Account System for'];
 
+  /**
+   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug service_web_site
+   * @private
+   */
   private readonly ServiceWebSiteMatchesList: RemoteServiceWebSiteRawSlug[] = [
     'ESO Website for',
   ];
 
+  /**
+   * @param raw Donnée brute de l'annonce du forum ESO
+   */
   constructor(private readonly raw: string) {
     this.slugMatches = [];
 
     this.slugList.forEach((slug: Slug): void => this.identify(slug));
   }
 
+  /**
+   * Methode permettant de récupérer la liste des indicateurs pour un slug donnée
+   * @param slug Slug à tester
+   * @private
+   */
   private getMatchList(slug: Slug): RemoteRawSlug[] {
     return <RemoteRawSlug[]>this[SlugIdentifier.getMatchListName(slug)];
   }
 
+  /**
+   * Methode permettant de récupérer le nom de la liste des indicateurs pour un slug donnée
+   * @param slug Slug à tester
+   * @private
+   */
   private static getMatchListName(slug: Slug): string {
     return `${slug
       .split('_')
@@ -86,12 +149,22 @@ export default class SlugIdentifier {
       .join('')}MatchesList`;
   }
 
+  /**
+   * Méthode permettant de tester l'ensemble des slugs
+   * @param slug Slug à tester
+   * @private
+   */
   private getMatches(slug: Slug): RemoteRawSlug[] {
     return this.getMatchList(slug).filter(
       (identifier: RemoteRawSlug): boolean => this.raw.includes(identifier),
     );
   }
 
+  /**
+   * Méthode permettant de tester un slug avec les indicateurs pour un slug donnée
+   * @param slug Slug à tester
+   * @private
+   */
   private identify(slug: Slug): void {
     const matches: RemoteRawSlug[] = this.getMatches(slug);
 

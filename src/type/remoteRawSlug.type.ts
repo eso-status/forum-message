@@ -6,6 +6,9 @@ import { RemoteServerXboxEuRawSlug } from './remoteServerXboxEuRawSlug.type';
 import { RemoteServiceStoreEsoRawSlug } from './remoteServiceStoreEsoRawSlug.type';
 import { RemoteServiceWebSiteRawSlug } from './remoteServiceWebSiteRawSlug.type';
 
+/**
+ * Différent slug des annonces du forum ESO
+ */
 export type RemoteRawSlug =
   | RemoteServerPcEuRawSlug
   | RemoteServerPcNaRawSlug
