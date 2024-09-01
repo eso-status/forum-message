@@ -1,5 +1,5 @@
 import * as moment from 'moment/moment';
-import { ForumMessageURL } from 'src/const';
+import { ForumMessagePTSURL, ForumMessageURL } from 'src/const';
 import { PatternItem } from '../interface/patternItem.interface';
 
 const pattern: PatternItem[] = [
@@ -1233,6 +1233,612 @@ const pattern: PatternItem[] = [
             .set('milliseconds', 0)
             .utcOffset(0),
         ],
+      },
+    ],
+  },
+  {
+    date: '2024-08-21T10_03_17',
+    url: ForumMessageURL,
+    file: '2024-08-21T10_03_17.html',
+    expected: [
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '· [IN PROGRESS] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_xbox_eu'],
+        type: 'server',
+        support: 'xbox',
+        zone: 'eu',
+        status: 'down',
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        rawStatus: '[IN PROGRESS]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '· [IN PROGRESS] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_xbox_na'],
+        type: 'server',
+        support: 'xbox',
+        zone: 'na',
+        status: 'down',
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        rawStatus: '[IN PROGRESS]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '· [IN PROGRESS] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_ps_eu'],
+        type: 'server',
+        support: 'ps',
+        zone: 'eu',
+        status: 'down',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        rawStatus: '[IN PROGRESS]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '· [IN PROGRESS] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_ps_na'],
+        type: 'server',
+        support: 'ps',
+        zone: 'na',
+        status: 'down',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        rawStatus: '[IN PROGRESS]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+    ],
+  },
+  {
+    date: '2024-08-21T11_50_35',
+    url: ForumMessageURL,
+    file: '2024-08-21T11_50_35.html',
+    expected: [
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '· [COMPLETE] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_xbox_eu'],
+        type: 'server',
+        support: 'xbox',
+        zone: 'eu',
+        status: 'up',
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        rawStatus: '[COMPLETE]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '· [COMPLETE] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_xbox_na'],
+        type: 'server',
+        support: 'xbox',
+        zone: 'na',
+        status: 'up',
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        rawStatus: '[COMPLETE]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '· [COMPLETE] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_ps_eu'],
+        type: 'server',
+        support: 'ps',
+        zone: 'eu',
+        status: 'up',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        rawStatus: '[COMPLETE]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '· [COMPLETE] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_ps_na'],
+        type: 'server',
+        support: 'ps',
+        zone: 'na',
+        status: 'up',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        rawStatus: '[COMPLETE]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 21)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+    ],
+  },
+  {
+    date: '2024-08-22T02_05_25',
+    url: ForumMessageURL,
+    file: '2024-08-22T02_05_25.html',
+    expected: [
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_store_eso'],
+        type: 'service',
+        support: 'store',
+        zone: 'eso',
+        status: 'planned',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_system_account'],
+        type: 'service',
+        support: 'system',
+        zone: 'account',
+        status: 'planned',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+    ],
+  },
+  {
+    date: '2024-08-22T13_02_03',
+    url: ForumMessageURL,
+    file: '2024-08-22T13_02_03.html',
+    expected: [
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• [IN PROGRESS] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_store_eso'],
+        type: 'service',
+        support: 'store',
+        zone: 'eso',
+        status: 'down',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        rawStatus: '[IN PROGRESS]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• [IN PROGRESS] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_system_account'],
+        type: 'service',
+        support: 'system',
+        zone: 'account',
+        status: 'down',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        rawStatus: '[IN PROGRESS]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+    ],
+  },
+  {
+    date: '2024-08-22T14_39_15',
+    url: ForumMessageURL,
+    file: '2024-08-22T14_39_15.html',
+    expected: [
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• [COMPLETE] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_store_eso'],
+        type: 'service',
+        support: 'store',
+        zone: 'eso',
+        status: 'up',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        rawStatus: '[COMPLETE]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• [COMPLETE] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_system_account'],
+        type: 'service',
+        support: 'system',
+        zone: 'account',
+        status: 'up',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        rawStatus: '[COMPLETE]',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 22)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+    ],
+  },
+  {
+    date: '2024-08-23T19_17_52',
+    url: ForumMessagePTSURL,
+    file: '2024-08-23T19_17_52.html',
+    expected: [
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          'We will be performing maintenance on the PTS on Tuesday at 10:00AM EDT (14:00 UTC).',
+        ],
+        slugs: ['server_pc_pts'],
+        type: 'server',
+        support: 'pc',
+        zone: 'pts',
+        status: 'planned',
+        rawSlug: 'PTS',
+        rawDate: 'Tuesday at 10:00AM EDT (14:00 UTC).',
+        rawStatus: 'We will be performing maintenance',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 8 - 1)
+            .set('date', 27)
+            .set('hours', 14)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+    ],
+  },
+  {
+    date: '2024-08-27T14_02_11',
+    url: ForumMessagePTSURL,
+    file: '2024-08-27T14_02_11.html',
+    expected: [
+      {
+        sources: [ForumMessagePTSURL],
+        raw: ['The PTS is currently unavailable while we perform maintenance.'],
+        slugs: ['server_pc_pts'],
+        type: 'server',
+        support: 'pc',
+        zone: 'pts',
+        status: 'down',
+        rawSlug: 'PTS',
+        rawStatus: 'unavailable',
+      },
+    ],
+  },
+  {
+    date: '2024-08-27T14_44_44',
+    url: ForumMessagePTSURL,
+    file: '2024-08-27T14_44_44.html',
+    expected: [
+      {
+        sources: [ForumMessagePTSURL],
+        raw: ['The maintenance is complete, and the PTS is now available.'],
+        slugs: ['server_pc_pts'],
+        type: 'server',
+        support: 'pc',
+        zone: 'pts',
+        status: 'up',
+        rawSlug: 'PTS',
+        rawStatus: 'now available',
       },
     ],
   },

@@ -36,9 +36,14 @@ export default class Connector {
       : '';
   }
 
-  private split(): void {
-    this.raw.forEach((raw: string): void => {
-      this.raw.push(...raw.split('<br>'));
+  public split(): void {
+    const rawList: string[] = this.raw;
+    this.raw = [];
+
+    rawList.forEach((raw: string): void => {
+      raw.split('<br>').forEach((split: string): void => {
+        this.raw.push(split);
+      });
     });
   }
 
@@ -64,15 +69,17 @@ export default class Connector {
   }
 
   private getMessagesByType(type: MessageType): void {
-    this.remoteContent
-      .split(`<div class="DismissMessage ${type}">`)
-      .forEach((item: string): void => {
-        const result: string[] = item.split('</div>');
+    const split: string[] = this.remoteContent.split(
+      `<div class="DismissMessage ${type}">`,
+    );
+    split.shift();
+    split.forEach((item: string): void => {
+      const result: string[] = item.split('</div>');
 
-        if (result.length >= 2) {
-          this.raw.push(result[0]);
-        }
-      });
+      if (result.length >= 2) {
+        this.raw.push(result[0]);
+      }
+    });
   }
 
   private get(): void {

@@ -98,7 +98,7 @@ export default class DateFormatter {
       .get('days');
     current.set('days', targetDayIndex);
 
-    if (current.get('days') > targetDayIndex) {
+    if (moment().get('days') > targetDayIndex) {
       current.add(1, 'week');
     }
 
