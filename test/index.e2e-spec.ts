@@ -45,7 +45,7 @@ describe('ForumMessage (e2e)', (): void => {
           ),
         );
 
-      expect(await ForumMessage.getData(patternData.url)).toEqual(
+      expect(await ForumMessage.getData(patternData.url)).toStrictEqual(
         patternData.expected,
       );
     },

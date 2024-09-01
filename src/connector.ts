@@ -92,9 +92,11 @@ export default class Connector {
    * @private
    */
   private replace(): void {
-    this.raw = this.raw.map((raw: string): string =>
-      raw.replace(/<br\/>\n/g, '<br>'),
-    );
+    this.raw = this.raw.map((raw: string): string => {
+      let initialRaw: string = raw;
+      initialRaw = initialRaw.replace(/<br\/>\n/g, '<br>');
+      return initialRaw.replace('. ', '.');
+    });
   }
 
   /**

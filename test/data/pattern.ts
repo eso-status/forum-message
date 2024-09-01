@@ -1842,6 +1842,618 @@ const pattern: PatternItem[] = [
       },
     ],
   },
+  {
+    date: '2024-08-30T17_26_58',
+    url: ForumMessagePTSURL,
+    file: '2024-08-30T17_26_58.html',
+    expected: [
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_pc_eu'],
+        type: 'server',
+        support: 'pc',
+        zone: 'eu',
+        status: 'planned',
+        rawSlug: 'PC/Mac: NA and EU megaservers for',
+        rawDate: 'September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 3)
+            .set('hours', 8)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 3)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_pc_na'],
+        type: 'server',
+        support: 'pc',
+        zone: 'na',
+        status: 'planned',
+        rawSlug: 'PC/Mac: NA and EU megaservers for',
+        rawDate: 'September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 3)
+            .set('hours', 8)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 3)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['server_xbox_eu'],
+        type: 'server',
+        support: 'xbox',
+        zone: 'eu',
+        status: 'planned',
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate:
+          'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['server_xbox_na'],
+        type: 'server',
+        support: 'xbox',
+        zone: 'na',
+        status: 'planned',
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate:
+          'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['server_ps_eu'],
+        type: 'server',
+        support: 'ps',
+        zone: 'eu',
+        status: 'planned',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate:
+          'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['server_ps_na'],
+        type: 'server',
+        support: 'ps',
+        zone: 'na',
+        status: 'planned',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate:
+          'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_store_eso'],
+        type: 'service',
+        support: 'store',
+        zone: 'eso',
+        status: 'planned',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate:
+          'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 14)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_system_account'],
+        type: 'service',
+        support: 'system',
+        zone: 'account',
+        status: 'planned',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate:
+          'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 14)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessagePTSURL],
+        raw: [
+          'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
+        ],
+        slugs: ['server_pc_pts'],
+        type: 'server',
+        support: 'pc',
+        zone: 'pts',
+        status: 'planned',
+        rawSlug: 'PTS',
+        rawDate: 'Thursday at 9:00AM EDT (13:00 UTC).',
+        rawStatus: 'We will be performing maintenance',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 5)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+    ],
+  },
+  {
+    date: '2024-08-30T17_28_10',
+    url: ForumMessageURL,
+    file: '2024-08-30T17_28_10.html',
+    expected: [
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_pc_eu'],
+        type: 'server',
+        support: 'pc',
+        zone: 'eu',
+        status: 'planned',
+        rawSlug: 'PC/Mac: NA and EU megaservers for',
+        rawDate: 'September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 3)
+            .set('hours', 8)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 3)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        ],
+        slugs: ['server_pc_na'],
+        type: 'server',
+        support: 'pc',
+        zone: 'na',
+        status: 'planned',
+        rawSlug: 'PC/Mac: NA and EU megaservers for',
+        rawDate: 'September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 3)
+            .set('hours', 8)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 3)
+            .set('hours', 13)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['server_xbox_eu'],
+        type: 'server',
+        support: 'xbox',
+        zone: 'eu',
+        status: 'planned',
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate:
+          'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['server_xbox_na'],
+        type: 'server',
+        support: 'xbox',
+        zone: 'na',
+        status: 'planned',
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate:
+          'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['server_ps_eu'],
+        type: 'server',
+        support: 'ps',
+        zone: 'eu',
+        status: 'planned',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate:
+          'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['server_ps_na'],
+        type: 'server',
+        support: 'ps',
+        zone: 'na',
+        status: 'planned',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate:
+          'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_store_eso'],
+        type: 'service',
+        support: 'store',
+        zone: 'eso',
+        status: 'planned',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate:
+          'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 14)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        sources: [ForumMessageURL],
+        raw: [
+          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        ],
+        slugs: ['service_system_account'],
+        type: 'service',
+        support: 'system',
+        zone: 'account',
+        status: 'planned',
+        rawSlug: 'ESO Store and Account System for',
+        rawDate:
+          'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 14)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 4)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+    ],
+  },
 ];
 
 export default pattern;
