@@ -37,20 +37,15 @@ export default class Connector {
   }
 
   private split(): void {
-    const rawList: string[] = this.raw;
-    this.raw = [];
-
-    rawList.forEach((raw: string): void => {
-      raw.split('<br>').forEach((split: string): void => {
-        this.raw.push(split);
-      });
+    this.raw.forEach((raw: string): void => {
+      this.raw.push(...raw.split('<br>'));
     });
   }
 
   private clean(): void {
-    this.raw = this.raw.map((raw: string): string => {
-      return raw.replace(/<br\/>\n/g, '<br>');
-    });
+    this.raw = this.raw.map((raw: string): string =>
+      raw.replace(/<br\/>\n/g, '<br>'),
+    );
   }
 
   private filter(): void {

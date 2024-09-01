@@ -8,11 +8,6 @@ export default class ForumMessage {
   public static async getData(url: SourceUrl): Promise<RawEsoStatus[]>;
 
   public static async getData(url?: SourceUrl): Promise<RawEsoStatus[]> {
-    let urlToUsed: SourceUrl = url;
-    if (!url) {
-      urlToUsed = ForumMessageURL;
-    }
-
-    return (await Connector.init(urlToUsed)).rawEsoStatus;
+    return (await Connector.init(url ?? ForumMessageURL)).rawEsoStatus;
   }
 }
