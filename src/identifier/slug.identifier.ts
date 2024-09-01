@@ -1,5 +1,4 @@
 import { Slug, Support, Type, Zone } from '@eso-status/types';
-import { SlugIdentify } from '../interface/slugIdentify.interface';
 import { RemoteRawSlug } from '../type/remoteRawSlug.type';
 import { RemoteServerPcNaRawSlug } from '../type/remoteServerPcNaRawSlug.type';
 import { RemoteServerPcEuRawSlug } from '../type/remoteServerPcEuRawSlug.type';
@@ -11,9 +10,10 @@ import { RemoteServerXboxNaRawSlug } from '../type/remoteServerXboxNaRawSlug.typ
 import { RemoteServiceStoreEsoRawSlug } from '../type/remoteServiceStoreEsoRawSlug.type';
 import { RemoteServiceSystemAccountRawSlug } from '../type/remoteServiceSystemAccountRawSlug.type';
 import { RemoteServiceWebSiteRawSlug } from '../type/remoteServiceWebSiteRawSlug.type';
+import SlugMatch from './slug.match';
 
 export default class SlugIdentifier {
-  public slugIdentified: SlugIdentify[];
+  public slugMatches: SlugMatch[];
 
   private readonly slugList: Slug[] = [
     'server_pc_eu',
@@ -67,28 +67,36 @@ export default class SlugIdentifier {
   ];
 
   constructor(private readonly raw: string) {
-    this.slugIdentified = [];
+    this.slugMatches = [];
 
-    this.slugList.forEach((slug: Slug): void => {
-      const matchesList: RemoteRawSlug[] = <RemoteRawSlug[]>this[
-        `${slug
-          .split('_')
-          .map(
-            (item: Type | Support | Zone): string =>
-              item.charAt(0).toUpperCase() + item.slice(1),
-          )
-          .join('')}MatchesList`
-      ];
+    this.slugList.forEach((slug: Slug): void => this.identify(slug));
+  }
 
-      const matches: RemoteRawSlug[] = matchesList.filter(
-        (identifier: RemoteRawSlug): boolean => this.raw.includes(identifier),
-      );
-      if (matches.length > 0) {
-        this.slugIdentified.push({
-          rawSlug: matches[0],
-          slug,
-        });
-      }
-    });
+  private getMatchList(slug: Slug): RemoteRawSlug[] {
+    return <RemoteRawSlug[]>this[SlugIdentifier.getMatchListName(slug)];
+  }
+
+  private static getMatchListName(slug: Slug): string {
+    return `${slug
+      .split('_')
+      .map(
+        (item: Type | Support | Zone): string =>
+          item.charAt(0).toUpperCase() + item.slice(1),
+      )
+      .join('')}MatchesList`;
+  }
+
+  private getMatches(slug: Slug): RemoteRawSlug[] {
+    return this.getMatchList(slug).filter(
+      (identifier: RemoteRawSlug): boolean => this.raw.includes(identifier),
+    );
+  }
+
+  private identify(slug: Slug): void {
+    const matches: RemoteRawSlug[] = this.getMatches(slug);
+
+    if (matches.length > 0) {
+      this.slugMatches.push(new SlugMatch(matches[0], slug));
+    }
   }
 }

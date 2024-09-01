@@ -34,101 +34,71 @@ export default class DateFormatter {
   }
 
   private formatClassic(): Moment[] {
-    const mouth: string = this.getRawClassicMouth();
-    const day: number = this.getRawClassicDay();
-
     return [
-      moment()
-        .utc()
-        .set('years', moment().get('years'))
-        .set('months', moment().month(mouth).get('months'))
-        .set('date', day)
-        .set('hours', this.getRawClassicHour1())
-        .set('minutes', this.getRawClassicMinute1())
-        .set('seconds', 0)
-        .set('milliseconds', 0)
-        .utcOffset(0),
-      moment()
-        .utc()
-        .set('years', moment().get('years'))
-        .set('months', moment().month(mouth).get('months'))
-        .set('date', day)
-        .set('hours', this.getRawClassicHour2())
-        .set('minutes', this.getRawClassicMinute2())
-        .set('seconds', 0)
-        .set('milliseconds', 0)
-        .utcOffset(0),
+      DateFormatter.generateMoment(
+        moment().get('years'),
+        moment().month(this.getRawClassicMouth()).get('months'),
+        this.getRawClassicDay(),
+        this.getRawClassicHour1(),
+        this.getRawClassicMinute1(),
+      ),
+      DateFormatter.generateMoment(
+        moment().get('years'),
+        moment().month(this.getRawClassicMouth()).get('months'),
+        this.getRawClassicDay(),
+        this.getRawClassicHour2(),
+        this.getRawClassicMinute2(),
+      ),
     ];
   }
 
   private getRawClassicMouth(): string {
-    const split: string[] = this.rawDate.split(' ');
-
-    return split[0];
+    return this.rawDate.split(' ')[0];
   }
 
   private getRawClassicDay(): number {
-    const split: string[] = this.rawDate.split(' ');
-
-    return Number(split[1].replace(',', ''));
+    return Number(this.rawDate.split(' ')[1].replace(',', ''));
   }
 
   private getRawClassicHour1(): number {
-    const split: string[] = this.rawDate.split('(');
-    const split1: string[] = split[1].split(':');
-
-    return Number(split1[0]);
+    return Number(this.rawDate.split('(')[1].split(':')[0]);
   }
 
   private getRawClassicMinute1(): number {
-    const split: string[] = this.rawDate.split('(');
-    const split1: string[] = split[1].split(':');
-    const split2: string[] = split1[1].split(' ');
-
-    return Number(split2[0]);
+    return Number(this.rawDate.split('(')[1].split(':')[1].split(' ')[0]);
   }
 
   private getRawClassicHour2(): number {
-    const split: string[] = this.rawDate.split('(');
-    const split1: string[] = split[2].split(':');
-
-    return Number(split1[0]);
+    return Number(this.rawDate.split('(')[2].split(':')[0]);
   }
 
   private getRawClassicMinute2(): number {
-    const split: string[] = this.rawDate.split('(');
-    const split1: string[] = split[2].split(':');
-    const split2: string[] = split1[1].split(' ');
-
-    return Number(split2[0]);
+    return Number(this.rawDate.split('(')[2].split(':')[1].split(' ')[0]);
   }
 
   private formatSpecial(): Moment[] {
     const date: Moment = this.getSpecialDate();
 
     return [
-      moment()
-        .utc()
-        .set('years', date.get('years'))
-        .set('months', date.get('months'))
-        .set('date', date.get('dates'))
-        .set('hours', this.getRawClassicHour1())
-        .set('minutes', this.getRawSpecialMinute())
-        .set('seconds', 0)
-        .set('milliseconds', 0)
-        .utcOffset(0),
+      DateFormatter.generateMoment(
+        date.get('years'),
+        date.get('months'),
+        date.get('dates'),
+        this.getRawClassicHour1(),
+        this.getRawSpecialMinute(),
+      ),
     ];
   }
 
   private getSpecialDate(): Moment {
     const current: Moment = moment();
-    const rawDay: string = this.rawDate.split(' ')[0];
-    const currentDayIndex: number = current.get('days');
 
-    const targetDayIndex: number = moment().days(rawDay).get('days');
+    const targetDayIndex: number = moment()
+      .days(this.rawDate.split(' ')[0])
+      .get('days');
     current.set('days', targetDayIndex);
 
-    if (currentDayIndex > targetDayIndex) {
+    if (current.get('days') > targetDayIndex) {
       current.add(1, 'week');
     }
 
@@ -136,8 +106,25 @@ export default class DateFormatter {
   }
 
   private getRawSpecialMinute(): number {
-    const split: string[] = this.rawDate.split(':');
-    const split1: string[] = split[2].split(' ');
-    return Number(split1[0]);
+    return Number(this.rawDate.split(':')[2].split(' ')[0]);
+  }
+
+  private static generateMoment(
+    year: number,
+    month: number,
+    day: number,
+    hour: number,
+    minute: number,
+  ): Moment {
+    return moment()
+      .utc()
+      .set('years', year)
+      .set('months', month)
+      .set('date', day)
+      .set('hours', hour)
+      .set('minutes', minute)
+      .set('seconds', 0)
+      .set('milliseconds', 0)
+      .utcOffset(0);
   }
 }
