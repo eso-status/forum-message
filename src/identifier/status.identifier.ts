@@ -5,27 +5,27 @@ import { RemoteDownRawStatus } from '../type/remoteDownRawStatus.type';
 import { RemotePlannedRawStatus } from '../type/remotePlannedRawStatus.type';
 
 /**
- * Class permettant d'identifier le status contenu dans une annonce du forum ESO
+ * Class permettant d'identifier le status contenu dans une annonce
  */
 export default class StatusIdentifier {
   /**
-   * Donnée ayant permis d'identifier la présence du status dans l'annonce du forum ESO
+   * Donnée ayant permis d'identifier la présence du status dans l'annonce
    */
   public rawStatus: RemoteRawStatus;
 
   /**
-   * Status trouvé dans l'annonce du forum ESO
+   * Status trouvé dans l'annonce
    */
   public status: Status;
 
   /**
-   * Liste des status dont on doit tester la présence dans l'annonce du forum ESO
+   * Liste des status dont on doit tester la présence dans l'annonce
    * @private
    */
   private readonly statusList: Status[] = ['up', 'down', 'planned'];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le status up
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le status up
    * @private
    */
   private readonly upMatchesList: RemoteUpRawStatus[] = [
@@ -35,7 +35,7 @@ export default class StatusIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le status down
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le status down
    * @private
    */
   private readonly downMatchesList: RemoteDownRawStatus[] = [
@@ -45,7 +45,7 @@ export default class StatusIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le status planned
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le status planned
    * @private
    */
   private readonly plannedMatchesList: RemotePlannedRawStatus[] = [
@@ -53,7 +53,7 @@ export default class StatusIdentifier {
   ];
 
   /**
-   * @param raw Donnée brute de l'annonce du forum ESO
+   * @param raw Donnée brute de l'annonce
    */
   constructor(private readonly raw: string) {
     this.statusList.forEach((status: Status): void => this.identify(status));

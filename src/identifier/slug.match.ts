@@ -2,12 +2,12 @@ import { Slug, Support, Type, Zone } from '@eso-status/types';
 import { RemoteRawSlug } from '../type/remoteRawSlug.type';
 
 /**
- * Class permettant de récupérer les informations sur un slug trouvé dans une annonce du forum ESO
+ * Class permettant de récupérer les informations sur un slug trouvé dans une annonce
  */
 export default class SlugMatch {
   /**
-   * @param rawSlug Donnée ayant permis d'identifier la présence du slug dans l'annonce du forum ESO
-   * @param slug Slug trouvé dans l'annonce du forum ESO
+   * @param rawSlug Donnée ayant permis d'identifier la présence du slug dans l'annonce
+   * @param slug Slug trouvé dans l'annonce
    */
   constructor(
     public readonly rawSlug: RemoteRawSlug,

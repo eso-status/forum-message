@@ -1,5 +1,5 @@
 /**
- * Différent slug des annonces du forum ESO concernant le server PC pour l'Amérique du Nord
+ * Différent slug des annonces concernant le server PC pour l'Amérique du Nord
  */
 export type RemoteServerPcNaRawSlug =
   | 'PC/Mac: NA megaserver for'

@@ -3,7 +3,7 @@ import { RemoteDownRawStatus } from './remoteDownRawStatus.type';
 import { RemotePlannedRawStatus } from './remotePlannedRawStatus.type';
 
 /**
- * Différent status des annonces du forum ESO
+ * Différent status des annonces
  */
 export type RemoteRawStatus =
   | RemoteUpRawStatus

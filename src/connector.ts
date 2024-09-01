@@ -6,17 +6,17 @@ import Match from './match';
 import Raw from './raw';
 
 /**
- * Class permettant de récupérer les informations des annonces du forum ESO
+ * Class permettant de récupérer les informations des annonces
  */
 export default class Connector {
   /**
-   * Liste des données brutes des annonces du forum ESO
+   * Liste des données brutes des annonces
    * @private
    */
   private raw: string[];
 
   /**
-   * Liste des informations des annonces du forum ESO
+   * Liste des informations des annonces
    */
   public rawEsoStatus: RawEsoStatus[];
 
@@ -134,7 +134,7 @@ export default class Connector {
 
   /**
    * Méthode permettant de vérifier la présence d'information dans une annonce
-   * @param raw Donnée brute de l'annonce du forum ESO
+   * @param raw Donnée brute de l'annonce
    * @private
    */
   private fetchEach(raw: string): void {
@@ -144,8 +144,8 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de compléter la liste des données à renvoyer contenant les informations des annonces du forum ESO
-   * @param match Class contenant les informations d'une annonce du forum ESO
+   * Méthode permettant de compléter la liste des données à renvoyer contenant les informations des annonces
+   * @param match Class contenant les informations d'une annonce
    * @private
    */
   private populateRawEsoStatus(match: Match): void {

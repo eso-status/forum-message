@@ -13,16 +13,16 @@ import { RemoteServiceWebSiteRawSlug } from '../type/remoteServiceWebSiteRawSlug
 import SlugMatch from './slug.match';
 
 /**
- * Class permettant d'identifier la liste des slugs contenu dans une annonce du forum ESO
+ * Class permettant d'identifier la liste des slugs contenu dans une annonce
  */
 export default class SlugIdentifier {
   /**
-   * Liste des informations de slugs trouvé dans l'annonce du forum ESO
+   * Liste des informations de slugs trouvé dans l'annonce
    */
   public slugMatches: SlugMatch[];
 
   /**
-   * Liste des slugs dont on doit tester la présence dans l'annonce du forum ESO
+   * Liste des slugs dont on doit tester la présence dans l'annonce
    * @private
    */
   private readonly slugList: Slug[] = [
@@ -39,7 +39,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_pc_eu
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_pc_eu
    * @private
    */
   private readonly ServerPcEuMatchesList: RemoteServerPcEuRawSlug[] = [
@@ -48,7 +48,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_pc_na
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_pc_na
    * @private
    */
   private readonly ServerPcNaMatchesList: RemoteServerPcNaRawSlug[] = [
@@ -57,13 +57,13 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_pc_pts
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_pc_pts
    * @private
    */
   private readonly ServerPcPtsMatchesList: RemoteServerPcPtsRawSlug[] = ['PTS'];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_ps_eu
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_ps_eu
    * @private
    */
   private readonly ServerPsEuMatchesList: RemoteServerPsEuRawSlug[] = [
@@ -71,7 +71,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_ps_na
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_ps_na
    * @private
    */
   private readonly ServerPsNaMatchesList: RemoteServerPsNaRawSlug[] = [
@@ -79,7 +79,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_xbox_eu
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_xbox_eu
    * @private
    */
   private readonly ServerXboxEuMatchesList: RemoteServerXboxEuRawSlug[] = [
@@ -87,7 +87,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug server_xbox_na
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_xbox_na
    * @private
    */
   private readonly ServerXboxNaMatchesList: RemoteServerXboxNaRawSlug[] = [
@@ -95,21 +95,21 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug service_store_eso
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug service_store_eso
    * @private
    */
   private readonly ServiceStoreEsoMatchesList: RemoteServiceStoreEsoRawSlug[] =
     ['ESO Store and Account System for'];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug service_system_account
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug service_system_account
    * @private
    */
   private readonly ServiceSystemAccountMatchesList: RemoteServiceSystemAccountRawSlug[] =
     ['ESO Store and Account System for'];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce du forum ESO concerne le slug service_web_site
+   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug service_web_site
    * @private
    */
   private readonly ServiceWebSiteMatchesList: RemoteServiceWebSiteRawSlug[] = [
@@ -117,7 +117,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * @param raw Donnée brute de l'annonce du forum ESO
+   * @param raw Donnée brute de l'annonce
    */
   constructor(private readonly raw: string) {
     this.slugMatches = [];

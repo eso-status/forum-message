@@ -6,7 +6,7 @@ import SlugMatch from './identifier/slug.match';
 import { SourceUrl } from './type/sourceUrl.type';
 
 /**
- * Méthode de récupération des informations pour une annonce du forum ESO
+ * Méthode de récupération des informations pour une annonce
  */
 export default class Raw {
   /**
@@ -28,13 +28,13 @@ export default class Raw {
   private slugsIdentifier: SlugIdentifier;
 
   /**
-   * Liste des correspondances contenue dans l'annonce du forum ESO
+   * Liste des correspondances contenue dans l'annonce
    */
   public matches: Match[] = [];
 
   /**
    * @param url Url servant de source pour récupérer les annonces de maintenance
-   * @param raw Donnée brute de l'annonce du forum ESO
+   * @param raw Donnée brute de l'annonce
    */
   constructor(
     private url: SourceUrl,
@@ -48,7 +48,7 @@ export default class Raw {
   }
 
   /**
-   * Méthode d'exploration des données des correspondances trouvée pour l'annonce du forum ESO
+   * Méthode d'exploration des données des correspondances trouvée pour l'annonce
    * @private
    */
   private split(): void {

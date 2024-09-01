@@ -2,28 +2,28 @@ import { Moment } from 'moment';
 import * as moment from 'moment';
 
 /**
- * Class permettant l'identification et la mise au bon format de la date contenu dans une annonce du forum ESO
+ * Class permettant l'identification et la mise au bon format de la date contenu dans une annonce
  */
 export default class DateFormatter {
   /**
-   * Donnée brute de la date contenue dans l'annonce du forum ESO
+   * Donnée brute de la date contenue dans l'annonce
    */
   public rawDate: string;
 
   /**
-   * Liste des dates mise au bon format contenue dans l'annonce du forum ESO
+   * Liste des dates mise au bon format contenue dans l'annonce
    */
   public dates: Moment[] | undefined;
 
   /**
-   * @param raw Donnée brute de l'annonce du forum ESO
+   * @param raw Donnée brute de l'annonce
    */
   constructor(private readonly raw: string) {
     this.checkFormat();
   }
 
   /**
-   * Methode permettant de récupérer la donnée brute de la date et la liste des dates en fonction du format de la date présente dans l'annonce du forum ESO
+   * Methode permettant de récupérer la donnée brute de la date et la liste des dates en fonction du format de la date présente dans l'annonce
    * Cas n°1 : L'annonce contient une date avec une heure de début et une heure de fin
    * Cas N°2 : L'annonce contient le nom du prochain jour de la maintenance avec une heure de début
    * @private

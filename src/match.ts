@@ -5,12 +5,12 @@ import SlugMatch from './identifier/slug.match';
 import { SourceUrl } from './type/sourceUrl.type';
 
 /**
- * Class permettant de génération l'objet contenant les informations d'une annonce du forum ESO
+ * Class permettant de génération l'objet contenant les informations d'une annonce
  */
 export default class Match {
   /**
    * @param url Url servant de source pour récupérer les annonces de maintenance
-   * @param raw Donnée brute de l'annonce du forum ESO
+   * @param raw Donnée brute de l'annonce
    * @param statusIdentifier Donnée concernant le status
    * @param dateFormatter Données pour les dates
    * @param slugMatch Données pour le slug

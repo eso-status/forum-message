@@ -7,7 +7,7 @@ import { RemoteServiceStoreEsoRawSlug } from './remoteServiceStoreEsoRawSlug.typ
 import { RemoteServiceWebSiteRawSlug } from './remoteServiceWebSiteRawSlug.type';
 
 /**
- * Différent slug des annonces du forum ESO
+ * Différent slug des annonces
  */
 export type RemoteRawSlug =
   | RemoteServerPcEuRawSlug
