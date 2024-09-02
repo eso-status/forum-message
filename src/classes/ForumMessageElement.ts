@@ -258,16 +258,7 @@ export default class ForumMessageElement {
       // getDateWithDayIndex
       list.push(moment()
         .utc()
-        .set('years', (moment().utc().isoWeekday() > isoWeekDay
-          ? moment()
-            .utc()
-            .isoWeekday(isoWeekDay)
-            .add(7, 'day')
-            .get('years')
-          : moment()
-            .utc()
-            .isoWeekday(isoWeekDay)
-            .get('years')))
+        .set('years', moment().get('years'))
         .set('months', (moment().utc().isoWeekday() > isoWeekDay
           ? moment()
             .utc()
@@ -299,7 +290,7 @@ export default class ForumMessageElement {
       // getDateWithHours
       list.push(moment()
         .utc()
-        .set('years', Number(((moment().utc().get('hours') > (dateTime && dateTime.length >= 1 ? Number(dateTime[1]) : 0)) || (moment().utc().get('hours') === (dateTime && dateTime.length >= 1 ? Number(dateTime[1]) : 0) && (moment().utc().get('minutes') > (dateTime && dateTime.length >= 1 ? Number(dateTime[2]) : 0))) ? moment().utc().add(1, 'day').get('years') : moment().utc().get('years'))))
+        .set('years', moment().get('years'))
         .set('months', Number(((moment().utc().get('hours') > (dateTime && dateTime.length >= 1 ? Number(dateTime[1]) : 0)) || (moment().utc().get('hours') === (dateTime && dateTime.length >= 1 ? Number(dateTime[1]) : 0) && (moment().utc().get('minutes') > (dateTime && dateTime.length >= 1 ? Number(dateTime[2]) : 0))) ? moment().utc().add(1, 'day').get('months') : moment().utc().get('months'))))
         .set('date', Number(((moment().utc().get('hours') > (dateTime && dateTime.length >= 1 ? Number(dateTime[1]) : 0)) || (moment().utc().get('hours') === (dateTime && dateTime.length >= 1 ? Number(dateTime[1]) : 0) && (moment().utc().get('minutes') > (dateTime && dateTime.length >= 1 ? Number(dateTime[2]) : 0))) ? moment().utc().add(1, 'day').get('date') : moment().utc().get('date'))))
         .set('hours', dateTime && dateTime.length >= 1 ? Number(dateTime[1]) : 0)
@@ -318,7 +309,7 @@ export default class ForumMessageElement {
       // getDateWithDayNumber
       list.push(moment()
         .utc()
-        .set('years', (month < moment().utc().get('months') || day < moment().utc().get('date') ? moment().add(1, 'year').get('years') : moment().get('years')))
+        .set('years', moment().get('years'))
         .set('months', month)
         .set('date', day)
         .set('hours', dateTime && dateTime.length >= 1 ? Number(dateTime[3]) : 0)
@@ -328,7 +319,7 @@ export default class ForumMessageElement {
         .utcOffset(0));
       list.push(moment()
         .utc()
-        .set('years', (month < moment().utc().get('months') || day < moment().utc().get('date') ? moment().add(1, 'year').get('years') : moment().get('years')))
+        .set('years', moment().get('years'))
         .set('months', month)
         .set('date', day)
         .set('hours', dateTime && dateTime.length >= 1 ? Number(dateTime[5]) : 0)

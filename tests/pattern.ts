@@ -84,7 +84,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 13).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 13).get('months'))
           .set('date', getDateWithDayNumber(7, 13).get('date'))
           .set('hours', 12)
@@ -94,7 +94,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 13).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 13).get('months'))
           .set('date', getDateWithDayNumber(7, 13).get('date'))
           .set('hours', 20)
@@ -150,7 +150,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 21).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 21).get('months'))
           .set('date', getDateWithDayNumber(7, 21).get('date'))
           .set('hours', 8)
@@ -160,7 +160,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 21).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 21).get('months'))
           .set('date', getDateWithDayNumber(7, 21).get('date'))
           .set('hours', 12)
@@ -183,7 +183,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 21).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 21).get('months'))
           .set('date', getDateWithDayNumber(7, 21).get('date'))
           .set('hours', 8)
@@ -193,7 +193,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 21).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 21).get('months'))
           .set('date', getDateWithDayNumber(7, 21).get('date'))
           .set('hours', 16)
@@ -284,7 +284,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 23).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 23).get('months'))
           .set('date', getDateWithDayNumber(7, 23).get('date'))
           .set('hours', 12)
@@ -294,7 +294,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 23).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 23).get('months'))
           .set('date', getDateWithDayNumber(7, 23).get('date'))
           .set('hours', 16)
@@ -316,7 +316,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayIndex(1).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayIndex(1).get('months'))
           .set('date', getDateWithDayIndex(1).get('date'))
           .set('hours', 6)
@@ -339,7 +339,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 10)
@@ -349,7 +349,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 14)
@@ -372,7 +372,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 10)
@@ -382,7 +382,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 14)
@@ -405,7 +405,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 26).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 26).get('months'))
           .set('date', getDateWithDayNumber(7, 26).get('date'))
           .set('hours', 8)
@@ -415,7 +415,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 26).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 26).get('months'))
           .set('date', getDateWithDayNumber(7, 26).get('date'))
           .set('hours', 12)
@@ -438,7 +438,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 26).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 26).get('months'))
           .set('date', getDateWithDayNumber(7, 26).get('date'))
           .set('hours', 8)
@@ -448,7 +448,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 26).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 26).get('months'))
           .set('date', getDateWithDayNumber(7, 26).get('date'))
           .set('hours', 12)
@@ -471,7 +471,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 26).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 26).get('months'))
           .set('date', getDateWithDayNumber(7, 26).get('date'))
           .set('hours', 8)
@@ -481,7 +481,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 26).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 26).get('months'))
           .set('date', getDateWithDayNumber(7, 26).get('date'))
           .set('hours', 12)
@@ -504,7 +504,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 10)
@@ -514,7 +514,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 14)
@@ -537,7 +537,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 10)
@@ -547,7 +547,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 14)
@@ -570,7 +570,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 10)
@@ -580,7 +580,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 14)
@@ -603,7 +603,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 10)
@@ -613,7 +613,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(7, 28).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(7, 28).get('months'))
           .set('date', getDateWithDayNumber(7, 28).get('date'))
           .set('hours', 14)
@@ -635,7 +635,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 3).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 3).get('months'))
           .set('date', getDateWithDayNumber(8, 3).get('date'))
           .set('hours', 21)
@@ -645,7 +645,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 3).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 3).get('months'))
           .set('date', getDateWithDayNumber(8, 3).get('date'))
           .set('hours', 23)
@@ -667,7 +667,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 3).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 3).get('months'))
           .set('date', getDateWithDayNumber(8, 3).get('date'))
           .set('hours', 21)
@@ -677,7 +677,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 3).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 3).get('months'))
           .set('date', getDateWithDayNumber(8, 3).get('date'))
           .set('hours', 23)
@@ -699,7 +699,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 3).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 3).get('months'))
           .set('date', getDateWithDayNumber(8, 3).get('date'))
           .set('hours', 21)
@@ -709,7 +709,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 3).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 3).get('months'))
           .set('date', getDateWithDayNumber(8, 3).get('date'))
           .set('hours', 23)
@@ -732,7 +732,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 9).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 9).get('months'))
           .set('date', getDateWithDayNumber(8, 9).get('date'))
           .set('hours', 8)
@@ -742,7 +742,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .utcOffset(0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 9).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 9).get('months'))
           .set('date', getDateWithDayNumber(8, 9).get('date'))
           .set('hours', 11)
@@ -765,7 +765,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 8)
@@ -774,7 +774,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 12)
@@ -797,7 +797,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 8)
@@ -806,7 +806,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 16)
@@ -851,7 +851,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 9).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 9).get('months'))
           .set('date', getDateWithDayNumber(8, 9).get('date'))
           .set('hours', 8)
@@ -860,7 +860,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 9).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 9).get('months'))
           .set('date', getDateWithDayNumber(8, 9).get('date'))
           .set('hours', 11)
@@ -883,7 +883,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 9).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 9).get('months'))
           .set('date', getDateWithDayNumber(8, 9).get('date'))
           .set('hours', 8)
@@ -892,7 +892,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 9).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 9).get('months'))
           .set('date', getDateWithDayNumber(8, 9).get('date'))
           .set('hours', 11)
@@ -915,7 +915,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 8)
@@ -924,7 +924,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 12)
@@ -947,7 +947,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 8)
@@ -956,7 +956,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 16)
@@ -979,7 +979,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 8)
@@ -988,7 +988,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 12)
@@ -1011,7 +1011,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 8)
@@ -1020,7 +1020,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 11).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 11).get('months'))
           .set('date', getDateWithDayNumber(8, 11).get('date'))
           .set('hours', 16)
@@ -1043,7 +1043,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 12).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 12).get('months'))
           .set('date', getDateWithDayNumber(8, 12).get('date'))
           .set('hours', 14)
@@ -1052,7 +1052,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 12).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 12).get('months'))
           .set('date', getDateWithDayNumber(8, 12).get('date'))
           .set('hours', 16)
@@ -1074,7 +1074,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayIndex(1).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayIndex(1).get('months'))
           .set('date', getDateWithDayIndex(1).get('date'))
           .set('hours', 14)
@@ -1151,7 +1151,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithHours(19, 0).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithHours(19, 0).get('months'))
           .set('date', getDateWithHours(19, 0).get('date'))
           .set('hours', 19)
@@ -1242,7 +1242,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 7).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 7).get('months'))
           .set('date', getDateWithDayNumber(9, 7).get('date'))
           .set('hours', 8)
@@ -1251,7 +1251,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 7).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 7).get('months'))
           .set('date', getDateWithDayNumber(9, 7).get('date'))
           .set('hours', 14)
@@ -1272,7 +1272,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 7).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 7).get('months'))
           .set('date', getDateWithDayNumber(9, 7).get('date'))
           .set('hours', 8)
@@ -1281,7 +1281,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 7).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 7).get('months'))
           .set('date', getDateWithDayNumber(9, 7).get('date'))
           .set('hours', 16)
@@ -1302,7 +1302,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 14).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 14).get('months'))
           .set('date', getDateWithDayNumber(9, 14).get('date'))
           .set('hours', 7)
@@ -1311,7 +1311,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 14).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 14).get('months'))
           .set('date', getDateWithDayNumber(9, 14).get('date'))
           .set('hours', 14)
@@ -1332,7 +1332,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 14).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 14).get('months'))
           .set('date', getDateWithDayNumber(9, 14).get('date'))
           .set('hours', 7)
@@ -1341,7 +1341,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 14).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 14).get('months'))
           .set('date', getDateWithDayNumber(9, 14).get('date'))
           .set('hours', 14)
@@ -1362,7 +1362,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 14).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 14).get('months'))
           .set('date', getDateWithDayNumber(9, 14).get('date'))
           .set('hours', 7)
@@ -1371,7 +1371,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(9, 14).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(9, 14).get('months'))
           .set('date', getDateWithDayNumber(9, 14).get('date'))
           .set('hours', 14)
@@ -1539,7 +1539,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(12, 8).get('months'))
           .set('date', getDateWithDayNumber(12, 8).get('date'))
           .set('hours', 12)
@@ -1548,7 +1548,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(12, 8).get('months'))
           .set('date', getDateWithDayNumber(12, 8).get('date'))
           .set('hours', 20)
@@ -1569,7 +1569,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(12, 8).get('months'))
           .set('date', getDateWithDayNumber(12, 8).get('date'))
           .set('hours', 12)
@@ -1578,7 +1578,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(12, 8).get('months'))
           .set('date', getDateWithDayNumber(12, 8).get('date'))
           .set('hours', 20)
@@ -1599,7 +1599,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(12, 8).get('months'))
           .set('date', getDateWithDayNumber(12, 8).get('date'))
           .set('hours', 12)
@@ -1608,7 +1608,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(12, 8).get('months'))
           .set('date', getDateWithDayNumber(12, 8).get('date'))
           .set('hours', 23)
@@ -1629,7 +1629,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(12, 8).get('months'))
           .set('date', getDateWithDayNumber(12, 8).get('date'))
           .set('hours', 12)
@@ -1638,7 +1638,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(12, 8).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(12, 8).get('months'))
           .set('date', getDateWithDayNumber(12, 8).get('date'))
           .set('hours', 20)
@@ -1696,7 +1696,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 10).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 10).get('months'))
           .set('date', getDateWithDayNumber(1, 10).get('date'))
           .set('hours', 9)
@@ -1705,7 +1705,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 10).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 10).get('months'))
           .set('date', getDateWithDayNumber(1, 10).get('date'))
           .set('hours', 15)
@@ -1726,7 +1726,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 7)
@@ -1735,7 +1735,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 17)
@@ -1756,7 +1756,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 11)
@@ -1765,7 +1765,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 15)
@@ -1786,7 +1786,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 7)
@@ -1795,7 +1795,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 17)
@@ -1816,7 +1816,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 11)
@@ -1825,7 +1825,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 15)
@@ -1846,7 +1846,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 11)
@@ -1855,7 +1855,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 15)
@@ -1876,7 +1876,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 7)
@@ -1885,7 +1885,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 19).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 19).get('months'))
           .set('date', getDateWithDayNumber(1, 19).get('date'))
           .set('hours', 17)
@@ -1906,7 +1906,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 27).get('months'))
           .set('date', getDateWithDayNumber(1, 27).get('date'))
           .set('hours', 19)
@@ -1915,7 +1915,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 27).get('months'))
           .set('date', getDateWithDayNumber(1, 27).get('date'))
           .set('hours', 20)
@@ -1936,7 +1936,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 27).get('months'))
           .set('date', getDateWithDayNumber(1, 27).get('date'))
           .set('hours', 19)
@@ -1945,7 +1945,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 27).get('months'))
           .set('date', getDateWithDayNumber(1, 27).get('date'))
           .set('hours', 20)
@@ -1966,7 +1966,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 27).get('months'))
           .set('date', getDateWithDayNumber(1, 27).get('date'))
           .set('hours', 19)
@@ -1975,7 +1975,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(1, 27).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(1, 27).get('months'))
           .set('date', getDateWithDayNumber(1, 27).get('date'))
           .set('hours', 20)
@@ -1996,7 +1996,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithHours(18, 30).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithHours(18, 30).get('months'))
           .set('date', getDateWithHours(18, 30).get('date'))
           .set('hours', 18)
@@ -2040,7 +2040,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(2, 16).get('months'))
           .set('date', getDateWithDayNumber(2, 16).get('date'))
           .set('hours', 11)
@@ -2049,7 +2049,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(2, 16).get('months'))
           .set('date', getDateWithDayNumber(2, 16).get('date'))
           .set('hours', 15)
@@ -2070,7 +2070,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(2, 16).get('months'))
           .set('date', getDateWithDayNumber(2, 16).get('date'))
           .set('hours', 11)
@@ -2079,7 +2079,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(2, 16).get('months'))
           .set('date', getDateWithDayNumber(2, 16).get('date'))
           .set('hours', 15)
@@ -2100,7 +2100,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(2, 16).get('months'))
           .set('date', getDateWithDayNumber(2, 16).get('date'))
           .set('hours', 11)
@@ -2109,7 +2109,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(2, 16).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(2, 16).get('months'))
           .set('date', getDateWithDayNumber(2, 16).get('date'))
           .set('hours', 15)
@@ -2132,7 +2132,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 7).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 7).get('months'))
           .set('date', getDateWithDayNumber(8, 7).get('date'))
           .set('hours', 8)
@@ -2141,7 +2141,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 7).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 7).get('months'))
           .set('date', getDateWithDayNumber(8, 7).get('date'))
           .set('hours', 16)
@@ -2164,7 +2164,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       dates: [
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 7).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 7).get('months'))
           .set('date', getDateWithDayNumber(8, 7).get('date'))
           .set('hours', 8)
@@ -2173,7 +2173,7 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
           .set('milliseconds', 0),
         moment()
           .utc()
-          .set('years', getDateWithDayNumber(8, 7).get('years'))
+          .set('years', moment().get('years'))
           .set('months', getDateWithDayNumber(8, 7).get('months'))
           .set('date', getDateWithDayNumber(8, 7).get('date'))
           .set('hours', 16)
