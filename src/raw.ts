@@ -1,7 +1,7 @@
+import { RawEsoStatus } from '@eso-status/types';
 import StatusIdentifier from './identifier/status.identifier';
 import DateFormatter from './formatter/date.formatter';
 import SlugIdentifier from './identifier/slug.identifier';
-import Match from './match';
 import SlugMatch from './identifier/slug.match';
 import { SourceUrl } from './type/sourceUrl.type';
 
@@ -30,7 +30,7 @@ export default class Raw {
   /**
    * Liste des correspondances contenue dans l'annonce
    */
-  public matches: Match[] = [];
+  public matches: RawEsoStatus[] = [];
 
   /**
    * @param url Url servant de source pour récupérer les annonces de maintenance
@@ -53,22 +53,34 @@ export default class Raw {
    */
   private split(): void {
     this.matches = this.slugsIdentifier.slugMatches.map(
-      (slugMatch: SlugMatch): Match => this.getMatch(slugMatch),
+      (slugMatch: SlugMatch): RawEsoStatus => this.getRawEsoStatus(slugMatch),
     );
   }
 
   /**
-   * Méthode de création de la correspondance
-   * @param slugMatch
-   * @private
+   * Méthode de génération de l'objet RawEsoStatus
    */
-  private getMatch(slugMatch: SlugMatch): Match {
-    return new Match(
-      this.url,
-      this.raw,
-      this.statusIdentifier,
-      this.dateFormatter,
-      slugMatch,
-    );
+  private getRawEsoStatus(slugMatch: SlugMatch): RawEsoStatus {
+    const rawEsoStatus: RawEsoStatus = {
+      sources: [this.url],
+      raw: [this.raw],
+      slugs: [slugMatch.slug],
+      type: slugMatch.getType(),
+      support: slugMatch.getSupport(),
+      zone: slugMatch.getZone(),
+      status: this.statusIdentifier.status,
+      rawSlug: slugMatch.rawSlug,
+    };
+
+    if (this.dateFormatter.rawDate) {
+      rawEsoStatus.rawDate = this.dateFormatter.rawDate;
+      rawEsoStatus.dates = this.dateFormatter.dates;
+    }
+
+    if (this.statusIdentifier.rawStatus) {
+      rawEsoStatus.rawStatus = this.statusIdentifier.rawStatus;
+    }
+
+    return rawEsoStatus;
   }
 }

@@ -2,7 +2,6 @@ import axios, { AxiosResponse } from 'axios';
 import { RawEsoStatus } from '@eso-status/types';
 import { SourceUrl } from './type/sourceUrl.type';
 import { MessageType } from './type/messageType.type';
-import Match from './match';
 import Raw from './raw';
 
 /**
@@ -140,17 +139,8 @@ export default class Connector {
    * @private
    */
   private fetchEach(raw: string): void {
-    new Raw(this.url, raw).matches.forEach((match: Match): void =>
-      this.populateRawEsoStatus(match),
-    );
-  }
-
-  /**
-   * Méthode permettant de compléter la liste des données à renvoyer contenant les informations des annonces
-   * @param match Class contenant les informations d'une annonce
-   * @private
-   */
-  private populateRawEsoStatus(match: Match): void {
-    this.rawEsoStatus.push(match.getRawEsoStatus());
+    new Raw(this.url, raw).matches.forEach((match: RawEsoStatus): void => {
+      this.rawEsoStatus.push(match);
+    });
   }
 }
