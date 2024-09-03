@@ -5,5 +5,6 @@ export interface PatternItem {
   date: string;
   url: SourceUrl;
   file: string;
+  rawList: string[];
   expected: RawEsoStatus[];
 }

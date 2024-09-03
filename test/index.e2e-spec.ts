@@ -1,6 +1,7 @@
 import * as fs from 'node:fs';
 import axios from 'axios';
 import * as moment from 'moment';
+import Connector from 'src/connector';
 import pattern from './data/pattern';
 import ForumMessage from '../src';
 import { PatternItem } from './interface/patternItem.interface';
@@ -47,6 +48,30 @@ describe('ForumMessage (e2e)', (): void => {
 
       expect(await ForumMessage.getData(patternData.url)).toStrictEqual(
         patternData.expected,
+      );
+    },
+  );
+
+  it.each(pattern)(
+    'should pattern return raw list with ($file)',
+    async (patternData: PatternItem): Promise<void> => {
+      jest
+        .spyOn(axios, 'get')
+        .mockImplementation(
+          async (): Promise<{ status: number; data: string }> => {
+            const data: string = await fs.promises.readFile(
+              `${__dirname}/data/${patternData.file}`,
+              'utf8',
+            );
+            return Promise.resolve({
+              status: 200,
+              data,
+            });
+          },
+        );
+
+      expect((await Connector.init(patternData.url)).raw).toStrictEqual(
+        patternData.rawList,
       );
     },
   );

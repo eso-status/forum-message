@@ -12,7 +12,7 @@ export default class Connector {
    * Liste des données brutes des annonces
    * @private
    */
-  private raw: string[];
+  public raw: string[];
 
   /**
    * Liste des informations des annonces
@@ -120,7 +120,8 @@ export default class Connector {
     this.raw = this.raw.filter((raw: string): boolean => {
       return (
         !raw.includes('Maintenance for the week of ') &&
-        !raw.includes('• PC/Mac: No maintenance – ')
+        !raw.includes('• PC/Mac: No maintenance – ') &&
+        raw !== ''
       );
     });
   }
