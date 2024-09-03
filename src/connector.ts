@@ -20,7 +20,7 @@ export default class Connector {
   public rawEsoStatus: RawEsoStatus[];
 
   /**
-   * @param url Url servant de source pour récupérer les annonces de maintenance
+   * @param url Url servant de source pour récupérer les annonces
    * @param remoteContent Contenu de la source récupéré via url
    */
   constructor(
@@ -39,7 +39,7 @@ export default class Connector {
 
   /**
    * Méthode permettant de créer une instance du connecteur via une URL
-   * @param url Url servant de source pour récupérer les annonces de maintenance
+   * @param url Url servant de source pour récupérer les annonces
    */
   public static async init(url: SourceUrl): Promise<Connector> {
     return new Connector(url, await Connector.getRemoteContent(url));
@@ -47,7 +47,7 @@ export default class Connector {
 
   /**
    * Méthode permettant de récupérer le contenu distant via une URL
-   * @param url Url servant de source pour récupérer les annonces de maintenance
+   * @param url Url servant de source pour récupérer les annonces
    * @private
    */
   private static async getRemoteContent(url: string): Promise<string> {
@@ -59,7 +59,7 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de récupérer les annonces brutes de tous les niveaux d'annonces
+   * Méthode permettant de récupérer les annonces brutes pour tous les niveaux d'annonces
    * @private
    */
   private getMessages(): void {
@@ -127,7 +127,7 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de vérifier la présence d'information dans chaque annonce
+   * Méthode permettant d'analyser chaque annonce
    * @private
    */
   private fetch(): void {
@@ -135,7 +135,7 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de vérifier la présence d'information dans une annonce
+   * Méthode permettant de récupérer les informations contenue dans une annonce
    * @param raw Donnée brute de l'annonce
    * @private
    */

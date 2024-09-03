@@ -62,7 +62,7 @@ export default class StatusIdentifier {
   }
 
   /**
-   * Methode permettant de récupérer la liste des indicateurs pour un statut donnée
+   * Methode permettant de récupérer la liste des indicateurs d'un statut à tester
    * @param status Status à tester
    * @private
    */
@@ -71,7 +71,7 @@ export default class StatusIdentifier {
   }
 
   /**
-   * Méthode permettant de tester l'ensemble des statuts
+   * Méthode permettant de récupérer les indicateurs d'un statut présents dans l'annonce
    * @param status Status à tester
    * @private
    */
@@ -82,7 +82,7 @@ export default class StatusIdentifier {
   }
 
   /**
-   * Méthode permettant de tester un statut avec les indicateurs pour un statut donnée
+   * Méthode permettant de tester si l'annonce contient des indicateurs d'un statut donné
    * @param status Status à tester
    * @private
    */
@@ -94,6 +94,10 @@ export default class StatusIdentifier {
     }
   }
 
+  /**
+   * Méthode permettant de définir le statut par défaut à planned dans l'absence de présence d'indicateurs d'autre statut
+   * @private
+   */
   private default(): void {
     if (!this.status) {
       this.status = 'planned';

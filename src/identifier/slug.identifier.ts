@@ -126,7 +126,7 @@ export default class SlugIdentifier {
   }
 
   /**
-   * Methode permettant de récupérer la liste des indicateurs pour un slug donnée
+   * Methode permettant de récupérer la liste des indicateurs d'un slug à tester
    * @param slug Slug à tester
    * @private
    */
@@ -135,7 +135,7 @@ export default class SlugIdentifier {
   }
 
   /**
-   * Methode permettant de récupérer le nom de la liste des indicateurs pour un slug donnée
+   * Methode permettant de récupérer le nom de la liste des indicateurs d'un slug à tester
    * @param slug Slug à tester
    * @private
    */
@@ -150,7 +150,7 @@ export default class SlugIdentifier {
   }
 
   /**
-   * Méthode permettant de tester l'ensemble des slugs
+   * Méthode permettant de récupérer les indicateurs d'un slug présents dans l'annonce
    * @param slug Slug à tester
    * @private
    */
@@ -161,7 +161,7 @@ export default class SlugIdentifier {
   }
 
   /**
-   * Méthode permettant de tester un slug avec les indicateurs pour un slug donnée
+   * Méthode permettant de tester si l'annonce contient des indicateurs d'un slug donné
    * @param slug Slug à tester
    * @private
    */

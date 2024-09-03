@@ -28,12 +28,12 @@ export default class Raw {
   private slugsIdentifier: SlugIdentifier;
 
   /**
-   * Liste des correspondances contenue dans l'annonce
+   * Liste des informations sur les slugs trouvé dans l'annonce
    */
   public matches: RawEsoStatus[] = [];
 
   /**
-   * @param url Url servant de source pour récupérer les annonces de maintenance
+   * @param url Url servant de source pour récupérer les annonces
    * @param raw Donnée brute de l'annonce
    */
   constructor(
@@ -48,7 +48,7 @@ export default class Raw {
   }
 
   /**
-   * Méthode d'exploration des données des correspondances trouvée pour l'annonce
+   * Méthode de mise au format RawEsoStatus pour chaque slug trouvé dans l'annonce
    * @private
    */
   private split(): void {

@@ -23,9 +23,9 @@ export default class DateFormatter {
   }
 
   /**
-   * Methode permettant de récupérer la donnée brute de la date et la liste des dates en fonction du format de la date présente dans l'annonce
-   * Cas n°1 : L'annonce contient une date avec une heure de début et une heure de fin
-   * Cas N°2 : L'annonce contient le nom du prochain jour de la maintenance avec une heure de début
+   * Methode permettant de récupérer la date brute et la liste des dates présente dans l'annonce en fonction de son format
+   * Cas n°1 : L'annonce contient une date avec une heure/minute de début et de fin
+   * Cas N°2 : L'annonce contient le nom du prochain jour de la maintenance avec une heure/minute de début
    * @private
    */
   private checkFormat(): void {
@@ -42,7 +42,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la donnée brute de la date dans le cas N°1
+   * Méthode permettant de récupérer la date brute dans le cas N°1
    * @private
    */
   private getRawClassicDate(): string {
@@ -55,7 +55,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la donnée brute de la date dans le cas N°2
+   * Méthode permettant de récupérer la date brute dans le cas N°2
    * @private
    */
   private getRawSpecialDate(): string {
@@ -64,7 +64,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de générer la liste des dates pour le cas N°1
+   * Méthode permettant de générer la liste des dates mise au bon format pour le cas N°1
    * @private
    */
   private formatClassic(): Moment[] {
@@ -87,7 +87,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la valeur du numéro du mois dans le cas N°1
+   * Méthode permettant de récupérer le numéro du mois pour le cas N°1
    * @private
    */
   private getRawClassicMouth(): string {
@@ -95,7 +95,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la valeur du numéro jour dans le cas N°1
+   * Méthode permettant de récupérer le numéro du jour pour le cas N°1
    * @private
    */
   private getRawClassicDay(): number {
@@ -103,7 +103,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la valeur de l'heure dans les deux cas
+   * Méthode permettant de récupérer le numéro de l'heure dans une date brute
    * @private
    */
   private getRawHour(): number {
@@ -111,7 +111,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la valeur des minutes de l'heure de début dans le cas N°1
+   * Méthode permettant de récupérer le numéro des minutes de l'heure de début pour le cas N°1
    * @private
    */
   private getRawClassicMinute1(): number {
@@ -119,7 +119,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la valeur des heures de l'heure de fin dans le cas N°1
+   * Méthode permettant de récupérer le numéro de l'heure de fin dans le cas N°1
    * @private
    */
   private getRawClassicHour2(): number {
@@ -127,7 +127,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la valeur des minutes de l'heure de fin dans le cas N°1
+   * Méthode permettant de récupérer le numéro des minutes de l'heure de fin dans le cas N°1
    * @private
    */
   private getRawClassicMinute2(): number {
@@ -135,7 +135,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de générer la date dans le cas N°2
+   * Méthode permettant de générer la date mise au bon format dans le cas N°2
    * @private
    */
   private formatSpecial(): Moment[] {
@@ -154,7 +154,7 @@ export default class DateFormatter {
 
   /**
    * Méthode permettant de récupérer la date de la maintenance dans le cas N°2
-   * Le cas N°2 ne fournit pas de moi ni de jour, uniquement "mardi" ou "mercredi". Il faut donc regarder si ce jour de la semaine est passé dans la semaine en cours. Pour savoir si on doit ajouter ou non une semaine à la date de maintenance
+   * Le cas N°2 ne fournit pas de moi ni de jour (dans le sens pas de numéro du jour du mois), uniquement le nom du jour (lundi, mardi...). Il faut donc regarder si ce jour est passé dans la semaine en cours pour savoir si on doit ajouter ou non une semaine à la date de maintenance.
    * @private
    */
   private getSpecialDate(): Moment {
@@ -173,7 +173,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la valeur des minutes de l'heure dans le cas N°2
+   * Méthode permettant de récupérer le numéro des minutes de l'heure dans le cas N°2
    * @private
    */
   private getRawSpecialMinute(): number {
