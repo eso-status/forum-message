@@ -63,7 +63,7 @@
     "README.md"
   ],
   "engines": {
-    "node": "^16.10.0 || ^18.12.0 || >=20.0.0"
+    "node": ">=16.10.0 || >=18.12.0 || >=20.0.0"
   },
   "bugs": {
     "url": "https://github.com/eso-status/forum-message/issues"
