@@ -1,4 +1,4 @@
 /**
- * Différent slug des annonces concernant le server Xbox pour l'Europe
+ * Différent slug des annonces concernant le Mégaserveur européen Xbox
  */
 export type RemoteServerXboxEuRawSlug = 'Xbox: NA and EU megaservers for';
