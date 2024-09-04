@@ -3,7 +3,7 @@ import { RemoteDownRawStatus } from './remoteDownRawStatus.type';
 import { RemotePlannedRawStatus } from './remotePlannedRawStatus.type';
 
 /**
- * Différent status des annonces
+ * Different statuses of announcements
  */
 export type RemoteRawStatus =
   | RemoteUpRawStatus

@@ -1,5 +1,5 @@
 /**
- * Différente url servant de source pour récupérer les annonces de maintenance
+ * Different URLs serving as sources for retrieving maintenance announcements
  */
 export type SourceUrl =
   | 'https://forums.elderscrollsonline.com'

@@ -1,4 +1,4 @@
 /**
- * Différentes classes des messages d'annonce du forum ESO
+ * Different classes of announcement messages on the ESO forum
  */
 export type MessageType = 'WarningMessage' | 'AlertMessage';

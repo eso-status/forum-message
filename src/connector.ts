@@ -5,23 +5,22 @@ import { MessageType } from './type/messageType.type';
 import Raw from './raw';
 
 /**
- * Class permettant de récupérer les informations des annonces
+ * Class for retrieving information from announcements
  */
 export default class Connector {
   /**
-   * Liste des données brutes des annonces
-   * @private
+   * List of raw data from announcements
    */
   public raw: string[];
 
   /**
-   * Liste des informations des annonces
+   * List of information from announcements
    */
   public rawEsoStatus: RawEsoStatus[];
 
   /**
-   * @param url Url servant de source pour récupérer les annonces
-   * @param remoteContent Contenu de la source récupéré via url
+   * @param url URL used as the source to retrieve announcements
+   * @param remoteContent Content of the source retrieved via URL
    */
   constructor(
     private readonly url: SourceUrl,
@@ -38,16 +37,16 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de créer une instance du connecteur via une URL
-   * @param url Url servant de source pour récupérer les annonces
+   * Method for creating an instance of the connector via a URL
+   * @param url URL used as the source to retrieve announcements
    */
   public static async init(url: SourceUrl): Promise<Connector> {
     return new Connector(url, await Connector.getRemoteContent(url));
   }
 
   /**
-   * Méthode permettant de récupérer le contenu distant via une URL
-   * @param url Url servant de source pour récupérer les annonces
+   * Method for retrieving remote content via a URL
+   * @param url URL serving as the source for retrieving announcements
    * @private
    */
   private static async getRemoteContent(url: string): Promise<string> {
@@ -59,7 +58,7 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de récupérer les annonces brutes pour tous les niveaux d'annonces
+   * Method for retrieving raw announcements for all announcement levels
    * @private
    */
   private getMessages(): void {
@@ -69,7 +68,7 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de récupérer les annonces brutes en fonction du niveau de l'annonce
+   * Method for retrieving raw announcements based on the announcement level
    * @private
    */
   private getMessagesByType(type: MessageType): void {
@@ -87,7 +86,7 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de formater les données brutes des annonces récupérer
+   * Method for formatting the raw data of retrieved announcements
    * @private
    */
   private replace(): void {
@@ -99,7 +98,7 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de séparer chaque message d'annonce
+   * Method for separating each announcement message
    */
   private split(): void {
     const rawList: string[] = this.raw;
@@ -113,7 +112,7 @@ export default class Connector {
   }
 
   /**
-   * Methode permettant de supprimer les annonces inutiles
+   * Method for removing unnecessary announcements
    * @private
    */
   private filter(): void {
@@ -127,7 +126,7 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant d'analyser chaque annonce
+   * Method for analyzing each announcement
    * @private
    */
   private fetch(): void {
@@ -135,8 +134,8 @@ export default class Connector {
   }
 
   /**
-   * Méthode permettant de récupérer les informations contenue dans une annonce
-   * @param raw Donnée brute de l'annonce
+   * Method for retrieving the information contained in an announcement
+   * @param raw Raw data of the announcement
    * @private
    */
   private fetchEach(raw: string): void {

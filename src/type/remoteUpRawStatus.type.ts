@@ -1,4 +1,4 @@
 /**
- * Différent status des annonces indiquant que l'annonce indique un service/server accessible
+ * Different statuses of announcements indicating that the announcement refers to an accessible service/server
  */
 export type RemoteUpRawStatus = '[COMPLETE]' | 'now available' | 'complete';

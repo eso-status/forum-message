@@ -6,35 +6,35 @@ import SlugMatch from './identifier/slug.match';
 import { SourceUrl } from './type/sourceUrl.type';
 
 /**
- * Méthode de récupération des informations pour une annonce
+ * Class containing announcement information
  */
 export default class Raw {
   /**
-   * Classe d'identification du statut
+   * Status identification class
    * @private
    */
   private readonly statusIdentifier: StatusIdentifier;
 
   /**
-   * Classe d'identification et de mise au bon format de la/des dates
+   * Class for identifying and formatting the date(s)
    * @private
    */
   private readonly dateFormatter: DateFormatter;
 
   /**
-   * Classe d'identification de la liste des slugs
+   * Class for identifying the list of slugs
    * @private
    */
   private slugsIdentifier: SlugIdentifier;
 
   /**
-   * Liste des informations sur les slugs trouvé dans l'annonce
+   * List of information about slugs found in the announcement
    */
   public matches: RawEsoStatus[] = [];
 
   /**
-   * @param url Url servant de source pour récupérer les annonces
-   * @param raw Donnée brute de l'annonce
+   * @param url URL used as the source to retrieve announcements
+   * @param raw Raw data of the announcement
    */
   constructor(
     private url: SourceUrl,
@@ -48,7 +48,7 @@ export default class Raw {
   }
 
   /**
-   * Méthode de mise au format RawEsoStatus pour chaque slug trouvé dans l'annonce
+   * Method for formatting each slug found in the announcement to RawEsoStatus
    * @private
    */
   private split(): void {
@@ -58,7 +58,7 @@ export default class Raw {
   }
 
   /**
-   * Méthode de génération de l'objet RawEsoStatus
+   * Method for generating the RawEsoStatus object
    */
   private getRawEsoStatus(slugMatch: SlugMatch): RawEsoStatus {
     const rawEsoStatus: RawEsoStatus = {

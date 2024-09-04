@@ -2,30 +2,30 @@ import { Moment } from 'moment';
 import * as moment from 'moment';
 
 /**
- * Class permettant l'identification et la mise au bon format de la date contenu dans une annonce
+ * Class for identifying and formatting the date contained in an announcement
  */
 export default class DateFormatter {
   /**
-   * Donnée brute de la date contenue dans l'annonce
+   * Raw date data contained in the announcement
    */
   public rawDate: string;
 
   /**
-   * Liste des dates mise au bon format contenue dans l'annonce
+   * List of dates formatted correctly contained in the announcement
    */
   public dates: Moment[] | undefined;
 
   /**
-   * @param raw Donnée brute de l'annonce
+   * @param raw Raw data of the announcement
    */
   constructor(private readonly raw: string) {
     this.checkFormat();
   }
 
   /**
-   * Methode permettant de récupérer la date brute et la liste des dates présente dans l'annonce en fonction de son format
-   * Cas n°1 : L'annonce contient une date avec une heure/minute de début et de fin
-   * Cas N°2 : L'annonce contient le nom du prochain jour de la maintenance avec une heure/minute de début
+   * Method for retrieving the raw date and the list of dates present in the announcement based on its format
+   * Case #1: The announcement contains a date with a start and end time (hour/minute)
+   * Case #2: The announcement contains the name of the next maintenance day with a start time (hour/minute)
    * @private
    */
   private checkFormat(): void {
@@ -42,7 +42,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la date brute dans le cas N°1
+   * Method for retrieving the raw date in case #1
    * @private
    */
   private getRawClassicDate(): string {
@@ -55,7 +55,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la date brute dans le cas N°2
+   * Method for retrieving the raw date in case #2
    * @private
    */
   private getRawSpecialDate(): string {
@@ -64,7 +64,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de générer la liste des dates mise au bon format pour le cas N°1
+   * Method for generating the list of correctly formatted dates for case #1
    * @private
    */
   private formatClassic(): Moment[] {
@@ -87,7 +87,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer le numéro du mois pour le cas N°1
+   * Method for retrieving the month number for case #1
    * @private
    */
   private getRawClassicMouth(): string {
@@ -95,7 +95,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer le numéro du jour pour le cas N°1
+   * Method for retrieving the day number for case #1
    * @private
    */
   private getRawClassicDay(): number {
@@ -103,7 +103,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer le numéro de l'heure dans une date brute
+   * Method for retrieving the hour number from a raw date
    * @private
    */
   private getRawHour(): number {
@@ -111,7 +111,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer le numéro des minutes de l'heure de début pour le cas N°1
+   * Method for retrieving the minute number of the start time for case #1
    * @private
    */
   private getRawClassicMinute1(): number {
@@ -119,7 +119,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer le numéro de l'heure de fin dans le cas N°1
+   * Method for retrieving the end hour number in case #1
    * @private
    */
   private getRawClassicHour2(): number {
@@ -127,7 +127,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer le numéro des minutes de l'heure de fin dans le cas N°1
+   * Method for retrieving the minute number of the end time in case #1
    * @private
    */
   private getRawClassicMinute2(): number {
@@ -135,7 +135,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de générer la date mise au bon format dans le cas N°2
+   * Method for generating the correctly formatted date in case #2
    * @private
    */
   private formatSpecial(): Moment[] {
@@ -153,8 +153,8 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer la date de la maintenance dans le cas N°2
-   * Le cas N°2 ne fournit pas de moi ni de jour (dans le sens pas de numéro du jour du mois), uniquement le nom du jour (lundi, mardi...). Il faut donc regarder si ce jour est passé dans la semaine en cours pour savoir si on doit ajouter ou non une semaine à la date de maintenance.
+   * Method for retrieving the maintenance date in case #2
+   * Case #2 does not provide the month or day (i.e., no day number), only the name of the day (Monday, Tuesday, etc.). Therefore, you need to check if the day has already passed in the current week to determine whether to add a week to the maintenance date.
    * @private
    */
   private getSpecialDate(): Moment {
@@ -173,7 +173,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de récupérer le numéro des minutes de l'heure dans le cas N°2
+   * Method for retrieving the minute number of the time in case #2
    * @private
    */
   private getRawSpecialMinute(): number {
@@ -181,7 +181,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Méthode permettant de mettre au bon format une date
+   * Method for formatting a date correctly
    * @param year
    * @param month
    * @param day

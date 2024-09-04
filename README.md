@@ -34,10 +34,10 @@ import ForumMessage from '@eso-status/forum-message';
 import { RawEsoStatus } from '@eso-status/types';
 import { ForumMessageURL } from '@eso-status/forum-message/const';
 
-// Forum HomePage
+// Homepage data
 const rawEsoStatus: RawEsoStatus = await ForumMessage.getData();
 
-// Forum PTS Category
+// PTS category homepage data
 const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
 ```
 ### Return exemple

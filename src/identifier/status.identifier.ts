@@ -5,27 +5,27 @@ import { RemoteDownRawStatus } from '../type/remoteDownRawStatus.type';
 import { RemotePlannedRawStatus } from '../type/remotePlannedRawStatus.type';
 
 /**
- * Class permettant d'identifier le status contenu dans une annonce
+ * Class for identifying the status contained in an announcement
  */
 export default class StatusIdentifier {
   /**
-   * Donnée ayant permis d'identifier la présence du status dans l'annonce
+   * Data used to identify the presence of the status in the announcement
    */
   public rawStatus: RemoteRawStatus;
 
   /**
-   * Status trouvé dans l'annonce
+   * Status found in the announcement
    */
   public status: Status;
 
   /**
-   * Liste des status dont on doit tester la présence dans l'annonce
+   * List of statuses to check for presence in the announcement
    * @private
    */
   private readonly statusList: Status[] = ['up', 'down', 'planned'];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le status up
+   * List of indicators proving that the announcement pertains to the status up
    * @private
    */
   private readonly upMatchesList: RemoteUpRawStatus[] = [
@@ -35,7 +35,7 @@ export default class StatusIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le status down
+   * List of indicators proving that the announcement pertains to the status down
    * @private
    */
   private readonly downMatchesList: RemoteDownRawStatus[] = [
@@ -45,7 +45,7 @@ export default class StatusIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le status planned
+   * List of indicators proving that the announcement pertains to the status planned
    * @private
    */
   private readonly plannedMatchesList: RemotePlannedRawStatus[] = [
@@ -53,7 +53,7 @@ export default class StatusIdentifier {
   ];
 
   /**
-   * @param raw Donnée brute de l'annonce
+   * @param raw Raw data of the announcement
    */
   constructor(private readonly raw: string) {
     this.statusList.forEach((status: Status): void => this.identify(status));
@@ -62,8 +62,8 @@ export default class StatusIdentifier {
   }
 
   /**
-   * Methode permettant de récupérer la liste des indicateurs d'un statut à tester
-   * @param status Status à tester
+   * Method for retrieving the list of indicators for a status to test
+   * @param status Status to test
    * @private
    */
   private getMatchList(status: Status): RemoteRawStatus[] {
@@ -71,8 +71,8 @@ export default class StatusIdentifier {
   }
 
   /**
-   * Méthode permettant de récupérer les indicateurs d'un statut présents dans l'annonce
-   * @param status Status à tester
+   * Method for retrieving the indicators of a status present in the announcement
+   * @param status Status to test
    * @private
    */
   private getMatches(status: Status): RemoteRawStatus[] {
@@ -82,8 +82,8 @@ export default class StatusIdentifier {
   }
 
   /**
-   * Méthode permettant de tester si l'annonce contient des indicateurs d'un statut donné
-   * @param status Status à tester
+   * Method for testing if the announcement contains indicators of a given status
+   * @param status Status to test
    * @private
    */
   private identify(status: Status): void {
@@ -95,7 +95,7 @@ export default class StatusIdentifier {
   }
 
   /**
-   * Méthode permettant de définir le statut par défaut à planned dans l'absence de présence d'indicateurs d'autre statut
+   * Method for setting the default status to planned in the absence of indicators for other statuses
    * @private
    */
   private default(): void {

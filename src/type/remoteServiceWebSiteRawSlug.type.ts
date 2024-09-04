@@ -1,4 +1,4 @@
 /**
- * Différent slug des annonces concernant le service du site web
+ * Different slugs of announcements concerning the website service
  */
 export type RemoteServiceWebSiteRawSlug = 'ESO Website for';

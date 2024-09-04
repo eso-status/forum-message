@@ -1,5 +1,5 @@
 /**
- * Différent slug des annonces concernant le système de compte
+ * Different slugs of announcements concerning the account system
  */
 export type RemoteServiceSystemAccountRawSlug =
   'ESO Store and Account System for';

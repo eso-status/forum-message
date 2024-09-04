@@ -1,4 +1,4 @@
 /**
- * Différent status des annonces indiquant que l'annonce indique qu'un service/server sera prochainement en maintenance
+ * Different statuses of announcements indicating that the announcement refers to a service/server that will be undergoing maintenance soon
  */
 export type RemotePlannedRawStatus = 'We will be performing maintenance';

@@ -1,5 +1,5 @@
 /**
- * Différent slug des annonces concernant le Mégaserveur européen PC/Mac
+ * Different slugs of announcements concerning the European PC/Mac Megaserver
  */
 export type RemoteServerPcEuRawSlug =
   | 'PC/Mac: EU megaserver for'

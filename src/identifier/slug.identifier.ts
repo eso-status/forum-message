@@ -13,16 +13,16 @@ import { RemoteServiceWebSiteRawSlug } from '../type/remoteServiceWebSiteRawSlug
 import SlugMatch from './slug.match';
 
 /**
- * Class permettant d'identifier la liste des slugs contenu dans une annonce
+ * Class for identifying the list of slugs contained in an announcement
  */
 export default class SlugIdentifier {
   /**
-   * Liste des informations de slugs trouvé dans l'annonce
+   * List of slug information found in the announcement
    */
   public slugMatches: SlugMatch[];
 
   /**
-   * Liste des slugs dont on doit tester la présence dans l'annonce
+   * List of slugs to check for presence in the announcement
    * @private
    */
   private readonly slugList: Slug[] = [
@@ -39,7 +39,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_pc_eu
+   * List of indicators proving that the announcement pertains to the slug server_pc_eu
    * @private
    */
   private readonly ServerPcEuMatchesList: RemoteServerPcEuRawSlug[] = [
@@ -48,7 +48,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_pc_na
+   * List of indicators proving that the announcement pertains to the slug server_pc_na
    * @private
    */
   private readonly ServerPcNaMatchesList: RemoteServerPcNaRawSlug[] = [
@@ -57,13 +57,13 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_pc_pts
+   * List of indicators proving that the announcement pertains to the slug server_pc_pts
    * @private
    */
   private readonly ServerPcPtsMatchesList: RemoteServerPcPtsRawSlug[] = ['PTS'];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_ps_eu
+   * List of indicators proving that the announcement pertains to the slug server_ps_eu
    * @private
    */
   private readonly ServerPsEuMatchesList: RemoteServerPsEuRawSlug[] = [
@@ -71,7 +71,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_ps_na
+   * List of indicators proving that the announcement pertains to the slug server_ps_na
    * @private
    */
   private readonly ServerPsNaMatchesList: RemoteServerPsNaRawSlug[] = [
@@ -79,7 +79,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_xbox_eu
+   * List of indicators proving that the announcement pertains to the slug server_xbox_eu
    * @private
    */
   private readonly ServerXboxEuMatchesList: RemoteServerXboxEuRawSlug[] = [
@@ -87,7 +87,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug server_xbox_na
+   * List of indicators proving that the announcement pertains to the slug server_xbox_na
    * @private
    */
   private readonly ServerXboxNaMatchesList: RemoteServerXboxNaRawSlug[] = [
@@ -95,21 +95,21 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug service_store_eso
+   * List of indicators proving that the announcement pertains to the slug service_store_eso
    * @private
    */
   private readonly ServiceStoreEsoMatchesList: RemoteServiceStoreEsoRawSlug[] =
     ['ESO Store and Account System for'];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug service_system_account
+   * List of indicators proving that the announcement pertains to the slug service_system_account
    * @private
    */
   private readonly ServiceSystemAccountMatchesList: RemoteServiceSystemAccountRawSlug[] =
     ['ESO Store and Account System for'];
 
   /**
-   * Liste des indicateurs permettant de prouver que l'annonce concerne le slug service_web_site
+   * List of indicators proving that the announcement pertains to the slug service_web_site
    * @private
    */
   private readonly ServiceWebSiteMatchesList: RemoteServiceWebSiteRawSlug[] = [
@@ -117,7 +117,7 @@ export default class SlugIdentifier {
   ];
 
   /**
-   * @param raw Donnée brute de l'annonce
+   * @param raw Raw data of the announcement
    */
   constructor(private readonly raw: string) {
     this.slugMatches = [];
@@ -126,8 +126,8 @@ export default class SlugIdentifier {
   }
 
   /**
-   * Methode permettant de récupérer la liste des indicateurs d'un slug à tester
-   * @param slug Slug à tester
+   * Method for retrieving the list of indicators for a slug to test
+   * @param slug Slug to test
    * @private
    */
   private getMatchList(slug: Slug): RemoteRawSlug[] {
@@ -135,8 +135,8 @@ export default class SlugIdentifier {
   }
 
   /**
-   * Methode permettant de récupérer le nom de la liste des indicateurs d'un slug à tester
-   * @param slug Slug à tester
+   * Method for retrieving the name of the list of indicators for a slug to test
+   * @param slug Slug to test
    * @private
    */
   private static getMatchListName(slug: Slug): string {
@@ -150,8 +150,8 @@ export default class SlugIdentifier {
   }
 
   /**
-   * Méthode permettant de récupérer les indicateurs d'un slug présents dans l'annonce
-   * @param slug Slug à tester
+   * Method for retrieving the indicators of a slug present in the announcement
+   * @param slug Slug to test
    * @private
    */
   private getMatches(slug: Slug): RemoteRawSlug[] {
@@ -161,8 +161,8 @@ export default class SlugIdentifier {
   }
 
   /**
-   * Méthode permettant de tester si l'annonce contient des indicateurs d'un slug donné
-   * @param slug Slug à tester
+   * Method for testing if the announcement contains indicators of a given slug
+   * @param slug Slug to test
    * @private
    */
   private identify(slug: Slug): void {

@@ -7,7 +7,7 @@ import { RemoteServiceStoreEsoRawSlug } from './remoteServiceStoreEsoRawSlug.typ
 import { RemoteServiceWebSiteRawSlug } from './remoteServiceWebSiteRawSlug.type';
 
 /**
- * Différent slug des annonces
+ * Different slugs of announcements
  */
 export type RemoteRawSlug =
   | RemoteServerPcEuRawSlug

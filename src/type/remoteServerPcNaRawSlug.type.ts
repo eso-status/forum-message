@@ -1,5 +1,5 @@
 /**
- * Différent slug des annonces concernant le Mégaserveur nord-américain PC/Mac
+ * Different slugs of announcements concerning the North American PC/Mac Megaserver
  */
 export type RemoteServerPcNaRawSlug =
   | 'PC/Mac: NA megaserver for'
