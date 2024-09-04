@@ -13,7 +13,7 @@ export default class DateFormatter {
   /**
    * List of dates formatted correctly contained in the announcement
    */
-  public dates: Moment[] | undefined;
+  public dates: Moment[];
 
   /**
    * @param raw Raw data of the announcement

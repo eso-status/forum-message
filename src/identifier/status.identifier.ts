@@ -22,7 +22,11 @@ export default class StatusIdentifier {
    * List of statuses to check for presence in the announcement
    * @private
    */
-  private readonly statusList: Status[] = ['up', 'down', 'planned'];
+  private readonly statusList: Status[] = [
+    'up',
+    'down',
+    'planned',
+  ];
 
   /**
    * List of indicators proving that the announcement pertains to the status up
@@ -76,9 +80,7 @@ export default class StatusIdentifier {
    * @private
    */
   private getMatches(status: Status): RemoteRawStatus[] {
-    return this.getMatchList(status).filter(
-      (identifier: RemoteRawStatus): boolean => this.raw.includes(identifier),
-    );
+    return this.getMatchList(status).filter((identifier: RemoteRawStatus): boolean => this.raw.includes(identifier));
   }
 
   /**
@@ -88,10 +90,13 @@ export default class StatusIdentifier {
    */
   private identify(status: Status): void {
     const matches: RemoteRawStatus[] = this.getMatches(status);
-    if (matches.length > 0) {
-      this.rawStatus = matches.shift();
-      this.status = status;
+
+    if (!matches.length) {
+      return;
     }
+
+    this.rawStatus = matches.shift();
+    this.status = status;
   }
 
   /**

@@ -11,24 +11,18 @@ export default class Connector {
   /**
    * List of raw data from announcements
    */
-  public raw: string[];
+  public raw: string[] = [];
 
   /**
    * List of information from announcements
    */
-  public rawEsoStatus: RawEsoStatus[];
+  public rawEsoStatus: RawEsoStatus[] = [];
 
   /**
    * @param url URL used as the source to retrieve announcements
    * @param remoteContent Content of the source retrieved via URL
    */
-  constructor(
-    private readonly url: SourceUrl,
-    private readonly remoteContent: string,
-  ) {
-    this.raw = [];
-    this.rawEsoStatus = [];
-
+  constructor(private readonly url: SourceUrl, private readonly remoteContent: string) {
     this.getMessages();
     this.replace();
     this.split();
@@ -62,9 +56,7 @@ export default class Connector {
    * @private
    */
   private getMessages(): void {
-    ['WarningMessage', 'AlertMessage'].forEach((type: MessageType): void =>
-      this.getMessagesByType(type),
-    );
+    ['WarningMessage', 'AlertMessage'].forEach((type: MessageType): void => this.getMessagesByType(type));
   }
 
   /**
@@ -72,9 +64,7 @@ export default class Connector {
    * @private
    */
   private getMessagesByType(type: MessageType): void {
-    const split: string[] = this.remoteContent.split(
-      `<div class="DismissMessage ${type}">`,
-    );
+    const split: string[] = this.remoteContent.split(`<div class="DismissMessage ${type}">`);
     split.shift();
     split.forEach((item: string): void => {
       const result: string[] = item.split('</div>');

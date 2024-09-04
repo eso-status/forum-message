@@ -60,7 +60,9 @@ export default class SlugIdentifier {
    * List of indicators proving that the announcement pertains to the slug server_pc_pts
    * @private
    */
-  private readonly ServerPcPtsMatchesList: RemoteServerPcPtsRawSlug[] = ['PTS'];
+  private readonly ServerPcPtsMatchesList: RemoteServerPcPtsRawSlug[] = [
+    'PTS',
+  ];
 
   /**
    * List of indicators proving that the announcement pertains to the slug server_ps_eu
@@ -98,15 +100,17 @@ export default class SlugIdentifier {
    * List of indicators proving that the announcement pertains to the slug service_store_eso
    * @private
    */
-  private readonly ServiceStoreEsoMatchesList: RemoteServiceStoreEsoRawSlug[] =
-    ['ESO Store and Account System for'];
+  private readonly ServiceStoreEsoMatchesList: RemoteServiceStoreEsoRawSlug[] = [
+    'ESO Store and Account System for',
+  ];
 
   /**
    * List of indicators proving that the announcement pertains to the slug service_system_account
    * @private
    */
-  private readonly ServiceSystemAccountMatchesList: RemoteServiceSystemAccountRawSlug[] =
-    ['ESO Store and Account System for'];
+  private readonly ServiceSystemAccountMatchesList: RemoteServiceSystemAccountRawSlug[] = [
+    'ESO Store and Account System for',
+  ];
 
   /**
    * List of indicators proving that the announcement pertains to the slug service_web_site
@@ -142,10 +146,7 @@ export default class SlugIdentifier {
   private static getMatchListName(slug: Slug): string {
     return `${slug
       .split('_')
-      .map(
-        (item: Type | Support | Zone): string =>
-          item.charAt(0).toUpperCase() + item.slice(1),
-      )
+      .map((item: Type | Support | Zone): string => item.charAt(0).toUpperCase() + item.slice(1))
       .join('')}MatchesList`;
   }
 
@@ -155,9 +156,7 @@ export default class SlugIdentifier {
    * @private
    */
   private getMatches(slug: Slug): RemoteRawSlug[] {
-    return this.getMatchList(slug).filter(
-      (identifier: RemoteRawSlug): boolean => this.raw.includes(identifier),
-    );
+    return this.getMatchList(slug).filter((identifier: RemoteRawSlug): boolean => this.raw.includes(identifier));
   }
 
   /**
@@ -168,8 +167,10 @@ export default class SlugIdentifier {
   private identify(slug: Slug): void {
     const matches: RemoteRawSlug[] = this.getMatches(slug);
 
-    if (matches.length > 0) {
-      this.slugMatches.push(new SlugMatch(matches[0], slug));
+    if (!matches.length) {
+      return;
     }
+
+    this.slugMatches.push(new SlugMatch(matches[0], slug));
   }
 }
