@@ -1,4 +1,4 @@
-import { RawEsoStatus } from '../../src/interface/rawEsoStatus.interface';
+import { EsoStatusRawData } from '../../src/interface/esoStatusRawData.interface';
 import { SourceUrl } from '../../src/type/sourceUrl.type';
 
 export interface PatternItem {
@@ -6,5 +6,5 @@ export interface PatternItem {
   url: SourceUrl;
   file: string;
   rawList: string[];
-  expected: RawEsoStatus[];
+  expected: EsoStatusRawData[];
 }

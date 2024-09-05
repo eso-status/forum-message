@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import { SourceUrl } from './type/sourceUrl.type';
 import { MessageType } from './type/messageType.type';
 import Raw from './raw';
-import { RawEsoStatus } from './interface/rawEsoStatus.interface';
+import { EsoStatusRawData } from './interface/esoStatusRawData.interface';
 
 /**
  * Class for retrieving information from announcements
@@ -16,7 +16,7 @@ export default class Connector {
   /**
    * List of information from announcements
    */
-  public rawEsoStatus: RawEsoStatus[] = [];
+  public rawEsoStatus: EsoStatusRawData[] = [];
 
   /**
    * @param url URL used as the source to retrieve announcements
@@ -136,7 +136,7 @@ export default class Connector {
    * @private
    */
   private fetchEach(raw: string): void {
-    new Raw(this.url, raw).matches.forEach((match: RawEsoStatus): void => {
+    new Raw(this.url, raw).matches.forEach((match: EsoStatusRawData): void => {
       this.rawEsoStatus.push(match);
     });
   }

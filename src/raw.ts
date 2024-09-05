@@ -3,7 +3,7 @@ import DateFormatter from './formatter/date.formatter';
 import SlugIdentifier from './identifier/slug.identifier';
 import SlugMatch from './identifier/slug.match';
 import { SourceUrl } from './type/sourceUrl.type';
-import { RawEsoStatus } from './interface/rawEsoStatus.interface';
+import { EsoStatusRawData } from './interface/esoStatusRawData.interface';
 
 /**
  * Class containing announcement information
@@ -30,7 +30,7 @@ export default class Raw {
   /**
    * List of information about slugs found in the announcement
    */
-  public matches: RawEsoStatus[] = [];
+  public matches: EsoStatusRawData[] = [];
 
   /**
    * @param url URL used as the source to retrieve announcements
@@ -53,15 +53,16 @@ export default class Raw {
    */
   private split(): void {
     this.matches = this.slugsIdentifier.slugMatches.map(
-      (slugMatch: SlugMatch): RawEsoStatus => this.getRawEsoStatus(slugMatch),
+      (slugMatch: SlugMatch): EsoStatusRawData =>
+        this.getRawEsoStatus(slugMatch),
     );
   }
 
   /**
    * Method for generating the RawEsoStatus object
    */
-  private getRawEsoStatus(slugMatch: SlugMatch): RawEsoStatus {
-    const rawEsoStatus: RawEsoStatus = {
+  private getRawEsoStatus(slugMatch: SlugMatch): EsoStatusRawData {
+    const rawEsoStatus: EsoStatusRawData = {
       source: this.url,
       raw: this.raw,
       slug: slugMatch.slug,

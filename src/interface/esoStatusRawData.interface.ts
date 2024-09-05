@@ -4,16 +4,16 @@ import { SourceUrl } from '../type/sourceUrl.type';
 import { RemoteRawSlug } from '../type/remoteRawSlug.type';
 import { RemoteRawStatus } from '../type/remoteRawStatus.type';
 
-export interface RawEsoStatus {
+export interface EsoStatusRawData {
   source: SourceUrl;
   raw: string;
+  status: Status;
+  rawStatus?: RemoteRawStatus;
   slug: Slug;
-  rawDate?: string;
-  dates?: Moment[];
+  rawSlug: RemoteRawSlug;
   type: Type;
   support: Support;
   zone: Zone;
-  status: Status;
-  rawSlug: RemoteRawSlug;
-  rawStatus?: RemoteRawStatus;
+  dates?: Moment[];
+  rawDate?: string;
 }
