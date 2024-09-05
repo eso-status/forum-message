@@ -1,4 +1,4 @@
-import { EsoStatusRawData } from '@eso-status/types/lib/interface/esoStatusRawData.interface';
+import { EsoStatusRawData } from '@eso-status/types';
 import { ForumMessageURL } from './const';
 import { SourceUrl } from './type/sourceUrl.type';
 import Connector from './connector';

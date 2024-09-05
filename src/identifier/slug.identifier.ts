@@ -1,17 +1,19 @@
-import { Slug } from '@eso-status/types/lib/type/Slug.type';
-import { Type } from '@eso-status/types/lib/type/Type.type';
-import { Support } from '@eso-status/types/lib/type/Support.type';
-import { Zone } from '@eso-status/types/lib/type/Zone.type';
-import { ServerPcEuSlug } from '@eso-status/types/lib/const/slug/serverPcEuSlug.const';
-import { ServerPcNaSlug } from '@eso-status/types/lib/const/slug/serverPcNaSlug.const';
-import { ServerPcPtsSlug } from '@eso-status/types/lib/const/slug/serverPcPtsSlug.const';
-import { ServerPsEuSlug } from '@eso-status/types/lib/const/slug/serverPsEuSlug.const';
-import { ServerPsNaSlug } from '@eso-status/types/lib/const/slug/serverPsNaSlug.const';
-import { ServerXboxEuSlug } from '@eso-status/types/lib/const/slug/serverXboxEuSlug.const';
-import { ServerXboxNaSlug } from '@eso-status/types/lib/const/slug/serverXboxNaSlug.const';
-import { ServiceStoreEsoSlug } from '@eso-status/types/lib/const/slug/serviceStoreEsoSlug.const';
-import { ServiceSystemAccountSlug } from '@eso-status/types/lib/const/slug/serviceSystemAccountSlug.const';
-import { ServiceWebSiteSlug } from '@eso-status/types/lib/const/slug/serviceWebSiteSlug.const';
+import {
+  ServerPcEuSlug,
+  ServerPcNaSlug,
+  ServerPcPtsSlug,
+  ServerPsEuSlug,
+  ServerPsNaSlug,
+  ServerXboxEuSlug,
+  ServerXboxNaSlug,
+  ServiceStoreEsoSlug,
+  ServiceSystemAccountSlug,
+  ServiceWebSiteSlug,
+  Slug,
+  Support,
+  Type,
+  Zone,
+} from '@eso-status/types';
 import { RemoteRawSlug } from '../type/remoteRawSlug.type';
 import { RemoteServerPcNaRawSlug } from '../type/remoteServerPcNaRawSlug.type';
 import { RemoteServerPcEuRawSlug } from '../type/remoteServerPcEuRawSlug.type';

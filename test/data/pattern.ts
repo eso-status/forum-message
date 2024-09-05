@@ -1,32 +1,34 @@
 import * as moment from 'moment/moment';
 
-import { ServiceType } from '@eso-status/types/lib/const/type/serviceType.const';
-import { WebSupport } from '@eso-status/types/lib/const/support/webSupport.const';
-import { SiteZone } from '@eso-status/types/lib/const/zone/siteZone.const';
-import { PlannedStatus } from '@eso-status/types/lib/const/status/plannedStatus.const';
-import { DownStatus } from '@eso-status/types/lib/const/status/downStatus.const';
-import { UpStatus } from '@eso-status/types/lib/const/status/upStatus.const';
-import { ServerPcEuSlug } from '@eso-status/types/lib/const/slug/serverPcEuSlug.const';
-import { ServerType } from '@eso-status/types/lib/const/type/serverType.const';
-import { PcSupport } from '@eso-status/types/lib/const/support/pcSupport.const';
-import { EuZone } from '@eso-status/types/lib/const/zone/euZone.const';
-import { ServerPcNaSlug } from '@eso-status/types/lib/const/slug/serverPcNaSlug.const';
-import { NaZone } from '@eso-status/types/lib/const/zone/naZone.const';
-import { ServerXboxEuSlug } from '@eso-status/types/lib/const/slug/serverXboxEuSlug.const';
-import { XboxSupport } from '@eso-status/types/lib/const/support/xboxSupport.const';
-import { ServerXboxNaSlug } from '@eso-status/types/lib/const/slug/serverXboxNaSlug.const';
-import { ServerPsEuSlug } from '@eso-status/types/lib/const/slug/serverPsEuSlug.const';
-import { PsSupport } from '@eso-status/types/lib/const/support/psSupport.const';
-import { ServerPsNaSlug } from '@eso-status/types/lib/const/slug/serverPsNaSlug.const';
-import { ServiceStoreEsoSlug } from '@eso-status/types/lib/const/slug/serviceStoreEsoSlug.const';
-import { StoreSupport } from '@eso-status/types/lib/const/support/storeSupport.const';
-import { EsoZone } from '@eso-status/types/lib/const/zone/esoZone.const';
-import { ServiceSystemAccountSlug } from '@eso-status/types/lib/const/slug/serviceSystemAccountSlug.const';
-import { SystemSupport } from '@eso-status/types/lib/const/support/systemSupport.const';
-import { AccountZone } from '@eso-status/types/lib/const/zone/accountZone.const';
-import { ServerPcPtsSlug } from '@eso-status/types/lib/const/slug/serverPcPtsSlug.const';
-import { PtsZone } from '@eso-status/types/lib/const/zone/ptsZone.const';
-import { ServiceWebSiteSlug } from '@eso-status/types/lib/const/slug/serviceWebSiteSlug.const';
+import {
+  AccountZone,
+  DownStatus,
+  EsoZone,
+  EuZone,
+  NaZone,
+  PcSupport,
+  PlannedStatus,
+  PsSupport,
+  PtsZone,
+  ServerPcEuSlug,
+  ServerPcNaSlug,
+  ServerPcPtsSlug,
+  ServerPsEuSlug,
+  ServerPsNaSlug,
+  ServerType,
+  ServerXboxEuSlug,
+  ServerXboxNaSlug,
+  ServiceStoreEsoSlug,
+  ServiceSystemAccountSlug,
+  ServiceType,
+  ServiceWebSiteSlug,
+  SiteZone,
+  StoreSupport,
+  SystemSupport,
+  UpStatus,
+  WebSupport,
+  XboxSupport,
+} from '@eso-status/types';
 import { ForumMessagePTSURL, ForumMessageURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
 

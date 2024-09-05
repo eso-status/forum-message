@@ -1,7 +1,4 @@
-import { Status } from '@eso-status/types/lib/type/Status.type';
-import { UpStatus } from '@eso-status/types/lib/const/status/upStatus.const';
-import { DownStatus } from '@eso-status/types/lib/const/status/downStatus.const';
-import { PlannedStatus } from '@eso-status/types/lib/const/status/plannedStatus.const';
+import { DownStatus, PlannedStatus, Status, UpStatus } from '@eso-status/types';
 import { RemoteRawStatus } from '../type/remoteRawStatus.type';
 import { RemoteUpRawStatus } from '../type/remoteUpRawStatus.type';
 import { RemoteDownRawStatus } from '../type/remoteDownRawStatus.type';
