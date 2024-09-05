@@ -1,4 +1,4 @@
-import { RawEsoStatus } from '@eso-status/types/lib/interface/RawEsoStatus.interface';
+import { RawEsoStatus } from '@eso-status/types';
 import { ForumMessageURL } from './const';
 import { SourceUrl } from './type/sourceUrl.type';
 import Connector from './connector';

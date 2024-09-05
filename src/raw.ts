@@ -1,9 +1,9 @@
-import { RawEsoStatus } from '@eso-status/types/lib/interface/RawEsoStatus.interface';
 import StatusIdentifier from './identifier/status.identifier';
 import DateFormatter from './formatter/date.formatter';
 import SlugIdentifier from './identifier/slug.identifier';
 import SlugMatch from './identifier/slug.match';
 import { SourceUrl } from './type/sourceUrl.type';
+import { RawEsoStatus } from './interface/rawEsoStatus.interface';
 
 /**
  * Class containing announcement information

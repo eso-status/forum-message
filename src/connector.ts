@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
-import { RawEsoStatus } from '@eso-status/types/lib/interface/RawEsoStatus.interface';
 import { SourceUrl } from './type/sourceUrl.type';
 import { MessageType } from './type/messageType.type';
 import Raw from './raw';
+import { RawEsoStatus } from './interface/rawEsoStatus.interface';
 
 /**
  * Class for retrieving information from announcements

@@ -1,7 +1,4 @@
-import { Type } from '@eso-status/types/lib/type/Type.type';
-import { Support } from '@eso-status/types/lib/type/Support.type';
-import { Zone } from '@eso-status/types/lib/type/Zone.type';
-import { Slug } from '@eso-status/types/lib/type/Slug.type';
+import { Slug, Support, Type, Zone } from '@eso-status/types';
 import { RemoteRawSlug } from '../type/remoteRawSlug.type';
 import { RemoteServerPcNaRawSlug } from '../type/remoteServerPcNaRawSlug.type';
 import { RemoteServerPcEuRawSlug } from '../type/remoteServerPcEuRawSlug.type';

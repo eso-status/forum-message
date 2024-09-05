@@ -44,11 +44,9 @@ const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
 ```text
 [
   {
-    sources: [ 'https://forums.elderscrollsonline.com' ],
-    raw: [
-      '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)'
-    ],
-    slugs: [ 'server_pc_eu' ],
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+    slug: 'server_pc_eu',
     type: 'server',
     support: 'pc',
     zone: 'eu',
@@ -56,11 +54,9 @@ const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
     rawSlug: 'PC/Mac: NA and EU megaservers for'
   },
   {
-    sources: [ 'https://forums.elderscrollsonline.com' ],
-    raw: [
-      '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)'
-    ],
-    slugs: [ 'server_pc_na' ],
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+    slug: 'server_pc_na',
     type: 'server',
     support: 'pc',
     zone: 'na',
@@ -68,11 +64,9 @@ const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
     rawSlug: 'PC/Mac: NA and EU megaservers for'
   },
   {
-    sources: [ 'https://forums.elderscrollsonline.com' ],
-    raw: [
-      '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)'
-    ],
-    slugs: [ 'server_xbox_eu' ],
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    slug: 'server_xbox_eu',
     type: 'server',
     support: 'xbox',
     zone: 'eu',
@@ -82,11 +76,9 @@ const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
     dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
   },
   {
-    sources: [ 'https://forums.elderscrollsonline.com' ],
-    raw: [
-      '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)'
-    ],
-    slugs: [ 'server_xbox_na' ],
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    slug: 'server_xbox_na',
     type: 'server',
     support: 'xbox',
     zone: 'na',
@@ -96,11 +88,9 @@ const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
     dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
   },
   {
-    sources: [ 'https://forums.elderscrollsonline.com' ],
-    raw: [
-      '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)'
-    ],
-    slugs: [ 'server_ps_eu' ],
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    slug: 'server_ps_eu',
     type: 'server',
     support: 'ps',
     zone: 'eu',
@@ -110,11 +100,9 @@ const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
     dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
   },
   {
-    sources: [ 'https://forums.elderscrollsonline.com' ],
-    raw: [
-      '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)'
-    ],
-    slugs: [ 'server_ps_na' ],
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    slug: 'server_ps_na',
     type: 'server',
     support: 'ps',
     zone: 'na',
@@ -124,11 +112,9 @@ const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
     dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
   },
   {
-    sources: [ 'https://forums.elderscrollsonline.com' ],
-    raw: [
-      '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)'
-    ],
-    slugs: [ 'service_store_eso' ],
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    slug: 'service_store_eso',
     type: 'service',
     support: 'store',
     zone: 'eso',
@@ -138,11 +124,9 @@ const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
     dates: [ Moment<2024-09-04T14:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
   },
   {
-    sources: [ 'https://forums.elderscrollsonline.com' ],
-    raw: [
-      '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)'
-    ],
-    slugs: [ 'service_system_account' ],
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    slug: 'service_system_account',
     type: 'service',
     support: 'system',
     zone: 'account',
@@ -152,11 +136,9 @@ const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
     dates: [ Moment<2024-09-04T14:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
   },
   {
-    sources: [ 'https://forums.elderscrollsonline.com/en/categories/pts' ],
-    raw: [
-      'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC). '
-    ],
-    slugs: [ 'server_pc_pts' ],
+    source: 'https://forums.elderscrollsonline.com/en/categories/pts',
+    raw: 'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
+    slug: 'server_pc_pts',
     type: 'server',
     support: 'pc',
     zone: 'pts',

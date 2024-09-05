@@ -1,4 +1,4 @@
-import { Status } from '@eso-status/types/lib/type/Status.type';
+import { Status } from '@eso-status/types';
 import { RemoteRawStatus } from '../type/remoteRawStatus.type';
 import { RemoteUpRawStatus } from '../type/remoteUpRawStatus.type';
 import { RemoteDownRawStatus } from '../type/remoteDownRawStatus.type';

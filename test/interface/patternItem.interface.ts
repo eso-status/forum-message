@@ -1,4 +1,4 @@
-import { RawEsoStatus } from './rawEsoStatus.interface';
+import { RawEsoStatus } from '../../src/interface/rawEsoStatus.interface';
 import { SourceUrl } from '../../src/type/sourceUrl.type';
 
 export interface PatternItem {
