@@ -1,4 +1,4 @@
-import { RawEsoStatus } from '@eso-status/types';
+import { RawEsoStatus } from '@eso-status/types/lib/interface/RawEsoStatus.interface';
 import StatusIdentifier from './identifier/status.identifier';
 import DateFormatter from './formatter/date.formatter';
 import SlugIdentifier from './identifier/slug.identifier';
@@ -62,9 +62,9 @@ export default class Raw {
    */
   private getRawEsoStatus(slugMatch: SlugMatch): RawEsoStatus {
     const rawEsoStatus: RawEsoStatus = {
-      sources: [this.url],
-      raw: [this.raw],
-      slugs: [slugMatch.slug],
+      source: this.url,
+      raw: this.raw,
+      slug: slugMatch.slug,
       type: slugMatch.getType(),
       support: slugMatch.getSupport(),
       zone: slugMatch.getZone(),

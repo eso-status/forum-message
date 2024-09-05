@@ -26,11 +26,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• ESO Website for maintenance – August 15, 4:30PM EDT (20:30 UTC) - 7:30PM EDT (23:30 UTC)',
-        ],
-        slugs: ['service_web_site'],
+        source: ForumMessageURL,
+        raw: '• ESO Website for maintenance – August 15, 4:30PM EDT (20:30 UTC) - 7:30PM EDT (23:30 UTC)',
+        slug: 'service_web_site',
         type: 'service',
         support: 'web',
         zone: 'site',
@@ -71,11 +69,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] ESO Website for maintenance – August 15, 4:30PM EDT (20:30 UTC) - 7:30PM EDT (23:30 UTC)',
-        ],
-        slugs: ['service_web_site'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] ESO Website for maintenance – August 15, 4:30PM EDT (20:30 UTC) - 7:30PM EDT (23:30 UTC)',
+        slug: 'service_web_site',
         type: 'service',
         support: 'web',
         zone: 'site',
@@ -117,11 +113,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [COMPLETE] ESO Website for maintenance – August 15, 4:30PM EDT (20:30 UTC) - 7:30PM EDT (23:30 UTC)',
-        ],
-        slugs: ['service_web_site'],
+        source: ForumMessageURL,
+        raw: '• [COMPLETE] ESO Website for maintenance – August 15, 4:30PM EDT (20:30 UTC) - 7:30PM EDT (23:30 UTC)',
+        slug: 'service_web_site',
         type: 'service',
         support: 'web',
         zone: 'site',
@@ -165,11 +159,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessageURL,
+        raw: '• PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -200,11 +192,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessageURL,
+        raw: '• PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -235,11 +225,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -270,11 +258,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -305,11 +291,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -340,11 +324,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -387,11 +369,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -423,11 +403,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -459,11 +437,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -494,11 +470,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -529,11 +503,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -564,11 +536,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -611,11 +581,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [EXTENDED] PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessageURL,
+        raw: '• [EXTENDED] PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -647,11 +615,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [EXTENDED] PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessageURL,
+        raw: '• [EXTENDED] PC/Mac: NA and EU megaservers for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -683,11 +649,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -718,11 +682,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -753,11 +715,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -788,11 +748,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -836,11 +794,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [COMPLETE] PC/Mac: EU megaserver for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessageURL,
+        raw: '• [COMPLETE] PC/Mac: EU megaserver for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -872,11 +828,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [EXTENDED] PC/Mac: NA megaserver for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 14:00PM EDT (18:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessageURL,
+        raw: '• [EXTENDED] PC/Mac: NA megaserver for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 14:00PM EDT (18:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -908,11 +862,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -943,11 +895,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -978,11 +928,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -1013,11 +961,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -1061,11 +1007,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [COMPLETE] PC/Mac: EU megaserver for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessageURL,
+        raw: '• [COMPLETE] PC/Mac: EU megaserver for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -1097,11 +1041,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [COMPLETE] PC/Mac: NA megaserver for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 14:00PM EDT (18:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessageURL,
+        raw: '• [COMPLETE] PC/Mac: NA megaserver for patch maintenance – August 19, 4:00AM EDT (8:00 UTC) - 14:00PM EDT (18:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -1133,11 +1075,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -1168,11 +1108,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -1203,11 +1141,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -1238,11 +1174,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -1284,11 +1218,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '· [IN PROGRESS] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '· [IN PROGRESS] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -1320,11 +1252,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '· [IN PROGRESS] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '· [IN PROGRESS] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -1356,11 +1286,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '· [IN PROGRESS] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '· [IN PROGRESS] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -1392,11 +1320,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '· [IN PROGRESS] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '· [IN PROGRESS] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -1439,11 +1365,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '· [COMPLETE] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '· [COMPLETE] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -1475,11 +1399,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '· [COMPLETE] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '· [COMPLETE] Xbox: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -1511,11 +1433,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '· [COMPLETE] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '· [COMPLETE] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -1547,11 +1467,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '· [COMPLETE] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '· [COMPLETE] PlayStation®: NA and EU megaservers for maintenance – August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -1593,11 +1511,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessageURL,
+        raw: '• ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -1628,11 +1544,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessageURL,
+        raw: '• ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',
@@ -1673,11 +1587,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -1709,11 +1621,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',
@@ -1755,11 +1665,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [COMPLETE] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessageURL,
+        raw: '• [COMPLETE] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -1791,11 +1699,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [COMPLETE] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessageURL,
+        raw: '• [COMPLETE] ESO Store and Account System for maintenance – August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',
@@ -1837,11 +1743,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          'We will be performing maintenance on the PTS on Tuesday at 10:00AM EDT (14:00 UTC).',
-        ],
-        slugs: ['server_pc_pts'],
+        source: ForumMessagePTSURL,
+        raw: 'We will be performing maintenance on the PTS on Tuesday at 10:00AM EDT (14:00 UTC).',
+        slug: 'server_pc_pts',
         type: 'server',
         support: 'pc',
         zone: 'pts',
@@ -1871,9 +1775,9 @@ const pattern: PatternItem[] = [
     rawList: ['The PTS is currently unavailable while we perform maintenance.'],
     expected: [
       {
-        sources: [ForumMessagePTSURL],
-        raw: ['The PTS is currently unavailable while we perform maintenance.'],
-        slugs: ['server_pc_pts'],
+        source: ForumMessagePTSURL,
+        raw: 'The PTS is currently unavailable while we perform maintenance.',
+        slug: 'server_pc_pts',
         type: 'server',
         support: 'pc',
         zone: 'pts',
@@ -1890,9 +1794,9 @@ const pattern: PatternItem[] = [
     rawList: ['The maintenance is complete, and the PTS is now available.'],
     expected: [
       {
-        sources: [ForumMessagePTSURL],
-        raw: ['The maintenance is complete, and the PTS is now available.'],
-        slugs: ['server_pc_pts'],
+        source: ForumMessagePTSURL,
+        raw: 'The maintenance is complete, and the PTS is now available.',
+        slug: 'server_pc_pts',
         type: 'server',
         support: 'pc',
         zone: 'pts',
@@ -1915,11 +1819,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessagePTSURL,
+        raw: '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -1950,11 +1852,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessagePTSURL,
+        raw: '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -1985,11 +1885,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessagePTSURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -2021,11 +1919,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessagePTSURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -2057,11 +1953,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -2093,11 +1987,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -2129,11 +2021,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessagePTSURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -2165,11 +2055,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessagePTSURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',
@@ -2201,11 +2089,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
-        ],
-        slugs: ['server_pc_pts'],
+        source: ForumMessagePTSURL,
+        raw: 'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
+        slug: 'server_pc_pts',
         type: 'server',
         support: 'pc',
         zone: 'pts',
@@ -2240,11 +2126,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -2276,11 +2160,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -2312,11 +2194,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -2348,11 +2228,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -2384,11 +2262,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -2420,11 +2296,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -2456,11 +2330,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessageURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -2492,11 +2364,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessageURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',
@@ -2542,11 +2412,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
-        ],
-        slugs: ['server_pc_pts'],
+        source: ForumMessagePTSURL,
+        raw: 'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
+        slug: 'server_pc_pts',
         type: 'server',
         support: 'pc',
         zone: 'pts',
@@ -2568,11 +2436,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessagePTSURL,
+        raw: '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -2604,11 +2470,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessagePTSURL,
+        raw: '• [IN PROGRESS] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -2640,11 +2504,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessagePTSURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -2676,11 +2538,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessagePTSURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -2712,11 +2572,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -2748,11 +2606,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -2784,11 +2640,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessagePTSURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -2820,11 +2674,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessagePTSURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',
@@ -2869,11 +2721,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessageURL,
+        raw: '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -2905,11 +2755,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessageURL,
+        raw: '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -2941,11 +2789,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -2977,11 +2823,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -3013,11 +2857,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -3049,11 +2891,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -3085,11 +2925,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessageURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -3121,11 +2959,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessageURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',
@@ -3171,11 +3007,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
-        ],
-        slugs: ['server_pc_pts'],
+        source: ForumMessagePTSURL,
+        raw: 'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
+        slug: 'server_pc_pts',
         type: 'server',
         support: 'pc',
         zone: 'pts',
@@ -3197,11 +3031,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_eu'],
+        source: ForumMessagePTSURL,
+        raw: '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_eu',
         type: 'server',
         support: 'pc',
         zone: 'eu',
@@ -3233,11 +3065,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        ],
-        slugs: ['server_pc_na'],
+        source: ForumMessagePTSURL,
+        raw: '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
+        slug: 'server_pc_na',
         type: 'server',
         support: 'pc',
         zone: 'na',
@@ -3269,11 +3099,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessagePTSURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -3305,11 +3133,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessagePTSURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -3341,11 +3167,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -3377,11 +3201,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -3413,11 +3235,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessagePTSURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -3449,11 +3269,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessagePTSURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',
@@ -3495,11 +3313,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessagePTSURL],
-        raw: [
-          'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
-        ],
-        slugs: ['server_pc_pts'],
+        source: ForumMessagePTSURL,
+        raw: 'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
+        slug: 'server_pc_pts',
         type: 'server',
         support: 'pc',
         zone: 'pts',
@@ -3533,11 +3349,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -3570,11 +3384,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -3607,11 +3419,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -3644,11 +3454,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -3681,11 +3489,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          'ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessageURL,
+        raw: 'ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -3717,11 +3523,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          'ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessageURL,
+        raw: 'ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',
@@ -3765,11 +3569,9 @@ const pattern: PatternItem[] = [
     ],
     expected: [
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_eu'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_eu',
         type: 'server',
         support: 'xbox',
         zone: 'eu',
@@ -3802,11 +3604,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_xbox_na'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_xbox_na',
         type: 'server',
         support: 'xbox',
         zone: 'na',
@@ -3839,11 +3639,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_eu'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_eu',
         type: 'server',
         support: 'ps',
         zone: 'eu',
@@ -3876,11 +3674,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• [IN PROGRESS] PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['server_ps_na'],
+        source: ForumMessageURL,
+        raw: '• [IN PROGRESS] PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'server_ps_na',
         type: 'server',
         support: 'ps',
         zone: 'na',
@@ -3913,11 +3709,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_store_eso'],
+        source: ForumMessageURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_store_eso',
         type: 'service',
         support: 'store',
         zone: 'eso',
@@ -3949,11 +3743,9 @@ const pattern: PatternItem[] = [
         ],
       },
       {
-        sources: [ForumMessageURL],
-        raw: [
-          '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        ],
-        slugs: ['service_system_account'],
+        source: ForumMessageURL,
+        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: 'service_system_account',
         type: 'service',
         support: 'system',
         zone: 'account',

@@ -1,20 +1,23 @@
 import { Moment } from 'moment/moment';
-import { Slug, Status, Support, Type, Zone } from '@eso-status/types';
-import { RemoteRawStatus } from '../../src/type/remoteRawStatus.type';
-import { RemoteRawSlug } from '../../src/type/remoteRawSlug.type';
+import { Slug } from '@eso-status/types/lib/type/Slug.type';
+import { Type } from '@eso-status/types/lib/type/Type.type';
+import { Support } from '@eso-status/types/lib/type/Support.type';
+import { Zone } from '@eso-status/types/lib/type/Zone.type';
+import { Status } from '@eso-status/types/lib/type/Status.type';
 import { SourceUrl } from '../../src/type/sourceUrl.type';
+import { RemoteRawSlug } from '../../src/type/remoteRawSlug.type';
+import { RemoteRawStatus } from '../../src/type/remoteRawStatus.type';
 
 export interface RawEsoStatus {
-  sources: SourceUrl[];
-  raw: string[];
-  slugs?: Slug[];
+  source: SourceUrl;
+  raw: string;
+  slug: Slug;
   rawDate?: string;
-  rawData?: string;
   dates?: Moment[];
-  type?: Type;
-  support?: Support;
-  zone?: Zone;
-  status?: Status;
-  rawSlug?: RemoteRawSlug;
+  type: Type;
+  support: Support;
+  zone: Zone;
+  status: Status;
+  rawSlug: RemoteRawSlug;
   rawStatus?: RemoteRawStatus;
 }
