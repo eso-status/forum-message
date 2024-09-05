@@ -1,4 +1,19 @@
-import { Slug, Support, Type, Zone } from '@eso-status/types';
+import {
+  ServerPcEuSlug,
+  ServerPcNaSlug,
+  ServerPcPtsSlug,
+  ServerPsEuSlug,
+  ServerPsNaSlug,
+  ServerXboxEuSlug,
+  ServerXboxNaSlug,
+  ServiceStoreEsoSlug,
+  ServiceSystemAccountSlug,
+  ServiceWebSiteSlug,
+  Slug,
+  Support,
+  Type,
+  Zone,
+} from '@eso-status/types';
 import { RemoteRawSlug } from '../type/remoteRawSlug.type';
 import { RemoteServerPcNaRawSlug } from '../type/remoteServerPcNaRawSlug.type';
 import { RemoteServerPcEuRawSlug } from '../type/remoteServerPcEuRawSlug.type';
@@ -26,16 +41,16 @@ export default class SlugIdentifier {
    * @private
    */
   private readonly slugList: Slug[] = [
-    'server_pc_eu',
-    'server_pc_na',
-    'server_pc_pts',
-    'server_ps_eu',
-    'server_ps_na',
-    'server_xbox_eu',
-    'server_xbox_na',
-    'service_store_eso',
-    'service_system_account',
-    'service_web_site',
+    ServerPcEuSlug,
+    ServerPcNaSlug,
+    ServerPcPtsSlug,
+    ServerPsEuSlug,
+    ServerPsNaSlug,
+    ServerXboxEuSlug,
+    ServerXboxNaSlug,
+    ServiceStoreEsoSlug,
+    ServiceSystemAccountSlug,
+    ServiceWebSiteSlug,
   ];
 
   /**
