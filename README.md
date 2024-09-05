@@ -31,14 +31,14 @@ npm i @eso-status/forum-message
 ### Usage
 ```javascript
 import ForumMessage from '@eso-status/forum-message';
-import { RawEsoStatus } from '@eso-status/types';
-import { ForumMessageURL } from '@eso-status/forum-message/const';
+import { EsoStatusRawData } from '@eso-status/types';
+import { ForumMessagePTSURL } from '@eso-status/forum-message/const';
 
 // Homepage data
-const rawEsoStatus: RawEsoStatus = await ForumMessage.getData();
+const rawEsoStatus: EsoStatusRawData = await ForumMessage.getData();
 
 // PTS category homepage data
-const rawEsoStatus: RawEsoStatus = await ForumMessage.getData(ForumMessageURL);
+const rawEsoStatus: EsoStatusRawData = await ForumMessage.getData(ForumMessagePTSURL);
 ```
 ### Return exemple
 ```text
