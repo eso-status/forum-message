@@ -35,10 +35,10 @@ import { EsoStatusRawData } from '@eso-status/types';
 import { ForumMessagePTSURL } from '@eso-status/forum-message/const';
 
 // Homepage data
-const rawEsoStatus: EsoStatusRawData = await ForumMessage.getData();
+const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData();
 
 // PTS category homepage data
-const rawEsoStatus: EsoStatusRawData = await ForumMessage.getData(ForumMessagePTSURL);
+const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(ForumMessagePTSURL);
 ```
 ### Return exemple
 ```text

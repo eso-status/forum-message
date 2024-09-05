@@ -1,8 +1,12 @@
 import { Moment } from 'moment/moment';
-import { Slug, Status, Support, Type, Zone } from '@eso-status/types';
-import { SourceUrl } from '../type/sourceUrl.type';
-import { RemoteRawSlug } from '../type/remoteRawSlug.type';
+import { Status } from '@eso-status/types/lib/type/Status.type';
+import { Slug } from '@eso-status/types/lib/type/Slug.type';
+import { Type } from '@eso-status/types/lib/type/Type.type';
+import { Support } from '@eso-status/types/lib/type/Support.type';
+import { Zone } from '@eso-status/types/lib/type/Zone.type';
 import { RemoteRawStatus } from '../type/remoteRawStatus.type';
+import { RemoteRawSlug } from '../type/remoteRawSlug.type';
+import { SourceUrl } from '../type/sourceUrl.type';
 
 export interface EsoStatusRawData {
   source: SourceUrl;

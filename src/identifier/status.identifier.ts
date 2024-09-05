@@ -1,4 +1,7 @@
-import { Status } from '@eso-status/types';
+import { Status } from '@eso-status/types/lib/type/Status.type';
+import { UpStatus } from '@eso-status/types/lib/const/status/upStatus.const';
+import { DownStatus } from '@eso-status/types/lib/const/status/downStatus.const';
+import { PlannedStatus } from '@eso-status/types/lib/const/status/plannedStatus.const';
 import { RemoteRawStatus } from '../type/remoteRawStatus.type';
 import { RemoteUpRawStatus } from '../type/remoteUpRawStatus.type';
 import { RemoteDownRawStatus } from '../type/remoteDownRawStatus.type';
@@ -22,7 +25,7 @@ export default class StatusIdentifier {
    * List of statuses to check for presence in the announcement
    * @private
    */
-  private readonly statusList: Status[] = ['up', 'down', 'planned'];
+  private readonly statusList: Status[] = [UpStatus, DownStatus, PlannedStatus];
 
   /**
    * List of indicators proving that the announcement pertains to the status up
@@ -103,7 +106,7 @@ export default class StatusIdentifier {
    */
   private default(): void {
     if (!this.status) {
-      this.status = 'planned';
+      this.status = PlannedStatus;
     }
   }
 }
