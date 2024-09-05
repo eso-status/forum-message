@@ -1,10 +1,10 @@
 import * as fs from 'node:fs';
 import axios from 'axios';
 import * as moment from 'moment';
-import Connector from 'src/connector';
 import pattern from './data/pattern';
 import ForumMessage from '../src';
 import { PatternItem } from './interface/patternItem.interface';
+import Connector from '../src/connector';
 
 describe('ForumMessage (e2e)', (): void => {
   it.each(pattern)(

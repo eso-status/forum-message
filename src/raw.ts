@@ -36,7 +36,10 @@ export default class Raw {
    * @param url URL used as the source to retrieve announcements
    * @param raw Raw data of the announcement
    */
-  constructor(private url: SourceUrl, private raw: string) {
+  constructor(
+    private url: SourceUrl,
+    private raw: string,
+  ) {
     this.statusIdentifier = new StatusIdentifier(this.raw);
     this.dateFormatter = new DateFormatter(this.raw);
     this.slugsIdentifier = new SlugIdentifier(this.raw);
@@ -49,7 +52,9 @@ export default class Raw {
    * @private
    */
   private split(): void {
-    this.matches = this.slugsIdentifier.slugMatches.map((slugMatch: SlugMatch): RawEsoStatus => this.getRawEsoStatus(slugMatch));
+    this.matches = this.slugsIdentifier.slugMatches.map(
+      (slugMatch: SlugMatch): RawEsoStatus => this.getRawEsoStatus(slugMatch),
+    );
   }
 
   /**

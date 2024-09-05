@@ -1,6 +1,6 @@
 import * as moment from 'moment/moment';
-import { ForumMessagePTSURL, ForumMessageURL } from 'src/const';
 import { PatternItem } from '../interface/patternItem.interface';
+import { ForumMessagePTSURL, ForumMessageURL } from '../../src/const';
 
 const pattern: PatternItem[] = [
   {

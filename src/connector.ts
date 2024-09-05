@@ -22,7 +22,10 @@ export default class Connector {
    * @param url URL used as the source to retrieve announcements
    * @param remoteContent Content of the source retrieved via URL
    */
-  constructor(private readonly url: SourceUrl, private readonly remoteContent: string) {
+  constructor(
+    private readonly url: SourceUrl,
+    private readonly remoteContent: string,
+  ) {
     this.getMessages();
     this.replace();
     this.split();
@@ -56,7 +59,9 @@ export default class Connector {
    * @private
    */
   private getMessages(): void {
-    ['WarningMessage', 'AlertMessage'].forEach((type: MessageType): void => this.getMessagesByType(type));
+    ['WarningMessage', 'AlertMessage'].forEach((type: MessageType): void =>
+      this.getMessagesByType(type),
+    );
   }
 
   /**
@@ -64,7 +69,9 @@ export default class Connector {
    * @private
    */
   private getMessagesByType(type: MessageType): void {
-    const split: string[] = this.remoteContent.split(`<div class="DismissMessage ${type}">`);
+    const split: string[] = this.remoteContent.split(
+      `<div class="DismissMessage ${type}">`,
+    );
     split.shift();
     split.forEach((item: string): void => {
       const result: string[] = item.split('</div>');
