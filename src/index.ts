@@ -1,27 +1,28 @@
-import { RawEsoStatus } from '@eso-status/types';
-import ForumMessageConnector from './connectors/ForumMessageConnector';
-
-export const ForumMessageURL = 'https://forums.elderscrollsonline.com/';
-export const ForumMessagePTSURL = 'https://forums.elderscrollsonline.com/en/categories/pts';
+import { EsoStatusRawData } from '@eso-status/types';
+import { ForumMessageURL } from './const';
+import { SourceUrl } from './type/sourceUrl.type';
+import Connector from './connector';
 
 /**
- * Class of Forum Message
+ * Class for retrieving announcement information
  */
-export class ForumMessage {
+export default class ForumMessage {
   /**
-     * Methode used to get Forum Message data
-     *
-     * @public
-     * @static
-     *
-     * @return Promise<RawEsoStatus[]> Forum Message elements
-     */
-  public static async getData(url: string = ForumMessageURL): Promise<RawEsoStatus[]> {
-    const remoteContent: RawEsoStatus[] = await ForumMessageConnector.getRemoteContent(url);
-    const slugOfRawContent: RawEsoStatus[] = ForumMessageConnector.getRawContentWithSlug(remoteContent);
-    const rawContentBySlug: RawEsoStatus[] = ForumMessageConnector.splitRawContentBySlug(slugOfRawContent);
-    const rawContentWithRawDate: RawEsoStatus[] = ForumMessageConnector.getRawContentWithRawDate(rawContentBySlug);
-    const data: RawEsoStatus[] = ForumMessageConnector.getData(rawContentWithRawDate);
-    return ForumMessageConnector.sortData(data);
+   * Method for retrieving announcement information
+   */
+  public static async getData(): Promise<EsoStatusRawData[]>;
+
+  /**
+   * Method for retrieving announcement information from a specific URL
+   */
+  public static async getData(url: SourceUrl): Promise<EsoStatusRawData[]>;
+
+  /**
+   * Method for retrieving announcement information
+   * If no URL is provided as a parameter, the method will return announcement information for https://forums.elderscrollsonline.com
+   * @param url URL serving as the source to retrieve announcements
+   */
+  public static async getData(url?: SourceUrl): Promise<EsoStatusRawData[]> {
+    return (await Connector.init(url ?? ForumMessageURL)).rawEsoStatus;
   }
 }
