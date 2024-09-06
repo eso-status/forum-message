@@ -17,9 +17,6 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "allowJs": true,
-    "paths": {
-      "@eso-status/*": ["node_modules/@eso-status/*"]
-    }
+    "allowJs": true
   }
 }
