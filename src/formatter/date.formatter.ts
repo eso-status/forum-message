@@ -60,7 +60,7 @@ export default class DateFormatter {
    */
   private getRawSpecialDate(): string {
     const split: string[] = this.raw.split('on the PTS on ');
-    return split.length === 2 ? split[1] : '';
+    return split.length === 2 ? split[1].split('.')[0] : '';
   }
 
   /**
