@@ -148,7 +148,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         zone: 'pts',
         status: 'planned',
         rawSlug: 'PTS',
-        rawDate: 'Thursday at 9:00AM EDT (13:00 UTC).',
+        rawDate: 'Thursday at 9:00AM EDT (13:00 UTC)',
         rawStatus: 'We will be performing maintenance',
         dates: [ Moment<2024-09-05T13:00:00Z> ]
     }
