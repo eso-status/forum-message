@@ -31,6 +31,7 @@ import {
 } from '@eso-status/types';
 import { ForumMessagePTSURL, ForumMessageURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
+import pattern20240918 from './pattern20240918';
 
 const pattern: PatternItem[] = [
   {
@@ -7651,6 +7652,7 @@ const pattern: PatternItem[] = [
       },
     ],
   },
+  ...pattern20240918,
 ];
 
 export default pattern;
