@@ -32,6 +32,7 @@ import {
 import { ForumMessagePTSURL, ForumMessageURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
 import pattern20240918 from './pattern20240918';
+import pattern20240919 from './pattern20240919';
 
 const pattern: PatternItem[] = [
   {
@@ -7653,6 +7654,7 @@ const pattern: PatternItem[] = [
     ],
   },
   ...pattern20240918,
+  ...pattern20240919,
 ];
 
 export default pattern;
