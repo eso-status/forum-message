@@ -89,6 +89,7 @@ export default class Connector {
   private replace(): void {
     this.raw = this.raw.map((raw: string): string => {
       let initialRaw: string = raw;
+      initialRaw = initialRaw.replace(' 。', '');
       initialRaw = initialRaw.replace(/<br\/>\n/g, '<br>');
       initialRaw = initialRaw.replace('. <br>', '.<br>');
       if (!initialRaw.includes('. <')) {
