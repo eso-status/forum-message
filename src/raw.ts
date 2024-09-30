@@ -25,7 +25,7 @@ export default class Raw {
    * Class for identifying the list of slugs
    * @private
    */
-  private slugsIdentifier: SlugIdentifier;
+  private readonly slugsIdentifier: SlugIdentifier;
 
   /**
    * List of information about slugs found in the announcement
@@ -37,8 +37,8 @@ export default class Raw {
    * @param raw Raw data of the announcement
    */
   constructor(
-    private url: SourceUrl,
-    private raw: string,
+    private readonly url: SourceUrl,
+    private readonly raw: string,
   ) {
     this.statusIdentifier = new StatusIdentifier(this.raw);
     this.dateFormatter = new DateFormatter(this.raw);
