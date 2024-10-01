@@ -730,6 +730,220 @@ const pattern20241001: PatternItem[] = [
       },
     ],
   },
+  {
+    date: '2024-10-01T13_58_52',
+    url: ForumMessagePTSURL,
+    file: '2024-10-01T13_58_52.html',
+    rawList: [
+      '• [COMPLETE] PC/Mac: NA and EU megaservers for maintenance – September 30, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
+      '• Xbox: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+      '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    ],
+    expected: [
+      {
+        source: ForumMessagePTSURL,
+        raw: '• [COMPLETE] PC/Mac: NA and EU megaservers for maintenance – September 30, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
+        slug: ServerPcEuSlug,
+        type: ServerType,
+        support: PcSupport,
+        zone: EuZone,
+        status: UpStatus,
+        rawStatus: '[COMPLETE]',
+        rawSlug: 'PC/Mac: NA and EU megaservers for',
+        rawDate:
+          'September 30, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 30)
+            .set('hours', 8)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 30)
+            .set('hours', 14)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• [COMPLETE] PC/Mac: NA and EU megaservers for maintenance – September 30, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
+        slug: ServerPcNaSlug,
+        type: ServerType,
+        support: PcSupport,
+        zone: NaZone,
+        status: UpStatus,
+        rawStatus: '[COMPLETE]',
+        rawSlug: 'PC/Mac: NA and EU megaservers for',
+        rawDate:
+          'September 30, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 30)
+            .set('hours', 8)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 9 - 1)
+            .set('date', 30)
+            .set('hours', 14)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerXboxEuSlug,
+        type: ServerType,
+        support: XboxSupport,
+        zone: EuZone,
+        status: PlannedStatus,
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 10 - 1)
+            .set('date', 2)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 10 - 1)
+            .set('date', 2)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• Xbox: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerXboxNaSlug,
+        type: ServerType,
+        support: XboxSupport,
+        zone: NaZone,
+        status: PlannedStatus,
+        rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 10 - 1)
+            .set('date', 2)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 10 - 1)
+            .set('date', 2)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsEuSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: EuZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 10 - 1)
+            .set('date', 2)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 10 - 1)
+            .set('date', 2)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsNaSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: NaZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: [
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 10 - 1)
+            .set('date', 2)
+            .set('hours', 10)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+          moment()
+            .utc()
+            .set('years', 2024)
+            .set('months', 10 - 1)
+            .set('date', 2)
+            .set('hours', 16)
+            .set('minutes', 0)
+            .set('seconds', 0)
+            .set('milliseconds', 0)
+            .utcOffset(0),
+        ],
+      },
+    ],
+  },
 ];
 
 export default pattern20241001;
