@@ -102,15 +102,11 @@ export default class Connector {
         )[0];
       }
 
-      if (!initialRaw.includes('. <')) {
-        return initialRaw.replace('. ', '.');
-      }
-
       if (initialRaw.includes('. <a href')) {
         return initialRaw.split(' <a href')[0];
       }
 
-      return initialRaw;
+      return initialRaw.replace('. ', '.');
     });
   }
 
