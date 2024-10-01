@@ -16,12 +16,12 @@ const pattern20240910: PatternItem[] = [
     url: ForumMessagePTSURL,
     file: '2024-09-10T19_19_16.html',
     rawList: [
-      'We will be performing maintenance on the PTS on Wednesday at 9:00AM EDT (13:00 UTC). <a href="https://forums.elderscrollsonline.com/en/discussion/665106/pts-maintenance-sept-5-through-sept-6#latest" rel="nofollow">https://forums.elderscrollsonline.com/en/discussion/665106/pts-maintenance-sept-5-through-sept-6#latest</a>',
+      'We will be performing maintenance on the PTS on Wednesday at 9:00AM EDT (13:00 UTC).',
     ],
     expected: [
       {
         source: ForumMessagePTSURL,
-        raw: 'We will be performing maintenance on the PTS on Wednesday at 9:00AM EDT (13:00 UTC). <a href="https://forums.elderscrollsonline.com/en/discussion/665106/pts-maintenance-sept-5-through-sept-6#latest" rel="nofollow">https://forums.elderscrollsonline.com/en/discussion/665106/pts-maintenance-sept-5-through-sept-6#latest</a>',
+        raw: 'We will be performing maintenance on the PTS on Wednesday at 9:00AM EDT (13:00 UTC).',
         slug: ServerPcPtsSlug,
         type: ServerType,
         support: PcSupport,
@@ -50,12 +50,12 @@ const pattern20240910: PatternItem[] = [
     url: ForumMessagePTSURL,
     file: '2024-09-10T19_23_21.html',
     rawList: [
-      'We will be performing maintenance on the PTS on Wednesday at 9:00AM EDT (13:00 UTC). <a href="https://forums.elderscrollsonline.com/en/discussion/665349" rel="nofollow">https://forums.elderscrollsonline.com/en/discussion/665349</a>',
+      'We will be performing maintenance on the PTS on Wednesday at 9:00AM EDT (13:00 UTC).',
     ],
     expected: [
       {
         source: ForumMessagePTSURL,
-        raw: 'We will be performing maintenance on the PTS on Wednesday at 9:00AM EDT (13:00 UTC). <a href="https://forums.elderscrollsonline.com/en/discussion/665349" rel="nofollow">https://forums.elderscrollsonline.com/en/discussion/665349</a>',
+        raw: 'We will be performing maintenance on the PTS on Wednesday at 9:00AM EDT (13:00 UTC).',
         slug: ServerPcPtsSlug,
         type: ServerType,
         support: PcSupport,
