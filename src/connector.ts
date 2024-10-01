@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { IssuesStatus } from '@eso-status/types';
+import { IssuesStatus, UpStatus } from '@eso-status/types';
 import { SourceUrl } from './type/sourceUrl.type';
 import { MessageType } from './type/messageType.type';
 import Raw from './raw';
@@ -93,6 +93,7 @@ export default class Connector {
       initialRaw = initialRaw.replace(' 。', '');
       initialRaw = initialRaw.replace(/<br\/>\n/g, '<br>');
       initialRaw = initialRaw.replace('. <br>', '.<br>');
+      initialRaw = initialRaw.replace(' Thank you for your patience.', '');
 
       if (
         initialRaw.includes('. Please check here for status updates: <a href')
@@ -163,6 +164,18 @@ export default class Connector {
    */
   private fetchAll(matches: EsoStatusRawData[]): void {
     matches.forEach((match: EsoStatusRawData): void => {
+      const alreadyInList: boolean =
+        this.rawEsoStatus.filter(
+          (esoStatusRawData: EsoStatusRawData): boolean =>
+            esoStatusRawData.slug === match.slug,
+        ).length !== 0;
+
+      const alone: boolean =
+        matches.filter(
+          (esoStatusRawData: EsoStatusRawData): boolean =>
+            esoStatusRawData.slug === match.slug,
+        ).length === 1;
+
       const slugIsIssues: boolean =
         matches.filter(
           (esoStatusRawData: EsoStatusRawData): boolean =>
@@ -170,17 +183,21 @@ export default class Connector {
             esoStatusRawData.slug === match.slug,
         ).length !== 0;
 
-      const alreadyInList: boolean =
-        this.rawEsoStatus.filter(
+      const slugIsUp: boolean =
+        matches.filter(
           (esoStatusRawData: EsoStatusRawData): boolean =>
+            esoStatusRawData.status === UpStatus &&
             esoStatusRawData.slug === match.slug,
         ).length !== 0;
 
-      if (
-        (match.status !== IssuesStatus && !slugIsIssues && !alreadyInList) ||
-        (match.status === IssuesStatus && slugIsIssues && !alreadyInList)
-      ) {
-        this.rawEsoStatus.push(match);
+      if (!alreadyInList) {
+        if (
+          alone ||
+          (match.status === IssuesStatus && slugIsIssues) ||
+          (match.status === UpStatus && slugIsUp)
+        ) {
+          this.rawEsoStatus.push(match);
+        }
       }
     });
   }

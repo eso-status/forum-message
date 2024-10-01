@@ -83,7 +83,7 @@ export default class SlugIdentifier {
    */
   private readonly ServerPsEuMatchesList: RemoteServerPsEuRawSlug[] = [
     'PlayStation®: NA and EU megaservers for',
-    'The PlayStation™ Network is',
+    'The PlayStation™ Network',
   ];
 
   /**
@@ -92,7 +92,7 @@ export default class SlugIdentifier {
    */
   private readonly ServerPsNaMatchesList: RemoteServerPsNaRawSlug[] = [
     'PlayStation®: NA and EU megaservers for',
-    'The PlayStation™ Network is',
+    'The PlayStation™ Network',
   ];
 
   /**

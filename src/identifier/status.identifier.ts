@@ -44,6 +44,7 @@ export default class StatusIdentifier {
     '[COMPLETE]',
     'now available',
     'complete',
+    'been resolved',
   ];
 
   /**
