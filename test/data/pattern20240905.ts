@@ -32,13 +32,11 @@ const pattern20240905: PatternItem[] = [
     date: '2024-09-05T18_43_47',
     url: ForumMessagePTSURL,
     file: '2024-09-05T18_43_47.html',
-    rawList: [
-      'The PTS is currently unavailable while we perform maintenance. <a href="https://forums.elderscrollsonline.com/en/discussion/665106" rel="nofollow">https://forums.elderscrollsonline.com/en/discussion/665106</a>',
-    ],
+    rawList: ['The PTS is currently unavailable while we perform maintenance.'],
     expected: [
       {
         source: ForumMessagePTSURL,
-        raw: 'The PTS is currently unavailable while we perform maintenance. <a href="https://forums.elderscrollsonline.com/en/discussion/665106" rel="nofollow">https://forums.elderscrollsonline.com/en/discussion/665106</a>',
+        raw: 'The PTS is currently unavailable while we perform maintenance.',
         slug: ServerPcPtsSlug,
         type: ServerType,
         support: PcSupport,

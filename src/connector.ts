@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
+import { IssuesStatus } from '@eso-status/types';
 import { SourceUrl } from './type/sourceUrl.type';
 import { MessageType } from './type/messageType.type';
 import Raw from './raw';
@@ -59,7 +60,7 @@ export default class Connector {
    * @private
    */
   private getMessages(): void {
-    ['WarningMessage', 'AlertMessage'].forEach((type: MessageType): void =>
+    ['AlertMessage', 'WarningMessage'].forEach((type: MessageType): void =>
       this.getMessagesByType(type),
     );
   }
@@ -92,8 +93,21 @@ export default class Connector {
       initialRaw = initialRaw.replace(' 。', '');
       initialRaw = initialRaw.replace(/<br\/>\n/g, '<br>');
       initialRaw = initialRaw.replace('. <br>', '.<br>');
+
+      if (
+        initialRaw.includes('. Please check here for status updates: <a href')
+      ) {
+        return initialRaw.split(
+          ' Please check here for status updates: <a href',
+        )[0];
+      }
+
       if (!initialRaw.includes('. <')) {
         return initialRaw.replace('. ', '.');
+      }
+
+      if (initialRaw.includes('. <a href')) {
+        return initialRaw.split(' <a href')[0];
       }
 
       return initialRaw;
@@ -133,17 +147,45 @@ export default class Connector {
    * @private
    */
   private fetch(): void {
-    this.raw.forEach((raw: string): void => this.fetchEach(raw));
+    const matches: EsoStatusRawData[] = [];
+
+    this.raw.forEach((raw: string): void => {
+      new Raw(this.url, raw).matches.forEach(
+        (match: EsoStatusRawData): void => {
+          matches.push(match);
+        },
+      );
+    });
+
+    this.fetchAll(matches);
   }
 
   /**
-   * Method for retrieving the information contained in an announcement
-   * @param raw Raw data of the announcement
+   * Method to create the return list with all the data contained in the announcements, sorted by importance while avoiding duplicates
+   * @param matches List of all the data contained in the announcements
    * @private
    */
-  private fetchEach(raw: string): void {
-    new Raw(this.url, raw).matches.forEach((match: EsoStatusRawData): void => {
-      this.rawEsoStatus.push(match);
+  private fetchAll(matches: EsoStatusRawData[]): void {
+    matches.forEach((match: EsoStatusRawData): void => {
+      const slugIsIssues: boolean =
+        matches.filter(
+          (esoStatusRawData: EsoStatusRawData): boolean =>
+            esoStatusRawData.status === IssuesStatus &&
+            esoStatusRawData.slug === match.slug,
+        ).length !== 0;
+
+      const alreadyInList: boolean =
+        this.rawEsoStatus.filter(
+          (esoStatusRawData: EsoStatusRawData): boolean =>
+            esoStatusRawData.slug === match.slug,
+        ).length !== 0;
+
+      if (
+        (match.status !== IssuesStatus && !slugIsIssues && !alreadyInList) ||
+        (match.status === IssuesStatus && slugIsIssues && !alreadyInList)
+      ) {
+        this.rawEsoStatus.push(match);
+      }
     });
   }
 }

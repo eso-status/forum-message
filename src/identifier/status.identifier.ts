@@ -1,8 +1,15 @@
-import { DownStatus, PlannedStatus, Status, UpStatus } from '@eso-status/types';
+import {
+  DownStatus,
+  IssuesStatus,
+  PlannedStatus,
+  Status,
+  UpStatus,
+} from '@eso-status/types';
 import { RemoteRawStatus } from '../type/remoteRawStatus.type';
 import { RemoteUpRawStatus } from '../type/remoteUpRawStatus.type';
 import { RemoteDownRawStatus } from '../type/remoteDownRawStatus.type';
 import { RemotePlannedRawStatus } from '../type/remotePlannedRawStatus.type';
+import { RemoteIssuesRawStatus } from '../type/remoteIssuesRawStatus.type';
 
 /**
  * Class for identifying the status contained in an announcement
@@ -22,7 +29,12 @@ export default class StatusIdentifier {
    * List of statuses to check for presence in the announcement
    * @private
    */
-  private readonly statusList: Status[] = [UpStatus, DownStatus, PlannedStatus];
+  private readonly statusList: Status[] = [
+    UpStatus,
+    DownStatus,
+    PlannedStatus,
+    IssuesStatus,
+  ];
 
   /**
    * List of indicators proving that the announcement pertains to the status up
@@ -50,6 +62,14 @@ export default class StatusIdentifier {
    */
   private readonly plannedMatchesList: RemotePlannedRawStatus[] = [
     'We will be performing maintenance',
+  ];
+
+  /**
+   * List of indicators proving that the announcement pertains to the status issues
+   * @private
+   */
+  private readonly issuesMatchesList: RemoteIssuesRawStatus[] = [
+    'is currently experiencing a service interruption',
   ];
 
   /**
