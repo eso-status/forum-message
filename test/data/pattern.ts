@@ -22,6 +22,8 @@ import pattern20240923 from './pattern20240923';
 import pattern20240927 from './pattern20240927';
 import pattern20240930 from './pattern20240930';
 import pattern20241001 from './pattern20241001';
+import pattern20241002 from './pattern20241002';
+import pattern20241004 from './pattern20241004';
 
 const pattern: PatternItem[] = [
   ...pattern20240814,
@@ -47,6 +49,8 @@ const pattern: PatternItem[] = [
   ...pattern20240927,
   ...pattern20240930,
   ...pattern20241001,
+  ...pattern20241002,
+  ...pattern20241004,
 ];
 
 export default pattern;

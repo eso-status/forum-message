@@ -19,6 +19,8 @@
     "lib/type/messageType.type.js",
     "lib/type/remoteDownRawStatus.type.d.ts",
     "lib/type/remoteDownRawStatus.type.js",
+    "lib/type/remoteIssuesRawStatus.type.d.ts",
+    "lib/type/remoteIssuesRawStatus.type.js",
     "lib/type/remotePlannedRawStatus.type.d.ts",
     "lib/type/remotePlannedRawStatus.type.js",
     "lib/type/remoteRawSlug.type.d.ts",
