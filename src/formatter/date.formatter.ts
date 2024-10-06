@@ -107,37 +107,14 @@ export default class DateFormatter {
    * @private
    */
   private getRawHour(): number {
-    if (this.isUTCHour()) {
-      return this.getRawUTCHour();
-    }
-    return this.getRawNoUTCHour();
-  }
-
-  /**
-   * Method to check if the time in parentheses is in UTC or not
-   * @private
-   */
-  private isUTCHour(): boolean {
-    return (
-      this.rawDate.split(' UTC)').length === 3 ||
-      this.rawDate.split(' UTC)').length === 2
+    return Number(
+      this.rawDate
+        .split(' UTC')[0]
+        .split(' ')
+        .pop()
+        .split(':')[0]
+        .replace('(', ''),
     );
-  }
-
-  /**
-   * Method to retrieve the time when it is in UTC
-   * @private
-   */
-  private getRawUTCHour(): number {
-    return Number(this.rawDate.split('(')[1].split(':')[0]);
-  }
-
-  /**
-   * Method for retrieving the time when it is not in UTC
-   * @private
-   */
-  private getRawNoUTCHour(): number {
-    return Number(this.rawDate.split(':')[0].split(', ')[1]);
   }
 
   /**
@@ -145,7 +122,7 @@ export default class DateFormatter {
    * @private
    */
   private getRawClassicMinute1(): number {
-    return Number(this.rawDate.split('(')[1].split(':')[1].split(' ')[0]);
+    return Number(this.rawDate.split(' UTC')[0].split(':').pop());
   }
 
   /**
@@ -153,34 +130,14 @@ export default class DateFormatter {
    * @private
    */
   private getRawClassicHour2(): number {
-    if (this.isUTCClassicHour2()) {
-      return this.getRawUTCClassicHour2();
-    }
-    return this.getRawNoUTCClassicHour2();
-  }
-
-  /**
-   * Method to check if the second time in parentheses is in UTC or not
-   * @private
-   */
-  private isUTCClassicHour2(): boolean {
-    return this.rawDate.split(' UTC)').length === 3;
-  }
-
-  /**
-   * Method to retrieve the second time when it is in UTC
-   * @private
-   */
-  private getRawUTCClassicHour2(): number {
-    return Number(this.rawDate.split('(')[2].split(':')[0]);
-  }
-
-  /**
-   * Method to retrieve the second time when it is not in UTC
-   * @private
-   */
-  private getRawNoUTCClassicHour2(): number {
-    return Number(this.rawDate.split(' - ')[1].split(':')[0]);
+    return Number(
+      this.rawDate
+        .split(' UTC')[1]
+        .split(' ')
+        .pop()
+        .split(':')[0]
+        .replace('(', ''),
+    );
   }
 
   /**
@@ -188,7 +145,7 @@ export default class DateFormatter {
    * @private
    */
   private getRawClassicMinute2(): number {
-    return Number(this.rawDate.split('(')[2].split(':')[1].split(' ')[0]);
+    return Number(this.rawDate.split(' UTC')[1].split(':').pop());
   }
 
   /**
