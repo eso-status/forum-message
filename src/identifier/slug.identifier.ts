@@ -101,6 +101,7 @@ export default class SlugIdentifier {
    */
   private readonly ServerXboxEuMatchesList: RemoteServerXboxEuRawSlug[] = [
     'Xbox: NA and EU megaservers for',
+    'Xbox: EU megaserver for',
   ];
 
   /**
