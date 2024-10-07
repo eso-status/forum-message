@@ -1,5 +1,3 @@
-import * as moment from 'moment/moment';
-
 import {
   DownStatus,
   EuZone,
@@ -42,28 +40,7 @@ const pattern20240918: PatternItem[] = [
         rawSlug: 'PC/Mac: NA and EU megaservers for',
         rawStatus: '[COMPLETE]',
         rawDate: 'September 16, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 16)
-            .set('hours', 8)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 16)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-16T08:00:00.000Z', '2024-09-16T13:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -76,28 +53,7 @@ const pattern20240918: PatternItem[] = [
         rawSlug: 'PC/Mac: NA and EU megaservers for',
         rawStatus: '[COMPLETE]',
         rawDate: 'September 16, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 16)
-            .set('hours', 8)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 16)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-16T08:00:00.000Z', '2024-09-16T13:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -110,28 +66,7 @@ const pattern20240918: PatternItem[] = [
         rawSlug: 'Xbox: NA and EU megaservers for',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -144,28 +79,7 @@ const pattern20240918: PatternItem[] = [
         rawSlug: 'Xbox: NA and EU megaservers for',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -178,28 +92,7 @@ const pattern20240918: PatternItem[] = [
         rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -212,28 +105,7 @@ const pattern20240918: PatternItem[] = [
         rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
     ],
   },
@@ -265,28 +137,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[IN PROGRESS]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -300,28 +151,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[IN PROGRESS]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -335,28 +165,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[IN PROGRESS]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -370,28 +179,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[IN PROGRESS]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
     ],
   },
@@ -416,28 +204,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[IN PROGRESS]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -451,28 +218,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[IN PROGRESS]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -486,28 +232,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[IN PROGRESS]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -521,28 +246,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[IN PROGRESS]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
     ],
   },
@@ -567,28 +271,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[COMPLETE]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -602,28 +285,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[COMPLETE]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -637,28 +299,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[COMPLETE]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -672,28 +313,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[COMPLETE]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
     ],
   },
@@ -718,28 +338,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[COMPLETE]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -753,28 +352,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[COMPLETE]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -788,28 +366,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[COMPLETE]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -823,28 +380,7 @@ const pattern20240918: PatternItem[] = [
         rawStatus: '[COMPLETE]',
         rawDate:
           'September 18, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 18)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-18T10:00:00.000Z', '2024-09-18T16:00:00.000Z'],
       },
     ],
   },

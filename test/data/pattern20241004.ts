@@ -8,7 +8,6 @@ import {
   ServerXboxEuSlug,
   XboxSupport,
 } from '@eso-status/types';
-import * as moment from 'moment';
 import { PatternItem } from '../interface/patternItem.interface';
 import { ForumMessagePTSURL, ForumMessageURL } from '../../src/const';
 
@@ -33,28 +32,7 @@ const pattern20241004: PatternItem[] = [
         rawSlug: 'Xbox: EU megaserver for',
         rawDate:
           'October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 10 - 1)
-            .set('date', 9)
-            .set('hours', 2)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 10 - 1)
-            .set('date', 9)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-10-09T02:00:00.000Z', '2024-10-09T16:00:00.000Z'],
       },
       {
         source: ForumMessagePTSURL,
@@ -67,18 +45,7 @@ const pattern20241004: PatternItem[] = [
         rawStatus: 'We will be performing maintenance',
         rawSlug: 'PTS',
         rawDate: 'Monday at 10:00AM EDT (14:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 10 - 1)
-            .set('date', 7)
-            .set('hours', 14)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-10-07T14:00:00.000Z'],
       },
     ],
   },
@@ -101,28 +68,7 @@ const pattern20241004: PatternItem[] = [
         rawSlug: 'Xbox: EU megaserver for',
         rawDate:
           'October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 10 - 1)
-            .set('date', 9)
-            .set('hours', 2)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 10 - 1)
-            .set('date', 9)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-10-09T02:00:00.000Z', '2024-10-09T16:00:00.000Z'],
       },
     ],
   },

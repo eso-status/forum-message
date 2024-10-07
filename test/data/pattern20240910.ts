@@ -1,5 +1,3 @@
-import * as moment from 'moment/moment';
-
 import {
   PcSupport,
   PlannedStatus,
@@ -30,18 +28,7 @@ const pattern20240910: PatternItem[] = [
         rawSlug: 'PTS',
         rawStatus: 'We will be performing maintenance',
         rawDate: 'Wednesday at 9:00AM EDT (13:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 11)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-11T13:00:00.000Z'],
       },
     ],
   },
@@ -64,18 +51,7 @@ const pattern20240910: PatternItem[] = [
         rawSlug: 'PTS',
         rawStatus: 'We will be performing maintenance',
         rawDate: 'Wednesday at 9:00AM EDT (13:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 9 - 1)
-            .set('date', 11)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-09-11T13:00:00.000Z'],
       },
     ],
   },

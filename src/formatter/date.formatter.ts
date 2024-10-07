@@ -13,7 +13,7 @@ export default class DateFormatter {
   /**
    * List of dates formatted correctly contained in the announcement
    */
-  public dates: Moment[];
+  public dates: string[];
 
   /**
    * @param raw Raw data of the announcement
@@ -67,16 +67,16 @@ export default class DateFormatter {
    * Method for generating the list of correctly formatted dates for case #1
    * @private
    */
-  private formatClassic(): Moment[] {
+  private formatClassic(): string[] {
     return [
-      DateFormatter.generateMoment(
+      DateFormatter.generateDate(
         moment().get('years'),
         moment().month(this.getRawClassicMouth()).get('months'),
         this.getRawClassicDay(),
         this.getRawHour(),
         this.getRawClassicMinute1(),
       ),
-      DateFormatter.generateMoment(
+      DateFormatter.generateDate(
         moment().get('years'),
         moment().month(this.getRawClassicMouth()).get('months'),
         this.getRawClassicDay(),
@@ -152,11 +152,11 @@ export default class DateFormatter {
    * Method for generating the correctly formatted date in case #2
    * @private
    */
-  private formatSpecial(): Moment[] {
+  private formatSpecial(): string[] {
     const date: Moment = this.getSpecialDate();
 
     return [
-      DateFormatter.generateMoment(
+      DateFormatter.generateDate(
         date.get('years'),
         date.get('months'),
         date.get('dates'),
@@ -203,13 +203,13 @@ export default class DateFormatter {
    * @param minute
    * @private
    */
-  private static generateMoment(
+  private static generateDate(
     year: number,
     month: number,
     day: number,
     hour: number,
     minute: number,
-  ): Moment {
+  ): string {
     return moment()
       .utc()
       .set('years', year)
@@ -219,6 +219,7 @@ export default class DateFormatter {
       .set('minutes', minute)
       .set('seconds', 0)
       .set('milliseconds', 0)
-      .utcOffset(0);
+      .utcOffset(0)
+      .toISOString();
   }
 }
