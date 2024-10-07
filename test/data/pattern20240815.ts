@@ -7,7 +7,6 @@ import {
   UpStatus,
   WebSupport,
 } from '@eso-status/types';
-import * as moment from 'moment';
 import { ForumMessageURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
 
@@ -37,28 +36,7 @@ const pattern20240815: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: 'ESO Website for',
         rawDate: 'August 15, 4:30PM EDT (20:30 UTC) - 7:30PM EDT (23:30 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 15)
-            .set('hours', 20)
-            .set('minutes', 30)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 15)
-            .set('hours', 23)
-            .set('minutes', 30)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-15T20:30:00.000Z', '2024-08-15T23:30:00.000Z'],
       },
     ],
   },
@@ -81,28 +59,7 @@ const pattern20240815: PatternItem[] = [
         rawSlug: 'ESO Website for',
         rawDate: 'August 15, 4:30PM EDT (20:30 UTC) - 7:30PM EDT (23:30 UTC)',
         rawStatus: '[IN PROGRESS]',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 15)
-            .set('hours', 20)
-            .set('minutes', 30)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 15)
-            .set('hours', 23)
-            .set('minutes', 30)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-15T20:30:00.000Z', '2024-08-15T23:30:00.000Z'],
       },
     ],
   },
@@ -125,28 +82,7 @@ const pattern20240815: PatternItem[] = [
         rawSlug: 'ESO Website for',
         rawDate: 'August 15, 4:30PM EDT (20:30 UTC) - 7:30PM EDT (23:30 UTC)',
         rawStatus: '[COMPLETE]',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 15)
-            .set('hours', 20)
-            .set('minutes', 30)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 15)
-            .set('hours', 23)
-            .set('minutes', 30)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-15T20:30:00.000Z', '2024-08-15T23:30:00.000Z'],
       },
     ],
   },

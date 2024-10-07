@@ -11,9 +11,9 @@ export default class DateFormatter {
   public rawDate: string;
 
   /**
-   * List of dates formatted correctly contained in the announcement
+   * List of dates formatted correctly contained in the announcement (ISO 8601)
    */
-  public dates: Moment[];
+  public dates: string[];
 
   /**
    * @param raw Raw data of the announcement
@@ -64,19 +64,19 @@ export default class DateFormatter {
   }
 
   /**
-   * Method for generating the list of correctly formatted dates for case #1
+   * Method for generating the list of correctly formatted dates for case #1 (ISO 8601)
    * @private
    */
-  private formatClassic(): Moment[] {
+  private formatClassic(): string[] {
     return [
-      DateFormatter.generateMoment(
+      DateFormatter.generateDate(
         moment().get('years'),
         moment().month(this.getRawClassicMouth()).get('months'),
         this.getRawClassicDay(),
         this.getRawHour(),
         this.getRawClassicMinute1(),
       ),
-      DateFormatter.generateMoment(
+      DateFormatter.generateDate(
         moment().get('years'),
         moment().month(this.getRawClassicMouth()).get('months'),
         this.getRawClassicDay(),
@@ -149,14 +149,14 @@ export default class DateFormatter {
   }
 
   /**
-   * Method for generating the correctly formatted date in case #2
+   * Method for generating the correctly formatted date in case #2 (ISO 8601)
    * @private
    */
-  private formatSpecial(): Moment[] {
+  private formatSpecial(): string[] {
     const date: Moment = this.getSpecialDate();
 
     return [
-      DateFormatter.generateMoment(
+      DateFormatter.generateDate(
         date.get('years'),
         date.get('months'),
         date.get('dates'),
@@ -195,7 +195,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Method for formatting a date correctly
+   * Method for formatting a date correctly (ISO 8601)
    * @param year
    * @param month
    * @param day
@@ -203,13 +203,13 @@ export default class DateFormatter {
    * @param minute
    * @private
    */
-  private static generateMoment(
+  private static generateDate(
     year: number,
     month: number,
     day: number,
     hour: number,
     minute: number,
-  ): Moment {
+  ): string {
     return moment()
       .utc()
       .set('years', year)
@@ -219,6 +219,7 @@ export default class DateFormatter {
       .set('minutes', minute)
       .set('seconds', 0)
       .set('milliseconds', 0)
-      .utcOffset(0);
+      .utcOffset(0)
+      .toISOString();
   }
 }

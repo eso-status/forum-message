@@ -5,7 +5,6 @@ import {
   ServerPcPtsSlug,
   ServerType,
 } from '@eso-status/types';
-import * as moment from 'moment';
 import { ForumMessagePTSURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
 
@@ -29,18 +28,7 @@ const pattern20240823: PatternItem[] = [
         rawSlug: 'PTS',
         rawDate: 'Tuesday at 10:00AM EDT (14:00 UTC)',
         rawStatus: 'We will be performing maintenance',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 27)
-            .set('hours', 14)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-27T14:00:00.000Z'],
       },
     ],
   },
