@@ -13,7 +13,6 @@ import {
   ServerXboxNaSlug,
   XboxSupport,
 } from '@eso-status/types';
-import * as moment from 'moment';
 import { ForumMessageURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
 
@@ -38,28 +37,7 @@ const pattern20240816: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: 'PC/Mac: NA and EU megaservers for',
         rawDate: 'August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 19)
-            .set('hours', 8)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 19)
-            .set('hours', 14)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-19T08:00:00.000Z', '2024-08-19T14:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -71,28 +49,7 @@ const pattern20240816: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: 'PC/Mac: NA and EU megaservers for',
         rawDate: 'August 19, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 19)
-            .set('hours', 8)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 19)
-            .set('hours', 14)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-19T08:00:00.000Z', '2024-08-19T14:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -104,28 +61,7 @@ const pattern20240816: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: 'Xbox: NA and EU megaservers for',
         rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 21)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 21)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-21T10:00:00.000Z', '2024-08-21T13:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -137,28 +73,7 @@ const pattern20240816: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: 'Xbox: NA and EU megaservers for',
         rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 21)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 21)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-21T10:00:00.000Z', '2024-08-21T13:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -170,28 +85,7 @@ const pattern20240816: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 21)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 21)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-21T10:00:00.000Z', '2024-08-21T13:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -203,28 +97,7 @@ const pattern20240816: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate: 'August 21, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 21)
-            .set('hours', 10)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 21)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-21T10:00:00.000Z', '2024-08-21T13:00:00.000Z'],
       },
     ],
   },

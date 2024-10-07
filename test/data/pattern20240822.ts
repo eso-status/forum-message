@@ -10,7 +10,6 @@ import {
   SystemSupport,
   UpStatus,
 } from '@eso-status/types';
-import * as moment from 'moment';
 import { ForumMessageURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
 
@@ -33,28 +32,7 @@ const pattern20240822: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: 'ESO Store and Account System for',
         rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-22T13:00:00.000Z', '2024-08-22T16:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -66,28 +44,7 @@ const pattern20240822: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: 'ESO Store and Account System for',
         rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-22T13:00:00.000Z', '2024-08-22T16:00:00.000Z'],
       },
     ],
   },
@@ -110,28 +67,7 @@ const pattern20240822: PatternItem[] = [
         rawSlug: 'ESO Store and Account System for',
         rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
         rawStatus: '[IN PROGRESS]',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-22T13:00:00.000Z', '2024-08-22T16:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -144,28 +80,7 @@ const pattern20240822: PatternItem[] = [
         rawSlug: 'ESO Store and Account System for',
         rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
         rawStatus: '[IN PROGRESS]',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-22T13:00:00.000Z', '2024-08-22T16:00:00.000Z'],
       },
     ],
   },
@@ -188,28 +103,7 @@ const pattern20240822: PatternItem[] = [
         rawSlug: 'ESO Store and Account System for',
         rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
         rawStatus: '[COMPLETE]',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-22T13:00:00.000Z', '2024-08-22T16:00:00.000Z'],
       },
       {
         source: ForumMessageURL,
@@ -222,28 +116,7 @@ const pattern20240822: PatternItem[] = [
         rawSlug: 'ESO Store and Account System for',
         rawDate: 'August 22, 9:00AM EDT (13:00 UTC) - 12:00PM EDT (16:00 UTC)',
         rawStatus: '[COMPLETE]',
-        dates: [
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 13)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-          moment()
-            .utc()
-            .set('years', 2024)
-            .set('months', 8 - 1)
-            .set('date', 22)
-            .set('hours', 16)
-            .set('minutes', 0)
-            .set('seconds', 0)
-            .set('milliseconds', 0)
-            .utcOffset(0),
-        ],
+        dates: ['2024-08-22T13:00:00.000Z', '2024-08-22T16:00:00.000Z'],
       },
     ],
   },
