@@ -11,7 +11,7 @@ export default class DateFormatter {
   public rawDate: string;
 
   /**
-   * List of dates formatted correctly contained in the announcement
+   * List of dates formatted correctly contained in the announcement (ISO 8601)
    */
   public dates: string[];
 
@@ -64,7 +64,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Method for generating the list of correctly formatted dates for case #1
+   * Method for generating the list of correctly formatted dates for case #1 (ISO 8601)
    * @private
    */
   private formatClassic(): string[] {
@@ -149,7 +149,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Method for generating the correctly formatted date in case #2
+   * Method for generating the correctly formatted date in case #2 (ISO 8601)
    * @private
    */
   private formatSpecial(): string[] {
@@ -195,7 +195,7 @@ export default class DateFormatter {
   }
 
   /**
-   * Method for formatting a date correctly
+   * Method for formatting a date correctly (ISO 8601)
    * @param year
    * @param month
    * @param day
