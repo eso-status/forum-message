@@ -88,9 +88,16 @@ export default class Connector {
    * @private
    */
   private replace(): void {
-    this.raw = this.raw.map((raw: string): string => {
+    const list: string[] = [];
+
+    this.raw.forEach((raw: string): void => {
+      list.push(...raw.split('<br/>'));
+    });
+
+    this.raw = list.map((raw: string): string => {
       let initialRaw: string = raw;
       initialRaw = initialRaw.replace(' 。', '');
+      initialRaw = initialRaw.replace(/\n/g, '');
       initialRaw = initialRaw.replace(/<br\/>\n/g, '<br>');
       initialRaw = initialRaw.replace('. <br>', '.<br>');
       initialRaw = initialRaw.replace(' Thank you for your patience.', '');
@@ -103,7 +110,7 @@ export default class Connector {
         )[0];
       }
 
-      if (initialRaw.includes('. <a href')) {
+      if (initialRaw.includes(' <a href')) {
         return initialRaw.split(' <a href')[0];
       }
 
@@ -133,7 +140,9 @@ export default class Connector {
     this.raw = this.raw.filter((raw: string): boolean => {
       return (
         !raw.includes('Maintenance for the week of ') &&
+        !raw.includes('Mantenimiento de la semana del ') &&
         !raw.includes('• PC/Mac: No maintenance – ') &&
+        !raw.includes('hora peninsular') &&
         raw !== ''
       );
     });
