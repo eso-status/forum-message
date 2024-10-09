@@ -140,7 +140,9 @@ export default class Connector {
     this.raw = this.raw.filter((raw: string): boolean => {
       return (
         !raw.includes('Maintenance for the week of ') &&
+        !raw.includes('Mantenimiento de la semana del ') &&
         !raw.includes('• PC/Mac: No maintenance – ') &&
+        !raw.includes('hora peninsular') &&
         raw !== ''
       );
     });
