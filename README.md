@@ -53,7 +53,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         status: 'planned',
         rawSlug: 'PC/Mac: NA and EU megaservers for',
         rawDate: 'September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        dates: [ Moment<2024-09-03T08:00:00Z>, Moment<2024-09-03T13:00:00Z> ]
+        dates: [ '2024-09-03T08:00:00Z', '2024-09-03T13:00:00Z' ]
     },
     {
         source: 'https://forums.elderscrollsonline.com',
@@ -65,7 +65,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         status: 'planned',
         rawSlug: 'PC/Mac: NA and EU megaservers for',
         rawDate: 'September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        dates: [ Moment<2024-09-03T08:00:00Z>, Moment<2024-09-03T13:00:00Z> ]
+        dates: [ '2024-09-03T08:00:00Z', '2024-09-03T13:00:00Z' ]
     },
     {
         source: 'https://forums.elderscrollsonline.com',
@@ -77,7 +77,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         status: 'planned',
         rawSlug: 'Xbox: NA and EU megaservers for',
         rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
+        dates: [ '2024-09-04T10:00:00Z', '2024-09-04T16:00:00Z' ]
     },
     {
         source: 'https://forums.elderscrollsonline.com',
@@ -89,7 +89,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         status: 'planned',
         rawSlug: 'Xbox: NA and EU megaservers for',
         rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
+        dates: [ '2024-09-04T10:00:00Z', '2024-09-04T16:00:00Z' ]
     },
     {
         source: 'https://forums.elderscrollsonline.com',
@@ -101,7 +101,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         status: 'planned',
         rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
+        dates: [ '2024-09-04T10:00:00Z', '2024-09-04T16:00:00Z' ]
     },
     {
         source: 'https://forums.elderscrollsonline.com',
@@ -113,7 +113,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         status: 'planned',
         rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ Moment<2024-09-04T10:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
+        dates: [ '2024-09-04T10:00:00Z', '2024-09-04T16:00:00Z' ]
     },
     {
         source: 'https://forums.elderscrollsonline.com',
@@ -125,7 +125,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         status: 'planned',
         rawSlug: 'ESO Store and Account System for',
         rawDate: 'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ Moment<2024-09-04T14:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
+        dates: [ '2024-09-04T14:00:00Z', '2024-09-04T16:00:00Z' ]
     },
     {
         source: 'https://forums.elderscrollsonline.com',
@@ -137,7 +137,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         status: 'planned',
         rawSlug: 'ESO Store and Account System for',
         rawDate: 'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ Moment<2024-09-04T14:00:00Z>, Moment<2024-09-04T16:00:00Z> ]
+        dates: [ '2024-09-04T14:00:00Z', '2024-09-04T16:00:00Z' ]
     },
     {
         source: 'https://forums.elderscrollsonline.com/en/categories/pts',
@@ -150,7 +150,7 @@ const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(Foru
         rawSlug: 'PTS',
         rawDate: 'Thursday at 9:00AM EDT (13:00 UTC)',
         rawStatus: 'We will be performing maintenance',
-        dates: [ Moment<2024-09-05T13:00:00Z> ]
+        dates: [ '2024-09-05T13:00:00Z' ]
     }
 ]
 ```
