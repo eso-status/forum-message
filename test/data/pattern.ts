@@ -4,6 +4,7 @@ import pattern20240920 from './pattern20240920';
 import pattern20240916 from './pattern20240916';
 import pattern20240913 from './pattern20240913';
 import pattern20240910 from './pattern20240910';
+import pattern20240911 from './pattern20240911';
 import pattern20240906 from './pattern20240906';
 import pattern20240905 from './pattern20240905';
 import pattern20240904 from './pattern20240904';
@@ -42,6 +43,7 @@ const pattern: PatternItem[] = [
   ...pattern20240905,
   ...pattern20240906,
   ...pattern20240910,
+  ...pattern20240911,
   ...pattern20240913,
   ...pattern20240916,
   ...pattern20240918,

@@ -7,10 +7,17 @@ import {
   UpStatus,
   WebSupport,
 } from '@eso-status/types';
-import { ForumMessageURL } from '../../src/const';
+import { ForumMessagePTSURL, ForumMessageURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
 
 const pattern20240815: PatternItem[] = [
+  {
+    date: '2024-08-15T14_02_33',
+    url: ForumMessagePTSURL,
+    file: '2024-08-15T14_02_33.html',
+    rawList: [],
+    expected: [],
+  },
   {
     date: '2024-08-15T14_03_38',
     url: ForumMessageURL,

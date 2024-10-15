@@ -143,7 +143,9 @@ export default class Connector {
         !raw.includes('Mantenimiento de la semana del ') &&
         !raw.includes('• PC/Mac: No maintenance – ') &&
         !raw.includes('hora peninsular') &&
-        raw !== ''
+        raw !== '' &&
+        !raw.startsWith('<') &&
+        !raw.endsWith('>')
       );
     });
   }
