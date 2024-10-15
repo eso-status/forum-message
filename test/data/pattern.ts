@@ -1,6 +1,5 @@
 import { PatternItem } from '../interface/patternItem.interface';
 import pattern20240918 from './pattern20240918';
-import pattern20240919 from './pattern20240919';
 import pattern20240920 from './pattern20240920';
 import pattern20240916 from './pattern20240916';
 import pattern20240913 from './pattern20240913';
@@ -46,7 +45,6 @@ const pattern: PatternItem[] = [
   ...pattern20240913,
   ...pattern20240916,
   ...pattern20240918,
-  ...pattern20240919,
   ...pattern20240920,
   ...pattern20240923,
   ...pattern20240927,
