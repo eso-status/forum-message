@@ -99,8 +99,11 @@ export default class Connector {
       initialRaw = initialRaw.replace(' 。', '');
       initialRaw = initialRaw.replace(/\n/g, '');
       initialRaw = initialRaw.replace(/<br\/>\n/g, '<br>');
-      initialRaw = initialRaw.replace('. <br>', '.<br>');
       initialRaw = initialRaw.replace(' Thank you for your patience.', '');
+
+      if (initialRaw.endsWith(' ')) {
+        initialRaw = initialRaw.substring(0, initialRaw.length - 1);
+      }
 
       if (
         initialRaw.includes('. Please check here for status updates: <a href')
@@ -114,7 +117,7 @@ export default class Connector {
         return initialRaw.split(' <a href')[0];
       }
 
-      return initialRaw.replace('. ', '.');
+      return initialRaw;
     });
   }
 
