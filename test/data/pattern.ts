@@ -5,6 +5,7 @@ import pattern20240920 from './pattern20240920';
 import pattern20240916 from './pattern20240916';
 import pattern20240913 from './pattern20240913';
 import pattern20240910 from './pattern20240910';
+import pattern20240911 from './pattern20240911';
 import pattern20240906 from './pattern20240906';
 import pattern20240905 from './pattern20240905';
 import pattern20240904 from './pattern20240904';
@@ -27,6 +28,10 @@ import pattern20241004 from './pattern20241004';
 import pattern20241007 from './pattern20241007';
 import pattern20241008 from './pattern20241008';
 import pattern20241009 from './pattern20241009';
+import pattern20241011 from './pattern20241011';
+import pattern20241014 from './pattern20241014';
+import pattern20241015 from './pattern20241015';
+import pattern20241016 from './pattern20241016';
 
 const pattern: PatternItem[] = [
   ...pattern20240814,
@@ -43,6 +48,7 @@ const pattern: PatternItem[] = [
   ...pattern20240905,
   ...pattern20240906,
   ...pattern20240910,
+  ...pattern20240911,
   ...pattern20240913,
   ...pattern20240916,
   ...pattern20240918,
@@ -57,6 +63,10 @@ const pattern: PatternItem[] = [
   ...pattern20241007,
   ...pattern20241008,
   ...pattern20241009,
+  ...pattern20241011,
+  ...pattern20241014,
+  ...pattern20241015,
+  ...pattern20241016,
 ];
 
 export default pattern;

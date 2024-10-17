@@ -11,13 +11,6 @@ import { PatternItem } from '../interface/patternItem.interface';
 
 const pattern20240923: PatternItem[] = [
   {
-    date: '2024-09-23T14_03_15',
-    url: ForumMessagePTSURL,
-    file: '2024-09-23T14_03_15.html',
-    rawList: [],
-    expected: [],
-  },
-  {
     date: '2024-09-23T14_05_18',
     url: ForumMessagePTSURL,
     file: '2024-09-23T14_05_18.html',

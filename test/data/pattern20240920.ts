@@ -5,7 +5,7 @@ import {
   ServerPcPtsSlug,
   ServerType,
 } from '@eso-status/types';
-import { ForumMessagePTSURL, ForumMessageURL } from '../../src/const';
+import { ForumMessagePTSURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
 
 const pattern20240920: PatternItem[] = [
@@ -31,13 +31,6 @@ const pattern20240920: PatternItem[] = [
         dates: ['2024-09-23T14:00:00.000Z'],
       },
     ],
-  },
-  {
-    date: '2024-09-20T18_51_44',
-    url: ForumMessageURL,
-    file: '2024-09-20T18_51_44.html',
-    rawList: [],
-    expected: [],
   },
 ];
 
