@@ -319,6 +319,57 @@ const pattern20241009: PatternItem[] = [
       },
     ],
   },
+  {
+    date: '2024-10-09T20_31_25',
+    url: ForumMessageURL,
+    file: '2024-10-09T20_31_25.html',
+    rawList: [
+      '· [COMPLETE] Xbox: EU megaserver for maintenance – October 9, 2:00 UTC (October 8, 10:00PM EDT) - 22:00 UTC (6:00PM EDT)',
+      '· [COMPLETE] PlayStation®: NA and EU megaservers for patch maintenance – October 9, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    ],
+    expected: [
+      {
+        source: ForumMessageURL,
+        raw: '· [COMPLETE] Xbox: EU megaserver for maintenance – October 9, 2:00 UTC (October 8, 10:00PM EDT) - 22:00 UTC (6:00PM EDT)',
+        slug: ServerXboxEuSlug,
+        type: ServerType,
+        support: XboxSupport,
+        zone: EuZone,
+        status: UpStatus,
+        rawStatus: '[COMPLETE]',
+        rawSlug: 'Xbox: EU megaserver for',
+        rawDate:
+          'October 9, 2:00 UTC (October 8, 10:00PM EDT) - 22:00 UTC (6:00PM EDT)',
+        dates: ['2024-10-09T02:00:00.000Z', '2024-10-09T22:00:00.000Z'],
+      },
+      {
+        source: ForumMessageURL,
+        raw: '· [COMPLETE] PlayStation®: NA and EU megaservers for patch maintenance – October 9, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsEuSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: EuZone,
+        status: UpStatus,
+        rawStatus: '[COMPLETE]',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'October 9, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-09T10:00:00.000Z', '2024-10-09T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessageURL,
+        raw: '· [COMPLETE] PlayStation®: NA and EU megaservers for patch maintenance – October 9, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsNaSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: NaZone,
+        status: UpStatus,
+        rawStatus: '[COMPLETE]',
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'October 9, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-09T10:00:00.000Z', '2024-10-09T16:00:00.000Z'],
+      },
+    ],
+  },
 ];
 
 export default pattern20241009;
