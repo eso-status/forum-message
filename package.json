@@ -1,6 +1,6 @@
 {
   "name": "@eso-status/forum-message",
-  "version": "2.0.0-dev.12",
+  "version": "2.0.0-dev.13",
   "description": "Library for retrieving and formatting data, available at https://forums.elderscrollsonline.com or https://forums.elderscrollsonline.com/en/categories/pts",
   "author": "@dov118 <contact@dov118.dev> (https://dov118.dev)",
   "main": "lib/index.js",
@@ -100,7 +100,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jest": "28.8.3",
     "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-sonarjs": "2.0.3",
+    "eslint-plugin-sonarjs": "2.0.4",
     "eslint-plugin-unused-imports": "4.1.4",
     "husky": "9.1.6",
     "jest": "29.7.0",
