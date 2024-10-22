@@ -61,6 +61,7 @@ export default class SlugIdentifier {
     'PC/Mac: EU megaserver for',
     'PC/Mac: NA and EU megaservers for',
     '] EU megaservers for',
+    '• EU megaservers for',
   ];
 
   /**
@@ -71,6 +72,7 @@ export default class SlugIdentifier {
     'PC/Mac: NA megaserver for',
     'PC/Mac: NA and EU megaservers for',
     '] NA megaservers for',
+    '• NA megaservers for',
   ];
 
   /**
@@ -87,6 +89,7 @@ export default class SlugIdentifier {
     'PlayStation®: NA and EU megaservers for',
     'The PlayStation™ Network',
     '] EU megaservers for',
+    '• EU megaservers for',
   ];
 
   /**
@@ -97,6 +100,7 @@ export default class SlugIdentifier {
     'PlayStation®: NA and EU megaservers for',
     'The PlayStation™ Network',
     '] NA megaservers for',
+    '• NA megaservers for',
   ];
 
   /**
@@ -107,6 +111,7 @@ export default class SlugIdentifier {
     'Xbox: NA and EU megaservers for',
     'Xbox: EU megaserver for',
     '] EU megaservers for',
+    '• EU megaservers for',
   ];
 
   /**
@@ -116,6 +121,7 @@ export default class SlugIdentifier {
   private readonly ServerXboxNaMatchesList: RemoteServerXboxNaRawSlug[] = [
     'Xbox: NA and EU megaservers for',
     '] NA megaservers for',
+    '• NA megaservers for',
   ];
 
   /**
