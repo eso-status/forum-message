@@ -33,10 +33,10 @@ const pattern20241015: PatternItem[] = [
     file: '2024-10-15T13_11_33.html',
     rawList: [
       'We will be performing maintenance on the PTS on Wednesday at 4:00AM EDT (8:00 UTC).',
-      '• [COMPLETE] ESO Store and Account System for maintenance – October 14, 6:00AM EDT (10:00 UTC) - 6:00PM EDT (22:00 UTC)', // Up et maintenance en même temps
+      '• [COMPLETE] ESO Store and Account System for maintenance – October 14, 6:00AM EDT (10:00 UTC) - 6:00PM EDT (22:00 UTC)',
       '• NA megaservers for maintenance – October 16, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
       '• EU megaservers for maintenance – October 16, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
-      '• ESO Store and Account System for maintenance – October 16, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)', // Up et maintenance en même temps
+      '• ESO Store and Account System for maintenance – October 16, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
     ],
     expected: [
       {
@@ -148,6 +148,30 @@ const pattern20241015: PatternItem[] = [
         status: PlannedStatus,
         rawSlug: '• EU megaservers for',
         rawDate: 'October 16, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+        dates: ['2024-10-16T08:00:00.000Z', '2024-10-16T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• ESO Store and Account System for maintenance – October 16, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServiceStoreEsoSlug,
+        type: ServiceType,
+        support: StoreSupport,
+        zone: EsoZone,
+        status: PlannedStatus,
+        rawSlug: 'ESO Store and Account System for',
+        rawDate: 'October 16, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-16T08:00:00.000Z', '2024-10-16T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• ESO Store and Account System for maintenance – October 16, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServiceSystemAccountSlug,
+        type: ServiceType,
+        support: SystemSupport,
+        zone: AccountZone,
+        status: PlannedStatus,
+        rawSlug: 'ESO Store and Account System for',
+        rawDate: 'October 16, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
         dates: ['2024-10-16T08:00:00.000Z', '2024-10-16T16:00:00.000Z'],
       },
     ],
