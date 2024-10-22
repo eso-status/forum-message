@@ -1,5 +1,10 @@
 import axios, { AxiosResponse } from 'axios';
-import { IssuesStatus, UpStatus } from '@eso-status/types';
+import {
+  DownStatus,
+  IssuesStatus,
+  PlannedStatus,
+  UpStatus,
+} from '@eso-status/types';
 import { SourceUrl } from './type/sourceUrl.type';
 import { MessageType } from './type/messageType.type';
 import Raw from './raw';
@@ -204,11 +209,26 @@ export default class Connector {
             esoStatusRawData.slug === match.slug,
         ).length !== 0;
 
+      const slugIsDown: boolean =
+        matches.filter(
+          (esoStatusRawData: EsoStatusRawData): boolean =>
+            esoStatusRawData.status === DownStatus &&
+            esoStatusRawData.slug === match.slug,
+        ).length !== 0;
+
+      const countSlugMaintenance: number = matches.filter(
+        (esoStatusRawData: EsoStatusRawData): boolean =>
+          esoStatusRawData.status === PlannedStatus &&
+          esoStatusRawData.slug === match.slug,
+      ).length;
+
       if (!alreadyInList) {
         if (
           alone ||
+          countSlugMaintenance >= 2 ||
           (match.status === IssuesStatus && slugIsIssues) ||
-          (match.status === UpStatus && slugIsUp)
+          (match.status === UpStatus && slugIsUp) ||
+          (match.status === DownStatus && slugIsDown)
         ) {
           this.rawEsoStatus.push(match);
         }
