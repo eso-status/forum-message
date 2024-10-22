@@ -1,10 +1,4 @@
 import axios, { AxiosResponse } from 'axios';
-import {
-  DownStatus,
-  IssuesStatus,
-  PlannedStatus,
-  UpStatus,
-} from '@eso-status/types';
 import { SourceUrl } from './type/sourceUrl.type';
 import { MessageType } from './type/messageType.type';
 import Raw from './raw';
@@ -163,76 +157,17 @@ export default class Connector {
    * @private
    */
   private fetch(): void {
-    const matches: EsoStatusRawData[] = [];
-
-    this.raw.forEach((raw: string): void => {
-      new Raw(this.url, raw).matches.forEach(
-        (match: EsoStatusRawData): void => {
-          matches.push(match);
-        },
-      );
-    });
-
-    this.fetchAll(matches);
+    this.raw.forEach((raw: string): void => this.fetchEach(raw));
   }
 
   /**
-   * Method to create the return list with all the data contained in the announcements, sorted by importance while avoiding duplicates
-   * @param matches List of all the data contained in the announcements
+   * Method for retrieving the information contained in an announcement
+   * @param raw Raw data of the announcement
    * @private
    */
-  private fetchAll(matches: EsoStatusRawData[]): void {
-    matches.forEach((match: EsoStatusRawData): void => {
-      const alreadyInList: boolean =
-        this.rawEsoStatus.filter(
-          (esoStatusRawData: EsoStatusRawData): boolean =>
-            esoStatusRawData.slug === match.slug,
-        ).length !== 0;
-
-      const alone: boolean =
-        matches.filter(
-          (esoStatusRawData: EsoStatusRawData): boolean =>
-            esoStatusRawData.slug === match.slug,
-        ).length === 1;
-
-      const slugIsIssues: boolean =
-        matches.filter(
-          (esoStatusRawData: EsoStatusRawData): boolean =>
-            esoStatusRawData.status === IssuesStatus &&
-            esoStatusRawData.slug === match.slug,
-        ).length !== 0;
-
-      const slugIsUp: boolean =
-        matches.filter(
-          (esoStatusRawData: EsoStatusRawData): boolean =>
-            esoStatusRawData.status === UpStatus &&
-            esoStatusRawData.slug === match.slug,
-        ).length !== 0;
-
-      const slugIsDown: boolean =
-        matches.filter(
-          (esoStatusRawData: EsoStatusRawData): boolean =>
-            esoStatusRawData.status === DownStatus &&
-            esoStatusRawData.slug === match.slug,
-        ).length !== 0;
-
-      const countSlugMaintenance: number = matches.filter(
-        (esoStatusRawData: EsoStatusRawData): boolean =>
-          esoStatusRawData.status === PlannedStatus &&
-          esoStatusRawData.slug === match.slug,
-      ).length;
-
-      if (!alreadyInList) {
-        if (
-          alone ||
-          countSlugMaintenance >= 2 ||
-          (match.status === IssuesStatus && slugIsIssues) ||
-          (match.status === UpStatus && slugIsUp) ||
-          (match.status === DownStatus && slugIsDown)
-        ) {
-          this.rawEsoStatus.push(match);
-        }
-      }
+  private fetchEach(raw: string): void {
+    new Raw(this.url, raw).matches.forEach((match: EsoStatusRawData): void => {
+      this.rawEsoStatus.push(match);
     });
   }
 }

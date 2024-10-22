@@ -28,8 +28,8 @@ const pattern20241001: PatternItem[] = [
     rawList: [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for maintenance – September 30, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
       '• Xbox: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-      '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-      'The PlayStation™ Network is currently experiencing a service interruption.',
+      '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)', // Issues et maintenance en même temps
+      'The PlayStation™ Network is currently experiencing a service interruption.', // Issues et maintenance en même temps
     ],
     expected: [
       {
@@ -81,6 +81,30 @@ const pattern20241001: PatternItem[] = [
         zone: NaZone,
         status: PlannedStatus,
         rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsEuSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: EuZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsNaSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: NaZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
         dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
       },
@@ -115,9 +139,9 @@ const pattern20241001: PatternItem[] = [
     rawList: [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for maintenance – September 30, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
       '• Xbox: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-      '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+      '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)', // Issues et maintenance en même temps
       'The maintenance is complete, and the PTS is now back online and patch 10.2.2 is available.',
-      'The PlayStation™ Network is currently experiencing a service interruption.',
+      'The PlayStation™ Network is currently experiencing a service interruption.', // Issues et maintenance en même temps
     ],
     expected: [
       {
@@ -169,6 +193,30 @@ const pattern20241001: PatternItem[] = [
         zone: NaZone,
         status: PlannedStatus,
         rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsEuSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: EuZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsNaSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: NaZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
         dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
       },
@@ -214,9 +262,9 @@ const pattern20241001: PatternItem[] = [
     rawList: [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for maintenance – September 30, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
       '• Xbox: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-      '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+      '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)', // Up et maintenance en même temps
       'The maintenance is complete, and the PTS is now back online and patch 10.2.2 is available.',
-      'The PlayStation™ Network service interruption has been resolved.',
+      'The PlayStation™ Network service interruption has been resolved.', // Up et maintenance en même temps
     ],
     expected: [
       {
@@ -268,6 +316,30 @@ const pattern20241001: PatternItem[] = [
         zone: NaZone,
         status: PlannedStatus,
         rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsEuSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: EuZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessagePTSURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsNaSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: NaZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
         dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
       },
@@ -313,8 +385,8 @@ const pattern20241001: PatternItem[] = [
     rawList: [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for maintenance – September 30, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
       '• Xbox: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-      '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-      'The PlayStation™ Network service interruption has been resolved.',
+      '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)', // Up et maintenance en même temps
+      'The PlayStation™ Network service interruption has been resolved.', // Up et maintenance en même temps
     ],
     expected: [
       {
@@ -366,6 +438,30 @@ const pattern20241001: PatternItem[] = [
         zone: NaZone,
         status: PlannedStatus,
         rawSlug: 'Xbox: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsEuSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: EuZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
+        rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
+      },
+      {
+        source: ForumMessageURL,
+        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
+        slug: ServerPsNaSlug,
+        type: ServerType,
+        support: PsSupport,
+        zone: NaZone,
+        status: PlannedStatus,
+        rawSlug: 'PlayStation®: NA and EU megaservers for',
         rawDate: 'October 2, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
         dates: ['2024-10-02T10:00:00.000Z', '2024-10-02T16:00:00.000Z'],
       },
