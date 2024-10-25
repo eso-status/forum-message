@@ -99,6 +99,14 @@ export default class Connector {
       initialRaw = initialRaw.replace(/\n/g, '');
       initialRaw = initialRaw.replace(/<br\/>\n/g, '<br>');
       initialRaw = initialRaw.replace(' Thank you for your patience.', '');
+      initialRaw = initialRaw.replace(
+        ' We will update as new information becomes available.',
+        '',
+      );
+      initialRaw = initialRaw.replace(
+        ' If you continue to experience difficulties at login, please restart your client. Thank you for your patience!',
+        '',
+      );
 
       if (initialRaw.endsWith(' ')) {
         initialRaw = initialRaw.substring(0, initialRaw.length - 1);
