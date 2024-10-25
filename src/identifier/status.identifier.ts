@@ -71,6 +71,7 @@ export default class StatusIdentifier {
    */
   private readonly issuesMatchesList: RemoteIssuesRawStatus[] = [
     'is currently experiencing a service interruption',
+    'currently investigating connection issues',
   ];
 
   /**
