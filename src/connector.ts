@@ -90,7 +90,10 @@ export default class Connector {
     const list: string[] = [];
 
     this.raw.forEach((raw: string): void => {
-      list.push(...raw.split('<br/>'));
+      raw.split('<br').forEach((line: string): void => {
+        const split: string[] = line.split('/>');
+        list.push(split.join(''));
+      });
     });
 
     this.raw = list.map((raw: string): string => {
@@ -107,6 +110,16 @@ export default class Connector {
         ' If you continue to experience difficulties at login, please restart your client. Thank you for your patience!',
         '',
       );
+
+      if (initialRaw.includes('\t')) {
+        const split: string[] = initialRaw.split('\t');
+        if (split[0] === ' ') {
+          return split[1];
+        }
+        if (split[0].includes('•')) {
+          return `• ${split[1]}`;
+        }
+      }
 
       if (initialRaw.endsWith(' ')) {
         initialRaw = initialRaw.substring(0, initialRaw.length - 1);
