@@ -6,6 +6,7 @@ import { RemoteServerXboxEuRawSlug } from './remoteServerXboxEuRawSlug.type';
 import { RemoteServiceStoreEsoRawSlug } from './remoteServiceStoreEsoRawSlug.type';
 import { RemoteServiceWebSiteRawSlug } from './remoteServiceWebSiteRawSlug.type';
 import { RemoteServerXboxNaRawSlug } from './remoteServerXboxNaRawSlug.type';
+import { RemoteServerPsNaRawSlug } from './remoteServerPsNaRawSlug.type';
 
 /**
  * Different slugs of announcements
@@ -15,6 +16,7 @@ export type RemoteRawSlug =
   | RemoteServerPcNaRawSlug
   | RemoteServerPcPtsRawSlug
   | RemoteServerPsEuRawSlug
+  | RemoteServerPsNaRawSlug
   | RemoteServerXboxEuRawSlug
   | RemoteServerXboxNaRawSlug
   | RemoteServiceStoreEsoRawSlug

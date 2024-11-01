@@ -101,6 +101,7 @@ export default class Connector {
       initialRaw = initialRaw.replace(' 。', '');
       initialRaw = initialRaw.replace(/\n/g, '');
       initialRaw = initialRaw.replace(/<br\/>\n/g, '<br>');
+      initialRaw = initialRaw.replace('  Thank you for your patience!', '');
       initialRaw = initialRaw.replace(' Thank you for your patience.', '');
       initialRaw = initialRaw.replace(
         ' We will update as new information becomes available.',

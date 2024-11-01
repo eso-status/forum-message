@@ -102,6 +102,7 @@ export default class SlugIdentifier {
     'The PlayStation™ Network',
     '] NA megaservers for',
     '• NA megaservers for',
+    'North American PlayStation® megaserver',
   ];
 
   /**

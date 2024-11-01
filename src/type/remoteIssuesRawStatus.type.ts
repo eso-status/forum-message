@@ -3,4 +3,4 @@
  */
 export type RemoteIssuesRawStatus =
   | 'is currently experiencing a service interruption'
-  | 'currently investigating connection issues';
+  | 'currently investigating';
