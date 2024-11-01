@@ -25,10 +25,10 @@ const pattern20241030: PatternItem[] = [
     file: '2024-10-30T10_06_25.html',
     rawList: [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – October 28, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
-      '· Xbox: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      '• [IN PROGRESS] Xbox: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      '• [IN PROGRESS] PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
+      '· Xbox: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)', // maintenance et down en même temps pour XBOX
+      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)', // maintenance et down en même temps pour PS
+      '• [IN PROGRESS] Xbox: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)', // maintenance et down en même temps pour XBOX
+      '• [IN PROGRESS] PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)', // maintenance et down en même temps pour PS
     ],
     expected: [
       {
