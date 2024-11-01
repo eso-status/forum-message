@@ -26,7 +26,7 @@ const pattern20241024: PatternItem[] = [
         support: PcSupport,
         zone: NaZone,
         status: IssuesStatus,
-        rawStatus: 'currently investigating connection issues',
+        rawStatus: 'currently investigating',
         rawSlug: 'North American PC/Mac megaserver',
       },
     ],
