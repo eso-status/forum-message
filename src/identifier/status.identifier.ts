@@ -63,6 +63,7 @@ export default class StatusIdentifier {
    */
   private readonly plannedMatchesList: RemotePlannedRawStatus[] = [
     'We will be performing maintenance',
+    'will be taken offline for maintenance',
   ];
 
   /**
@@ -71,7 +72,7 @@ export default class StatusIdentifier {
    */
   private readonly issuesMatchesList: RemoteIssuesRawStatus[] = [
     'is currently experiencing a service interruption',
-    'currently investigating connection issues',
+    'currently investigating',
   ];
 
   /**
