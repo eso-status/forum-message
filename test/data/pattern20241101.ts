@@ -3,13 +3,16 @@ import {
   EuZone,
   NaZone,
   PcSupport,
+  PlannedStatus,
+  PtsZone,
   ServerPcEuSlug,
   ServerPcNaSlug,
+  ServerPcPtsSlug,
   ServerType,
   UpStatus,
 } from '@eso-status/types';
 import { PatternItem } from '../interface/patternItem.interface';
-import { ForumMessageURL } from '../../src/const';
+import { ForumMessagePTSURL, ForumMessageURL } from '../../src/const';
 
 const pattern20241101: PatternItem[] = [
   {
@@ -83,6 +86,36 @@ const pattern20241101: PatternItem[] = [
         dates: ['2024-11-01T08:00:00.000Z', '2024-11-01T13:00:00.000Z'],
       },
     ],
+  },
+  {
+    date: '2024-11-01T18_44_06',
+    url: ForumMessagePTSURL,
+    file: '2024-11-01T18_44_06.html',
+    rawList: [
+      'We will be performing maintenance on the PTS on Monday at 10:00AM EST (15:00 UTC).',
+    ],
+    expected: [
+      {
+        source: ForumMessagePTSURL,
+        raw: 'We will be performing maintenance on the PTS on Monday at 10:00AM EST (15:00 UTC).',
+        slug: ServerPcPtsSlug,
+        type: ServerType,
+        support: PcSupport,
+        zone: PtsZone,
+        status: PlannedStatus,
+        rawStatus: 'We will be performing maintenance',
+        rawSlug: 'PTS',
+        rawDate: 'Monday at 10:00AM EST (15:00 UTC)',
+        dates: ['2024-11-04T15:00:00.000Z'],
+      },
+    ],
+  },
+  {
+    date: '2024-11-01T18_44_36',
+    url: ForumMessageURL,
+    file: '2024-11-01T18_44_36.html',
+    rawList: [],
+    expected: [],
   },
 ];
 
