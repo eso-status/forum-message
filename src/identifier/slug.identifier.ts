@@ -114,6 +114,7 @@ export default class SlugIdentifier {
     'Xbox: EU megaserver for',
     '] EU megaservers for',
     '• EU megaservers for',
+    'Xbox Live™',
   ];
 
   /**
@@ -124,6 +125,7 @@ export default class SlugIdentifier {
     'Xbox: NA and EU megaservers for',
     '] NA megaservers for',
     '• NA megaservers for',
+    'Xbox Live™',
   ];
 
   /**

@@ -111,6 +111,7 @@ export default class Connector {
         ' If you continue to experience difficulties at login, please restart your client. Thank you for your patience!',
         '',
       );
+      initialRaw = initialRaw.replace('  ', ' ');
 
       if (initialRaw.includes('\t')) {
         const split: string[] = initialRaw.split('\t');
