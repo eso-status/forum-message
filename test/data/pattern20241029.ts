@@ -27,8 +27,8 @@ const pattern20241029: PatternItem[] = [
     rawList: [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – October 28, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
       '· Xbox: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      'We are currently investigating issues some players are having logging into the North American PlayStation® megaserver.',
+      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)', // maintenance et issue en même temps pour PS NA
+      'We are currently investigating issues some players are having logging into the North American PlayStation® megaserver.', // maintenance et issue en même temps pour PS NA
     ],
     expected: [
       {
@@ -125,9 +125,9 @@ const pattern20241029: PatternItem[] = [
     rawList: [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – October 28, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
       '· Xbox: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      'We are currently investigating issues some players are having logging into the North American PlayStation® megaserver.',
-      'In response to the ongoing issue, the North American PlayStation® megaserver will be taken offline for maintenance.',
+      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)', // double maintenance et issue en même temps pour PS NA
+      'We are currently investigating issues some players are having logging into the North American PlayStation® megaserver.', // double maintenance et issue en même temps pour PS NA
+      'In response to the ongoing issue, the North American PlayStation® megaserver will be taken offline for maintenance.', // double maintenance et issue en même temps pour PS NA
     ],
     expected: [
       {
@@ -235,9 +235,9 @@ const pattern20241029: PatternItem[] = [
     rawList: [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – October 28, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
       '· Xbox: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      'We are currently investigating issues some players are having logging into the North American PlayStation® megaserver.',
-      'In response to the ongoing issue, the North American PlayStation® megaserver is currently unavailable while we perform maintenance.',
+      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)', // maintenance, issue et down en même temps pour PS NA
+      'We are currently investigating issues some players are having logging into the North American PlayStation® megaserver.', // maintenance, issue et down en même temps pour PS NA
+      'In response to the ongoing issue, the North American PlayStation® megaserver is currently unavailable while we perform maintenance.', // maintenance, issue et down en même temps pour PS NA
     ],
     expected: [
       {
@@ -345,8 +345,8 @@ const pattern20241029: PatternItem[] = [
     rawList: [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – October 28, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
       '· Xbox: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      'In response to the ongoing issue, the North American PlayStation® megaserver is currently unavailable while we perform maintenance.',
+      '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)', // maintenance et down en même temps pour PS NA
+      'In response to the ongoing issue, the North American PlayStation® megaserver is currently unavailable while we perform maintenance.', // maintenance et down en même temps pour PS NA
     ],
     expected: [
       {
@@ -444,7 +444,7 @@ const pattern20241029: PatternItem[] = [
       '• [COMPLETE] PC/Mac: NA and EU megaservers for patch maintenance – October 28, 4:00AM EDT (8:00 UTC) - 10:00AM EDT (14:00 UTC)',
       '· Xbox: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
       '· PlayStation®: NA and EU megaservers for maintenance – October 30, 6:00AM EDT (10:00 UTC) - 9:00AM EDT (13:00 UTC)',
-      'The issue is resolved, and the North American PlayStation® megaserver is now available.',
+      'The issue is resolved, and the North American PlayStation® megaserver is now available.', // maintenance et up en même temps pour PS NA
     ],
     expected: [
       {
