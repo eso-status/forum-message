@@ -1,6 +1,6 @@
 {
   "name": "@eso-status/forum-message",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Library used to get servers status of The elders scrolls Online game with https://forums.elderscrollsonline.com/ and https://forums.elderscrollsonline.com/en/categories/pts",
   "main": "lib/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "type": "git",
     "url": "git@github.com:eso-status/forum-message-dev.git"
   },
-  "author": "@dov118 <contact@dov118.dev> (https://dov118.dev)",
+  "author": "@dov118 <contact.dov118.dev@gmail.com> (https://dov118.dev)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/eso-status/forum-message-dev/issues"
