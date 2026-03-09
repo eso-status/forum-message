@@ -26,17 +26,19 @@ jobs:
           - ubuntu-latest
 
         node:
-          - 18.18.0
-          - 18.x
-          - 20.0.0
-          - 20.17.0
+          - 20.19.0
+          - 20.x
+          - 22.13.0
+          - 22.x
+          - 24.0.0
+          - 24.x
 
     steps:
       - name: Checkout source
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v6.0.2
 
       - name: Install Node ${{ matrix.node }}
-        uses: actions/setup-node@v4.0.3
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ matrix.node }}
 

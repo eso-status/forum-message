@@ -2183,6 +2183,272 @@ export const forumMessagePattern: {raw: string, result: {rawDate: string, slug: 
       ],
     },
   },
+  // • [IN PROGRESS] ESO Store and Account System for maintenance – X X, X:XXAM EST (XX:XX UTC) - XX:XXPM EST (XX:XX UTC)
+  {
+    raw: '• [IN PROGRESS] ESO Store and Account System for maintenance – March 3, 9:00AM EST (14:00 UTC) - 12:00PM EST (17:00 UTC)',
+    result: {
+      rawDate: 'March 3, 9:00AM EST (14:00 UTC) - 12:00PM EST (17:00 UTC)',
+      slug: [
+        'service_store_eso',
+        'service_system_account',
+      ],
+      status: 'down',
+      dates: [
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 3).get('months'))
+          .set('date', getDateWithDayNumber(3, 3).get('date'))
+          .set('hours', 14)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 3).get('months'))
+          .set('date', getDateWithDayNumber(3, 3).get('date'))
+          .set('hours', 17)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  // • [COMPLETE] ESO Store and Account System for maintenance – X X, X:XXAM EST (XX:XX UTC) - XX:XXPM EST (XX:XX UTC)
+  {
+    raw: '• [COMPLETE] ESO Store and Account System for maintenance – March 3, 9:00AM EST (14:00 UTC) - 12:00PM EST (17:00 UTC)',
+    result: {
+      rawDate: 'March 3, 9:00AM EST (14:00 UTC) - 12:00PM EST (17:00 UTC)',
+      slug: [
+        'service_store_eso',
+        'service_system_account',
+      ],
+      status: 'up',
+      dates: [
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 3).get('months'))
+          .set('date', getDateWithDayNumber(3, 3).get('date'))
+          .set('hours', 14)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 3).get('months'))
+          .set('date', getDateWithDayNumber(3, 3).get('date'))
+          .set('hours', 17)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  // eslint-disable-next-line no-tabs
+  // •	NA megaservers for patch maintenance – X X, X:XXAM EDT (X:XX UTC) - XX:XXPM EDT (XX:XX UTC)
+  {
+    raw: '•\tNA megaservers for patch maintenance – March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    result: {
+      rawDate: 'March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+      slug: [
+        'server_pc_na',
+        'server_xbox_na',
+        'server_ps_na',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 9).get('months'))
+          .set('date', getDateWithDayNumber(3, 9).get('date'))
+          .set('hours', 8)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 9).get('months'))
+          .set('date', getDateWithDayNumber(3, 9).get('date'))
+          .set('hours', 16)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  // eslint-disable-next-line no-tabs
+  // •	EU megaservers for patch maintenance – X X, X:XX UTC (X:XXAM EDT) - XX:XX UTC (XX:XXPM EDT)
+  {
+    raw: '•\tEU megaservers for patch maintenance – March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+    result: {
+      rawDate: 'March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+      slug: [
+        'server_pc_eu',
+        'server_xbox_eu',
+        'server_ps_eu',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 9).get('months'))
+          .set('date', getDateWithDayNumber(3, 9).get('date'))
+          .set('hours', 8)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 9).get('months'))
+          .set('date', getDateWithDayNumber(3, 9).get('date'))
+          .set('hours', 16)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  // eslint-disable-next-line no-tabs
+  // •	ESO Store and Account System for maintenance – X XX, X:XXAM EDT (XX:XX UTC) - X:XXPM EDT (XX:XX UTC)
+  {
+    raw: '•\tESO Store and Account System for maintenance – March 11, 9:00AM EDT (13:00 UTC) - 1:00PM EDT (17:00 UTC)',
+    result: {
+      rawDate: 'March 11, 9:00AM EDT (13:00 UTC) - 1:00PM EDT (17:00 UTC)',
+      slug: [
+        'service_store_eso',
+        'service_system_account',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 11).get('months'))
+          .set('date', getDateWithDayNumber(3, 11).get('date'))
+          .set('hours', 13)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 11).get('months'))
+          .set('date', getDateWithDayNumber(3, 11).get('date'))
+          .set('hours', 17)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  // eslint-disable-next-line no-tabs
+  // 	• [IN PROGRESS] NA megaservers for patch maintenance – X X, X:XXAM EDT (X:XX UTC) - XX:XXPM EDT (XX:XX UTC)
+  {
+    raw: '\t• [IN PROGRESS] NA megaservers for patch maintenance – March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    result: {
+      rawDate: 'March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+      slug: [
+        'server_pc_na',
+        'server_xbox_na',
+        'server_ps_na',
+      ],
+      status: 'down',
+      dates: [
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 9).get('months'))
+          .set('date', getDateWithDayNumber(3, 9).get('date'))
+          .set('hours', 8)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 9).get('months'))
+          .set('date', getDateWithDayNumber(3, 9).get('date'))
+          .set('hours', 16)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  // eslint-disable-next-line no-tabs
+  // 	• [IN PROGRESS] EU megaservers for patch maintenance – X X, X:XX UTC (X:XXAM EDT) - XX:XX UTC (XX:XXPM EDT)
+  {
+    raw: '\t• [IN PROGRESS] EU megaservers for patch maintenance – March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+    result: {
+      rawDate: 'March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+      slug: [
+        'server_pc_eu',
+        'server_xbox_eu',
+        'server_ps_eu',
+      ],
+      status: 'down',
+      dates: [
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 9).get('months'))
+          .set('date', getDateWithDayNumber(3, 9).get('date'))
+          .set('hours', 8)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 9).get('months'))
+          .set('date', getDateWithDayNumber(3, 9).get('date'))
+          .set('hours', 16)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
+  // eslint-disable-next-line no-tabs
+  // 	• ESO Store and Account System for maintenance – X XX, X:XXAM EDT (XX:XX UTC) - X:XXPM EDT (XX:XX UTC)
+  {
+    raw: '\t• ESO Store and Account System for maintenance – March 11, 9:00AM EDT (13:00 UTC) - 1:00PM EDT (17:00 UTC)',
+    result: {
+      rawDate: 'March 11, 9:00AM EDT (13:00 UTC) - 1:00PM EDT (17:00 UTC)',
+      slug: [
+        'service_store_eso',
+        'service_system_account',
+      ],
+      status: 'planned',
+      dates: [
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 11).get('months'))
+          .set('date', getDateWithDayNumber(3, 11).get('date'))
+          .set('hours', 13)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+        moment()
+          .utc()
+          .set('years', moment().get('years'))
+          .set('months', getDateWithDayNumber(3, 11).get('months'))
+          .set('date', getDateWithDayNumber(3, 11).get('date'))
+          .set('hours', 17)
+          .set('minutes', 0)
+          .set('seconds', 0)
+          .set('milliseconds', 0),
+      ],
+    },
+  },
 ];
 
 /**

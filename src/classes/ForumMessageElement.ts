@@ -166,18 +166,30 @@ export default class ForumMessageElement {
     if (support === 'xbox') { // OK
       return rawData.includes('Xbox')
         || rawData.includes('· NA megaservers')
+        || rawData.includes('•\tNA megaservers')
+        || rawData.includes('] NA megaservers')
         || rawData.includes('· EU megaservers')
+        || rawData.includes('•\tEU megaservers')
+        || rawData.includes('] EU megaservers')
         || rawData.includes('the megaservers');
     } if (support === 'ps') { // OK
       return rawData.includes('PlayStation')
         || rawData.includes('· NA megaservers')
+        || rawData.includes('•\tNA megaservers')
+        || rawData.includes('] NA megaservers')
         || rawData.includes('· EU megaservers')
+        || rawData.includes('•\tEU megaservers')
+        || rawData.includes('] EU megaservers')
         || rawData.includes('the megaservers');
     } if (support === 'pc') { // OK
       return rawData.includes('PC/Mac')
         || rawData.includes('PTS')
         || rawData.includes('· NA megaservers')
+        || rawData.includes('•\tNA megaservers')
+        || rawData.includes('] NA megaservers')
         || rawData.includes('· EU megaservers')
+        || rawData.includes('•\tEU megaservers')
+        || rawData.includes('] EU megaservers')
         || rawData.includes('the megaservers');
     } if (support === 'web') {
       return rawData.includes('ESO Website');
