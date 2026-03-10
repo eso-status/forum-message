@@ -6,6 +6,8 @@ import Connector from './connector';
 /**
  * Class for retrieving announcement information
  */
+/* eslint-disable @typescript-eslint/no-extraneous-class */
+/* eslint-disable @typescript-eslint/unified-signatures */
 export default class ForumMessage {
   /**
    * Method for retrieving announcement information
@@ -26,3 +28,5 @@ export default class ForumMessage {
     return (await Connector.init(url ?? ForumMessageURL)).rawEsoStatus;
   }
 }
+/* eslint-enable @typescript-eslint/no-extraneous-class */
+/* eslint-enable @typescript-eslint/unified-signatures */

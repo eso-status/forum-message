@@ -18,12 +18,12 @@ export default class StatusIdentifier {
   /**
    * Data used to identify the presence of the status in the announcement
    */
-  public rawStatus: RemoteRawStatus;
+  public rawStatus: RemoteRawStatus | null;
 
   /**
    * Status found in the announcement
    */
-  public status: Status;
+  public status: Status | null;
 
   /**
    * List of statuses to check for presence in the announcement
@@ -79,7 +79,9 @@ export default class StatusIdentifier {
    * @param raw Raw data of the announcement
    */
   constructor(private readonly raw: string) {
-    this.statusList.forEach((status: Status): void => this.identify(status));
+    this.statusList.forEach((status: Status): void => {
+      this.identify(status);
+    });
 
     this.default();
   }
@@ -90,7 +92,7 @@ export default class StatusIdentifier {
    * @private
    */
   private getMatchList(status: Status): RemoteRawStatus[] {
-    return <RemoteRawStatus[]>this[`${status}MatchesList`];
+    return this[`${status}MatchesList`] as RemoteRawStatus[];
   }
 
   /**
@@ -125,8 +127,6 @@ export default class StatusIdentifier {
    * @private
    */
   private default(): void {
-    if (!this.status) {
-      this.status = PlannedStatus;
-    }
+    this.status ??= PlannedStatus;
   }
 }

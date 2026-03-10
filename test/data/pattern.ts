@@ -40,7 +40,6 @@ import pattern20241029 from './pattern20241029';
 import pattern20241030 from './pattern20241030';
 import pattern20241101 from './pattern20241101';
 import pattern20241104 from './pattern20241104';
-// import pattern20241106 from './pattern20241106';
 import pattern20241108 from './pattern20241108';
 import pattern20241111 from './pattern20241111';
 import pattern20241113 from './pattern20241113';
