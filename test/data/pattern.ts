@@ -87,7 +87,6 @@ const pattern: PatternItem[] = [
   ...pattern20241030,
   ...pattern20241101,
   ...pattern20241104,
-  // ...pattern20241106,
   ...pattern20241108,
   ...pattern20241111,
   ...pattern20241113,
