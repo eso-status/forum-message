@@ -97,8 +97,8 @@ export default class Connector {
     this.raw = list.map((raw: string): string => {
       let initialRaw: string = raw;
       initialRaw = initialRaw.replace(' 。', '');
-      initialRaw = initialRaw.replace(/\n/g, '');
-      initialRaw = initialRaw.replace(/<br\/>\n/g, '<br>');
+      initialRaw = initialRaw.replaceAll('\n', '');
+      initialRaw = initialRaw.replaceAll(/<br\/>\n/g, '<br>');
       initialRaw = initialRaw.replace('  Thank you for your patience!', '');
       initialRaw = initialRaw.replace(' Thank you for your patience.', '');
       initialRaw = initialRaw.replace(
