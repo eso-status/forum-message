@@ -26,6 +26,7 @@ import { RemoteServiceStoreEsoRawSlug } from '../type/remoteServiceStoreEsoRawSl
 import { RemoteServiceSystemAccountRawSlug } from '../type/remoteServiceSystemAccountRawSlug.type';
 import { RemoteServiceWebSiteRawSlug } from '../type/remoteServiceWebSiteRawSlug.type';
 import SlugMatch from './slug.match';
+import { MatchesList } from '../type/matchesList.type';
 
 /**
  * Class for identifying the list of slugs contained in an announcement
@@ -156,7 +157,9 @@ export default class SlugIdentifier {
   constructor(private readonly raw: string) {
     this.slugMatches = [];
 
-    this.slugList.forEach((slug: Slug): void => this.identify(slug));
+    this.slugList.forEach((slug: Slug): void => {
+      this.identify(slug);
+    });
   }
 
   /**
@@ -165,7 +168,8 @@ export default class SlugIdentifier {
    * @private
    */
   private getMatchList(slug: Slug): RemoteRawSlug[] {
-    return <RemoteRawSlug[]>this[SlugIdentifier.getMatchListName(slug)];
+    const key = SlugIdentifier.getMatchListName(slug) as keyof this;
+    return this[key] as RemoteRawSlug[];
   }
 
   /**
@@ -173,14 +177,14 @@ export default class SlugIdentifier {
    * @param slug Slug to test
    * @private
    */
-  private static getMatchListName(slug: Slug): string {
+  private static getMatchListName(slug: Slug): MatchesList {
     return `${slug
       .split('_')
       .map(
         (item: Type | Support | Zone): string =>
           item.charAt(0).toUpperCase() + item.slice(1),
       )
-      .join('')}MatchesList`;
+      .join('')}MatchesList` as MatchesList;
   }
 
   /**

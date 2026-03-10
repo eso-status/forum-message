@@ -49,9 +49,7 @@ export default class Connector {
   private static async getRemoteContent(url: string): Promise<string> {
     const response: AxiosResponse<string> = await axios.get<string>(url);
 
-    return response?.status === 200 && !!response?.data
-      ? String(response?.data)
-      : '';
+    return response.status === 200 && !!response.data ? response.data : '';
   }
 
   /**
@@ -59,9 +57,9 @@ export default class Connector {
    * @private
    */
   private getMessages(): void {
-    ['AlertMessage', 'WarningMessage'].forEach((type: MessageType): void =>
-      this.getMessagesByType(type),
-    );
+    ['AlertMessage', 'WarningMessage'].forEach((type: MessageType): void => {
+      this.getMessagesByType(type);
+    });
   }
 
   /**
@@ -180,7 +178,9 @@ export default class Connector {
    * @private
    */
   private fetch(): void {
-    this.raw.forEach((raw: string): void => this.fetchEach(raw));
+    this.raw.forEach((raw: string): void => {
+      this.fetchEach(raw);
+    });
   }
 
   /**
