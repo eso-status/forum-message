@@ -25,7 +25,7 @@ import {
   UpStatus,
 } from '@eso-status/types';
 
-const pattern20260306: PatternItem[] = [
+const pattern20260309: PatternItem[] = [
   {
     date: '2026-03-09T08_09_00',
     url: ForumMessagePTSURL,
@@ -484,4 +484,4 @@ const pattern20260306: PatternItem[] = [
   },
 ];
 
-export default pattern20260306;
+export default pattern20260309;
