@@ -98,6 +98,8 @@ export default class Connector {
       let initialRaw: string = raw;
       initialRaw = initialRaw.replace(' 。', '');
       initialRaw = initialRaw.replaceAll('\n', '');
+      initialRaw = initialRaw.replaceAll('>•', '•');
+      initialRaw = initialRaw.replaceAll(' •', '•');
       initialRaw = initialRaw.replaceAll('<br/>\n', '<br>');
       initialRaw = initialRaw.replace('  Thank you for your patience!', '');
       initialRaw = initialRaw.replace(' Thank you for your patience.', '');
