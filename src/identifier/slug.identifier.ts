@@ -63,6 +63,7 @@ export default class SlugIdentifier {
     'PC/Mac: NA and EU megaservers for',
     '] EU megaservers for',
     '• EU megaservers for',
+    'North American and European PC/Mac megaservers',
   ];
 
   /**
@@ -75,6 +76,7 @@ export default class SlugIdentifier {
     '] NA megaservers for',
     '• NA megaservers for',
     'North American PC/Mac megaserver',
+    'North American and European PC/Mac megaservers',
   ];
 
   /**
