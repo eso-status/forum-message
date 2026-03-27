@@ -4,6 +4,8 @@ import SlugIdentifier from './identifier/slug.identifier';
 import SlugMatch from './identifier/slug.match';
 import { SourceUrl } from './type/sourceUrl.type';
 import { EsoStatusRawData } from './interface/esoStatusRawData.interface';
+import { MessagePatternType } from './type/messagePattern.type';
+import MessageReplacePattern from './pattern/message/messageReplace.pattern';
 
 /**
  * Class containing announcement information
@@ -33,6 +35,12 @@ export default class Raw {
   public matches: EsoStatusRawData[] = [];
 
   /**
+   * Pattern that matched the raw message from the data source
+   * @private
+   */
+  private pattern: MessagePatternType;
+
+  /**
    * @param url URL used as the source to retrieve announcements
    * @param raw Raw data of the announcement
    */
@@ -40,6 +48,8 @@ export default class Raw {
     private readonly url: SourceUrl,
     private readonly raw: string,
   ) {
+    this.getPattern();
+
     this.statusIdentifier = new StatusIdentifier(this.raw);
     this.dateFormatter = new DateFormatter(this.raw);
     this.slugsIdentifier = new SlugIdentifier(this.raw);
@@ -65,6 +75,7 @@ export default class Raw {
     const rawEsoStatus: EsoStatusRawData = {
       source: this.url,
       raw: this.raw,
+      pattern: this.pattern,
       slug: slugMatch.slug,
       type: slugMatch.getType(),
       support: slugMatch.getSupport(),
@@ -83,5 +94,20 @@ export default class Raw {
     }
 
     return rawEsoStatus;
+  }
+
+  /**
+   * Method to get the pattern from raw
+   * @private
+   */
+  private getPattern(): void {
+    this.pattern = this.raw as MessagePatternType;
+
+    for (const [pattern, replacement] of MessageReplacePattern) {
+      this.pattern = this.pattern.replace(
+        pattern,
+        replacement.toString(),
+      ) as MessagePatternType;
+    }
   }
 }

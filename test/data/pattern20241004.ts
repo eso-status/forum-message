@@ -9,34 +9,43 @@ import {
   XboxSupport,
 } from '@eso-status/types';
 import { PatternItem } from '../interface/patternItem.interface';
-import { ForumMessagePTSURL, ForumMessageURL } from '../../src/const';
+import ForumMessagePtsUrl from '../../src/const/ForumMessagePtsUrl.const';
+import ForumMessageUrl from '../../src/const/ForumMessageUrl.const';
 
 const pattern20241004: PatternItem[] = [
   {
     date: '2024-10-04T18_59_15',
-    url: ForumMessagePTSURL,
+    url: ForumMessagePtsUrl,
     file: '2024-10-04T18_59_15.html',
     rawList: [
-      '• Xbox: EU megaserver for maintenance – October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
-      'We will be performing maintenance for patch 10.2.3 on the PTS on Monday at 10:00AM EDT (14:00 UTC).',
+      'Xbox: EU megaserver for maintenance - October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
+      'We will be performing maintenance for patch 10.2.3 on the PTS on Monday at 10:00AM EDT (14:00 UTC)',
+    ],
+    patternList: [
+      'We will be performing maintenance on the PTS on D at [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
+      'Xbox: EU megaserver for maintenance - [month] [day number], [hour]:[minute] [timezone] ([month] [day number], [hour]:[minute][meridiem] [timezone]) - [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone])',
     ],
     expected: [
       {
-        source: ForumMessagePTSURL,
-        raw: '• Xbox: EU megaserver for maintenance – October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
+        source: ForumMessagePtsUrl,
+        raw: 'Xbox: EU megaserver for maintenance - October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
+        pattern:
+          'Xbox: EU megaserver for maintenance - [month] [day number], [hour]:[minute] [timezone] ([month] [day number], [hour]:[minute][meridiem] [timezone]) - [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone])',
         slug: ServerXboxEuSlug,
         type: ServerType,
         support: XboxSupport,
         zone: EuZone,
         status: PlannedStatus,
-        rawSlug: 'Xbox: EU megaserver for',
+        rawSlug: 'Xbox: EU megaserver',
         rawDate:
           'October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
         dates: ['2024-10-09T02:00:00.000Z', '2024-10-09T16:00:00.000Z'],
       },
       {
-        source: ForumMessagePTSURL,
-        raw: 'We will be performing maintenance for patch 10.2.3 on the PTS on Monday at 10:00AM EDT (14:00 UTC).',
+        source: ForumMessagePtsUrl,
+        raw: 'We will be performing maintenance for patch 10.2.3 on the PTS on Monday at 10:00AM EDT (14:00 UTC)',
+        pattern:
+          'We will be performing maintenance on the PTS on D at [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
         slug: ServerPcPtsSlug,
         type: ServerType,
         support: PcSupport,
@@ -51,21 +60,26 @@ const pattern20241004: PatternItem[] = [
   },
   {
     date: '2024-10-04T18_59_47',
-    url: ForumMessageURL,
+    url: ForumMessageUrl,
     file: '2024-10-04T18_59_47.html',
     rawList: [
-      '• Xbox: EU megaserver for maintenance – October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
+      'Xbox: EU megaserver for maintenance - October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
+    ],
+    patternList: [
+      'Xbox: EU megaserver for maintenance - [month] [day number], [hour]:[minute] [timezone] ([month] [day number], [hour]:[minute][meridiem] [timezone]) - [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone])',
     ],
     expected: [
       {
-        source: ForumMessageURL,
-        raw: '• Xbox: EU megaserver for maintenance – October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
+        source: ForumMessageUrl,
+        raw: 'Xbox: EU megaserver for maintenance - October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
+        pattern:
+          'Xbox: EU megaserver for maintenance - [month] [day number], [hour]:[minute] [timezone] ([month] [day number], [hour]:[minute][meridiem] [timezone]) - [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone])',
         slug: ServerXboxEuSlug,
         type: ServerType,
         support: XboxSupport,
         zone: EuZone,
         status: PlannedStatus,
-        rawSlug: 'Xbox: EU megaserver for',
+        rawSlug: 'Xbox: EU megaserver',
         rawDate:
           'October 9, 2:00 UTC (October 8, 10:00PM EDT) - 16:00 UTC (12:00PM EDT)',
         dates: ['2024-10-09T02:00:00.000Z', '2024-10-09T16:00:00.000Z'],

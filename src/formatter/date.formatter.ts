@@ -46,12 +46,12 @@ export default class DateFormatter {
    * @private
    */
   private getRawClassicDate(): string {
-    const split: string[] = this.raw.split(' – ');
+    const split: string[] = this.raw.split(' - ');
     if (split.length > 2) {
       split.shift();
-      return split.join(' – ');
+      return split.join(' - ');
     }
-    return split.length === 2 ? split[1] : '';
+    return '';
   }
 
   /**

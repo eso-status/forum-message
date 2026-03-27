@@ -5,21 +5,26 @@ import {
   ServerPcPtsSlug,
   ServerType,
 } from '@eso-status/types';
-import { ForumMessagePTSURL } from '../../src/const';
 import { PatternItem } from '../interface/patternItem.interface';
+import ForumMessagePtsUrl from '../../src/const/ForumMessagePtsUrl.const';
 
 const pattern20240823: PatternItem[] = [
   {
     date: '2024-08-23T19_17_52',
-    url: ForumMessagePTSURL,
+    url: ForumMessagePtsUrl,
     file: '2024-08-23T19_17_52.html',
     rawList: [
-      'We will be performing maintenance on the PTS on Tuesday at 10:00AM EDT (14:00 UTC).',
+      'We will be performing maintenance on the PTS on Tuesday at 10:00AM EDT (14:00 UTC)',
+    ],
+    patternList: [
+      'We will be performing maintenance on the PTS on D at [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
     ],
     expected: [
       {
-        source: ForumMessagePTSURL,
-        raw: 'We will be performing maintenance on the PTS on Tuesday at 10:00AM EDT (14:00 UTC).',
+        source: ForumMessagePtsUrl,
+        raw: 'We will be performing maintenance on the PTS on Tuesday at 10:00AM EDT (14:00 UTC)',
+        pattern:
+          'We will be performing maintenance on the PTS on D at [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
         slug: ServerPcPtsSlug,
         type: ServerType,
         support: PcSupport,

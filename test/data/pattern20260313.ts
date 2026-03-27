@@ -1,5 +1,4 @@
 import { PatternItem } from '../interface/patternItem.interface';
-import { ForumMessageURL } from '../../src/const';
 import {
   ServerPcEuSlug,
   ServerType,
@@ -18,20 +17,26 @@ import {
   SystemSupport,
   AccountZone,
 } from '@eso-status/types';
-import { ForumMessagePTSURL } from '../../lib/const';
+import ForumMessageUrl from '../../src/const/ForumMessageUrl.const';
+import ForumMessagePtsUrl from '../../src/const/ForumMessagePtsUrl.const';
 
 const pattern20260313: PatternItem[] = [
   {
     date: '2026-03-13T14_48_18',
-    url: ForumMessageURL,
+    url: ForumMessageUrl,
     file: '2026-03-13T14_48_18.html',
     rawList: [
-      'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers.',
+      'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers',
+    ],
+    patternList: [
+      'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers',
     ],
     expected: [
       {
-        source: ForumMessageURL,
-        raw: 'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers.',
+        source: ForumMessageUrl,
+        raw: 'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers',
+        pattern:
+          'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers',
         slug: ServerPcEuSlug,
         type: ServerType,
         support: PcSupport,
@@ -41,40 +46,10 @@ const pattern20260313: PatternItem[] = [
         rawSlug: 'North American and European PC/Mac megaservers',
       },
       {
-        source: ForumMessageURL,
-        raw: 'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers.',
-        slug: ServerPcNaSlug,
-        type: ServerType,
-        support: PcSupport,
-        zone: NaZone,
-        status: IssuesStatus,
-        rawStatus: 'currently investigating',
-        rawSlug: 'North American and European PC/Mac megaservers',
-      },
-    ],
-  },
-  {
-    date: '2026-03-13T14_49_36',
-    url: ForumMessageURL,
-    file: '2026-03-13T14_49_36.html',
-    rawList: [
-      'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers.',
-    ],
-    expected: [
-      {
-        source: ForumMessageURL,
-        raw: 'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers.',
-        slug: ServerPcEuSlug,
-        type: ServerType,
-        support: PcSupport,
-        zone: EuZone,
-        status: IssuesStatus,
-        rawStatus: 'currently investigating',
-        rawSlug: 'North American and European PC/Mac megaservers',
-      },
-      {
-        source: ForumMessageURL,
-        raw: 'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers.',
+        source: ForumMessageUrl,
+        raw: 'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers',
+        pattern:
+          'We are currently investigating issues some players are having on the North American and European PC/Mac megaservers',
         slug: ServerPcNaSlug,
         type: ServerType,
         support: PcSupport,
@@ -87,15 +62,20 @@ const pattern20260313: PatternItem[] = [
   },
   {
     date: '2026-03-13T15_40_00',
-    url: ForumMessagePTSURL,
+    url: ForumMessagePtsUrl,
     file: '2026-03-13T15_40_00.html',
     rawList: [
-      'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
+      'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
+    ],
+    patternList: [
+      'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
     ],
     expected: [
       {
-        source: ForumMessagePTSURL,
-        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
+        source: ForumMessagePtsUrl,
+        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
+        pattern:
+          'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
         slug: ServerPcEuSlug,
         type: ServerType,
         support: PcSupport,
@@ -105,40 +85,10 @@ const pattern20260313: PatternItem[] = [
         rawSlug: 'North American and European PC/Mac megaservers',
       },
       {
-        source: ForumMessagePTSURL,
-        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
-        slug: ServerPcNaSlug,
-        type: ServerType,
-        support: PcSupport,
-        zone: NaZone,
-        status: UpStatus,
-        rawStatus: 'been resolved',
-        rawSlug: 'North American and European PC/Mac megaservers',
-      },
-    ],
-  },
-  {
-    date: '2026-03-13T15_40_32',
-    url: ForumMessageURL,
-    file: '2026-03-13T15_40_32.html',
-    rawList: [
-      'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
-    ],
-    expected: [
-      {
-        source: ForumMessageURL,
-        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
-        slug: ServerPcEuSlug,
-        type: ServerType,
-        support: PcSupport,
-        zone: EuZone,
-        status: UpStatus,
-        rawStatus: 'been resolved',
-        rawSlug: 'North American and European PC/Mac megaservers',
-      },
-      {
-        source: ForumMessageURL,
-        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
+        source: ForumMessagePtsUrl,
+        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
+        pattern:
+          'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
         slug: ServerPcNaSlug,
         type: ServerType,
         support: PcSupport,
@@ -151,16 +101,22 @@ const pattern20260313: PatternItem[] = [
   },
   {
     date: '2026-03-13T19_03_28',
-    url: ForumMessageURL,
+    url: ForumMessageUrl,
     file: '2026-03-13T19_03_28.html',
     rawList: [
-      'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
-      '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
+      'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
+      'ESO Store and Account System for maintenance - March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
+    ],
+    patternList: [
+      'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
+      'ESO Store and Account System for maintenance - [month] [day number], [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone]) - [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
     ],
     expected: [
       {
-        source: ForumMessageURL,
-        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
+        source: ForumMessageUrl,
+        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
+        pattern:
+          'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
         slug: ServerPcEuSlug,
         type: ServerType,
         support: PcSupport,
@@ -170,8 +126,10 @@ const pattern20260313: PatternItem[] = [
         rawSlug: 'North American and European PC/Mac megaservers',
       },
       {
-        source: ForumMessageURL,
-        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
+        source: ForumMessageUrl,
+        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
+        pattern:
+          'The issues on the North American and European PC/Mac megaservers have been resolved at this time',
         slug: ServerPcNaSlug,
         type: ServerType,
         support: PcSupport,
@@ -181,151 +139,30 @@ const pattern20260313: PatternItem[] = [
         rawSlug: 'North American and European PC/Mac megaservers',
       },
       {
-        source: ForumMessageURL,
-        raw: '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
+        source: ForumMessageUrl,
+        raw: 'ESO Store and Account System for maintenance - March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
+        pattern:
+          'ESO Store and Account System for maintenance - [month] [day number], [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone]) - [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
         slug: ServiceStoreEsoSlug,
         type: ServiceType,
         support: StoreSupport,
         zone: EsoZone,
         status: PlannedStatus,
-        rawSlug: 'ESO Store and Account System for',
+        rawSlug: 'ESO Store',
         rawDate: 'March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
         dates: ['2026-03-18T10:00:00.000Z', '2026-03-18T20:00:00.000Z'],
       },
       {
-        source: ForumMessageURL,
-        raw: '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
+        source: ForumMessageUrl,
+        raw: 'ESO Store and Account System for maintenance - March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
+        pattern:
+          'ESO Store and Account System for maintenance - [month] [day number], [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone]) - [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
         slug: ServiceSystemAccountSlug,
         type: ServiceType,
         support: SystemSupport,
         zone: AccountZone,
         status: PlannedStatus,
-        rawSlug: 'ESO Store and Account System for',
-        rawDate: 'March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        dates: ['2026-03-18T10:00:00.000Z', '2026-03-18T20:00:00.000Z'],
-      },
-    ],
-  },
-  {
-    date: '2026-03-13T19_03_38',
-    url: ForumMessagePTSURL,
-    file: '2026-03-13T19_03_38.html',
-    rawList: [
-      'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
-      '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-    ],
-    expected: [
-      {
-        source: ForumMessagePTSURL,
-        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
-        slug: ServerPcEuSlug,
-        type: ServerType,
-        support: PcSupport,
-        zone: EuZone,
-        status: UpStatus,
-        rawStatus: 'been resolved',
-        rawSlug: 'North American and European PC/Mac megaservers',
-      },
-      {
-        source: ForumMessagePTSURL,
-        raw: 'The issues on the North American and European PC/Mac megaservers have been resolved at this time.',
-        slug: ServerPcNaSlug,
-        type: ServerType,
-        support: PcSupport,
-        zone: NaZone,
-        status: UpStatus,
-        rawStatus: 'been resolved',
-        rawSlug: 'North American and European PC/Mac megaservers',
-      },
-      {
-        source: ForumMessagePTSURL,
-        raw: '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        slug: ServiceStoreEsoSlug,
-        type: ServiceType,
-        support: StoreSupport,
-        zone: EsoZone,
-        status: PlannedStatus,
-        rawSlug: 'ESO Store and Account System for',
-        rawDate: 'March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        dates: ['2026-03-18T10:00:00.000Z', '2026-03-18T20:00:00.000Z'],
-      },
-      {
-        source: ForumMessagePTSURL,
-        raw: '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        slug: ServiceSystemAccountSlug,
-        type: ServiceType,
-        support: SystemSupport,
-        zone: AccountZone,
-        status: PlannedStatus,
-        rawSlug: 'ESO Store and Account System for',
-        rawDate: 'March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        dates: ['2026-03-18T10:00:00.000Z', '2026-03-18T20:00:00.000Z'],
-      },
-    ],
-  },
-  {
-    date: '2026-03-13T19_05_28',
-    url: ForumMessageURL,
-    file: '2026-03-13T19_05_28.html',
-    rawList: [
-      '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-    ],
-    expected: [
-      {
-        source: ForumMessageURL,
-        raw: '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        slug: ServiceStoreEsoSlug,
-        type: ServiceType,
-        support: StoreSupport,
-        zone: EsoZone,
-        status: PlannedStatus,
-        rawSlug: 'ESO Store and Account System for',
-        rawDate: 'March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        dates: ['2026-03-18T10:00:00.000Z', '2026-03-18T20:00:00.000Z'],
-      },
-      {
-        source: ForumMessageURL,
-        raw: '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        slug: ServiceSystemAccountSlug,
-        type: ServiceType,
-        support: SystemSupport,
-        zone: AccountZone,
-        status: PlannedStatus,
-        rawSlug: 'ESO Store and Account System for',
-        rawDate: 'March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        dates: ['2026-03-18T10:00:00.000Z', '2026-03-18T20:00:00.000Z'],
-      },
-    ],
-  },
-  {
-    date: '2026-03-13T19_05_38',
-    url: ForumMessagePTSURL,
-    file: '2026-03-13T19_05_38.html',
-    rawList: [
-      '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-    ],
-    expected: [
-      {
-        source: ForumMessagePTSURL,
-        raw: '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        slug: ServiceStoreEsoSlug,
-        type: ServiceType,
-        support: StoreSupport,
-        zone: EsoZone,
-        status: PlannedStatus,
-        rawSlug: 'ESO Store and Account System for',
-        rawDate: 'March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        dates: ['2026-03-18T10:00:00.000Z', '2026-03-18T20:00:00.000Z'],
-      },
-      {
-        source: ForumMessagePTSURL,
-        raw: '• ESO Store and Account System for maintenance – March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
-        slug: ServiceSystemAccountSlug,
-        type: ServiceType,
-        support: SystemSupport,
-        zone: AccountZone,
-        status: PlannedStatus,
-        rawSlug: 'ESO Store and Account System for',
+        rawSlug: 'Account System',
         rawDate: 'March 18, 6:00AM EDT (10:00 UTC) - 4:00PM EDT (20:00 UTC)',
         dates: ['2026-03-18T10:00:00.000Z', '2026-03-18T20:00:00.000Z'],
       },
