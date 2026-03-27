@@ -1,8 +1,28 @@
-import axios, { AxiosResponse } from 'axios';
 import { SourceUrl } from './type/sourceUrl.type';
 import { MessageType } from './type/messageType.type';
 import Raw from './raw';
 import { EsoStatusRawData } from './interface/esoStatusRawData.interface';
+
+import axios, { AxiosResponse } from 'axios';
+import { MessagePatternType } from './type/messagePattern.type';
+import ForumMessagePtsUrl from './const/ForumMessagePtsUrl.const';
+import {
+  ServerPcEuSlug,
+  ServerPcNaSlug,
+  ServerPcPtsSlug,
+  ServerPsEuSlug,
+  ServerPsNaSlug,
+  ServerXboxEuSlug,
+  ServerXboxNaSlug,
+  ServiceStoreEsoSlug,
+  ServiceSystemAccountSlug,
+  ServiceWebSiteSlug,
+  Slug,
+} from '@eso-status/types';
+import MessageSanitizePattern from './pattern/message/messageSanitize.pattern';
+import MessageFilterPattern from './pattern/message/messageFilter.pattern';
+import ForumMessagePtsReplacePattern from './pattern/content/forumMessagePtsReplace.pattern';
+import ForumMessageReplacePattern from './pattern/content/forumMessageReplace.pattern';
 
 /**
  * Class for retrieving information from announcements
@@ -19,6 +39,35 @@ export default class Connector {
   public rawEsoStatus: EsoStatusRawData[] = [];
 
   /**
+   * Sanitized remote content to compare changes between two versions
+   * @private
+   */
+  private sanitizedRemoteContent = '';
+
+  /**
+   * Patterns that matched the raw messages from the data source
+   */
+  public patterns: MessagePatternType[] = [];
+
+  /**
+   * List of information from announcements by zone
+   * @private
+   */
+  private readonly messagesZones: string[] = [];
+
+  /**
+   * List of raw data from announcements
+   * @private
+   */
+  private readonly messages: string[] = [];
+
+  /**
+   * List of sanitized data from announcements
+   * @private
+   */
+  private sanitizedMessages: string[] = [];
+
+  /**
    * @param url URL used as the source to retrieve announcements
    * @param remoteContent Content of the source retrieved via URL
    */
@@ -26,11 +75,14 @@ export default class Connector {
     private readonly url: SourceUrl,
     private readonly remoteContent: string,
   ) {
+    this.sanitizedRemoteContent = this.remoteContent;
+    this.cleanRemoteContent();
     this.getMessages();
-    this.replace();
     this.split();
+    this.sanitize();
     this.filter();
     this.fetch();
+    this.generatePatternList();
   }
 
   /**
@@ -53,6 +105,28 @@ export default class Connector {
   }
 
   /**
+   * Get a sanitized remote content to compare changes between two versions
+   * @private
+   */
+  private cleanRemoteContent(): void {
+    for (const [pattern, replacement] of ForumMessageReplacePattern) {
+      this.sanitizedRemoteContent = this.sanitizedRemoteContent.replace(
+        pattern,
+        replacement.toString(),
+      );
+    }
+
+    if (this.url === ForumMessagePtsUrl) {
+      for (const [pattern, replacement] of ForumMessagePtsReplacePattern) {
+        this.sanitizedRemoteContent = this.sanitizedRemoteContent.replace(
+          pattern,
+          replacement.toString(),
+        );
+      }
+    }
+  }
+
+  /**
    * Method for retrieving raw announcements for all announcement levels
    * @private
    */
@@ -67,16 +141,22 @@ export default class Connector {
    * @private
    */
   private getMessagesByType(type: MessageType): void {
-    const split: string[] = this.remoteContent.split(
-      `<div class="DismissMessage ${type}">`,
+    const regex = new RegExp(
+      String.raw`<div[^>]*class="[^"]*DismissMessage ${type}[^"]*"[^>]*>([\s\S]*?)<\/div>`,
+      'g',
     );
-    split.shift();
-    split.forEach((item: string): void => {
-      const result: string[] = item.split('</div>');
 
-      if (result.length >= 2) {
-        this.raw.push(result[0]);
-      }
+    for (const match of this.remoteContent.matchAll(regex)) {
+      this.messagesZones.push(match[1]);
+    }
+  }
+
+  /**
+   * Method for separating each announcement message
+   */
+  private split(): void {
+    this.messagesZones.forEach((messagesZone: string): void => {
+      this.messages.push(...messagesZone.split(/<br\s*\/?>/i));
     });
   }
 
@@ -84,76 +164,13 @@ export default class Connector {
    * Method for formatting the raw data of retrieved announcements
    * @private
    */
-  private replace(): void {
-    const list: string[] = [];
-
-    this.raw.forEach((raw: string): void => {
-      raw.split('<br').forEach((line: string): void => {
-        const split: string[] = line.split('/>');
-        list.push(split.join(''));
-      });
-    });
-
-    this.raw = list.map((raw: string): string => {
-      let initialRaw: string = raw;
-      initialRaw = initialRaw.replace(' 。', '');
-      initialRaw = initialRaw.replaceAll('\n', '');
-      initialRaw = initialRaw.replaceAll('>•', '•');
-      initialRaw = initialRaw.replaceAll(' •', '•');
-      initialRaw = initialRaw.replaceAll('<br/>\n', '<br>');
-      initialRaw = initialRaw.replace('  Thank you for your patience!', '');
-      initialRaw = initialRaw.replace(' Thank you for your patience.', '');
-      initialRaw = initialRaw.replace(
-        ' We will update as new information becomes available.',
-        '',
-      );
-      initialRaw = initialRaw.replace(
-        ' If you continue to experience difficulties at login, please restart your client. Thank you for your patience!',
-        '',
-      );
-      initialRaw = initialRaw.replace('  ', ' ');
-
-      if (initialRaw.includes('\t')) {
-        const split: string[] = initialRaw.split('\t');
-        if (split[0] === ' ') {
-          return split[1];
-        }
-        if (split[0].includes('•')) {
-          return `• ${split[1]}`;
-        }
+  private sanitize(): void {
+    this.sanitizedMessages = this.messages.map((message: string): string => {
+      for (const [pattern, replacement] of MessageSanitizePattern) {
+        message = message.replace(pattern, replacement.toString());
       }
 
-      if (initialRaw.endsWith(' ')) {
-        initialRaw = initialRaw.substring(0, initialRaw.length - 1);
-      }
-
-      if (
-        initialRaw.includes('. Please check here for status updates: <a href')
-      ) {
-        return initialRaw.split(
-          ' Please check here for status updates: <a href',
-        )[0];
-      }
-
-      if (initialRaw.includes(' <a href')) {
-        return initialRaw.split(' <a href')[0];
-      }
-
-      return initialRaw;
-    });
-  }
-
-  /**
-   * Method for separating each announcement message
-   */
-  private split(): void {
-    const rawList: string[] = this.raw;
-    this.raw = [];
-
-    rawList.forEach((raw: string): void => {
-      raw.split('<br>').forEach((split: string): void => {
-        this.raw.push(split);
-      });
+      return message;
     });
   }
 
@@ -162,15 +179,11 @@ export default class Connector {
    * @private
    */
   private filter(): void {
-    this.raw = this.raw.filter((raw: string): boolean => {
+    this.raw = this.sanitizedMessages.filter((message: string): boolean => {
       return (
-        !raw.includes('Maintenance for the week of ') &&
-        !raw.includes('Mantenimiento de la semana del ') &&
-        !raw.includes('• PC/Mac: No maintenance – ') &&
-        !raw.includes('hora peninsular') &&
-        raw !== '' &&
-        !raw.startsWith('<') &&
-        !raw.endsWith('>')
+        MessageFilterPattern.filter((pattern: RegExp): boolean =>
+          pattern.test(message),
+        ).length === 0
       );
     });
   }
@@ -193,6 +206,33 @@ export default class Connector {
   private fetchEach(raw: string): void {
     new Raw(this.url, raw).matches.forEach((match: EsoStatusRawData): void => {
       this.rawEsoStatus.push(match);
+    });
+  }
+
+  /**
+   * Method to get all patterns
+   * @private
+   */
+  private generatePatternList(): void {
+    [
+      ServerPcEuSlug,
+      ServerPcNaSlug,
+      ServerPcPtsSlug,
+      ServerPsEuSlug,
+      ServerPsNaSlug,
+      ServerXboxEuSlug,
+      ServerXboxNaSlug,
+      ServiceStoreEsoSlug,
+      ServiceSystemAccountSlug,
+      ServiceWebSiteSlug,
+    ].forEach((slug: Slug): void => {
+      this.rawEsoStatus.forEach((rawEsoStatus: EsoStatusRawData): void => {
+        if (rawEsoStatus.slug === slug) {
+          if (!this.patterns.includes(rawEsoStatus.pattern)) {
+            this.patterns.push(rawEsoStatus.pattern);
+          }
+        }
+      });
     });
   }
 }

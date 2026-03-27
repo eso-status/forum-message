@@ -7,20 +7,25 @@ import {
   UpStatus,
 } from '@eso-status/types';
 import { PatternItem } from '../interface/patternItem.interface';
-import { ForumMessageURL } from '../../src/const';
+import ForumMessageUrl from '../../src/const/ForumMessageUrl.const';
 
 const pattern20241024: PatternItem[] = [
   {
     date: '2024-10-24T16_48_39',
-    url: ForumMessageURL,
+    url: ForumMessageUrl,
     file: '2024-10-24T16_48_39.html',
     rawList: [
-      'We are currently investigating connection issues some players are having on the North American PC/Mac megaserver.',
+      'We are currently investigating connection issues some players are having on the North American PC/Mac megaserver',
+    ],
+    patternList: [
+      'We are currently investigating connection issues some players are having on the North American PC/Mac megaserver',
     ],
     expected: [
       {
-        source: ForumMessageURL,
-        raw: 'We are currently investigating connection issues some players are having on the North American PC/Mac megaserver.',
+        source: ForumMessageUrl,
+        raw: 'We are currently investigating connection issues some players are having on the North American PC/Mac megaserver',
+        pattern:
+          'We are currently investigating connection issues some players are having on the North American PC/Mac megaserver',
         slug: ServerPcNaSlug,
         type: ServerType,
         support: PcSupport,
@@ -33,15 +38,20 @@ const pattern20241024: PatternItem[] = [
   },
   {
     date: '2024-10-24T17_43_21',
-    url: ForumMessageURL,
+    url: ForumMessageUrl,
     file: '2024-10-24T17_43_21.html',
     rawList: [
-      'The connection issues for the North American PC/Mac megaserver have been resolved at this time.',
+      'The connection issues for the North American PC/Mac megaserver have been resolved at this time',
+    ],
+    patternList: [
+      'The connection issues for the North American PC/Mac megaserver have been resolved at this time',
     ],
     expected: [
       {
-        source: ForumMessageURL,
-        raw: 'The connection issues for the North American PC/Mac megaserver have been resolved at this time.',
+        source: ForumMessageUrl,
+        raw: 'The connection issues for the North American PC/Mac megaserver have been resolved at this time',
+        pattern:
+          'The connection issues for the North American PC/Mac megaserver have been resolved at this time',
         slug: ServerPcNaSlug,
         type: ServerType,
         support: PcSupport,

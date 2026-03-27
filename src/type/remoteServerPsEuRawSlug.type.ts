@@ -2,7 +2,8 @@
  * Different slugs of announcements concerning the European PlayStation® Megaserver
  */
 export type RemoteServerPsEuRawSlug =
-  | 'PlayStation®: NA and EU megaservers for'
-  | 'The PlayStation™ Network'
-  | '] EU megaservers for'
-  | '• EU megaservers for';
+  | 'EU megaservers'
+  | 'PlayStation®: NA and EU megaservers'
+  | 'PlayStation™ Network'
+  | '[IN PROGRESS] EU megaservers'
+  | '[COMPLETE] EU megaservers';

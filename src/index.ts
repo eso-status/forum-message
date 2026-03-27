@@ -1,7 +1,7 @@
 import { EsoStatusRawData } from '@eso-status/types';
-import { ForumMessageURL } from './const';
 import { SourceUrl } from './type/sourceUrl.type';
 import Connector from './connector';
+import ForumMessageUrl from './const/ForumMessageUrl.const';
 
 /**
  * Class for retrieving announcement information
@@ -25,7 +25,7 @@ export default class ForumMessage {
    * @param url URL serving as the source to retrieve announcements
    */
   public static async getData(url?: SourceUrl): Promise<EsoStatusRawData[]> {
-    return (await Connector.init(url ?? ForumMessageURL)).rawEsoStatus;
+    return (await Connector.init(url ?? ForumMessageUrl)).rawEsoStatus;
   }
 }
 /* eslint-enable @typescript-eslint/no-extraneous-class */

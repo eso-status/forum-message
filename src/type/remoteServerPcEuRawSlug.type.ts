@@ -2,8 +2,9 @@
  * Different slugs of announcements concerning the European PC/Mac Megaserver
  */
 export type RemoteServerPcEuRawSlug =
-  | 'PC/Mac: EU megaserver for'
-  | 'PC/Mac: NA and EU megaservers for'
-  | '] EU megaservers for'
-  | '• EU megaservers for'
+  | 'PC/Mac: NA and EU megaservers'
+  | 'PC/Mac: EU megaserver'
+  | 'EU megaservers'
+  | '[IN PROGRESS] EU megaservers'
+  | '[COMPLETE] EU megaservers'
   | 'North American and European PC/Mac megaservers';
