@@ -7,6 +7,7 @@ import { RemoteServiceStoreEsoRawSlug } from './remoteServiceStoreEsoRawSlug.typ
 import { RemoteServiceWebSiteRawSlug } from './remoteServiceWebSiteRawSlug.type';
 import { RemoteServerXboxNaRawSlug } from './remoteServerXboxNaRawSlug.type';
 import { RemoteServerPsNaRawSlug } from './remoteServerPsNaRawSlug.type';
+import { RemoteServiceSystemAccountRawSlug } from './remoteServiceSystemAccountRawSlug.type';
 
 /**
  * Different slugs of announcements
@@ -20,4 +21,5 @@ export type RemoteRawSlug =
   | RemoteServerXboxEuRawSlug
   | RemoteServerXboxNaRawSlug
   | RemoteServiceStoreEsoRawSlug
+  | RemoteServiceSystemAccountRawSlug
   | RemoteServiceWebSiteRawSlug;

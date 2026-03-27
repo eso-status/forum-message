@@ -19,138 +19,144 @@
 eso-status/forum-message is a library for retrieving and formatting data, which can be found at [https://forums.elderscrollsonline.com](https://forums.elderscrollsonline.com) or [https://forums.elderscrollsonline.com/en/categories/pts](https://forums.elderscrollsonline.com/en/categories/pts).
 
 ## Table of Contents
+
 - [Install](#install)
 - [Usage](#usage)
 - [Return exemple](#return-exemple)
 
 ### Install
+
 ```shell
 npm i @eso-status/forum-message
 ```
 
 ### Usage
+
 ```javascript
-import ForumMessage from '@eso-status/forum-message';
 import { EsoStatusRawData } from '@eso-status/types';
-import { ForumMessagePTSURL } from '@eso-status/forum-message/const';
+import ForumMessage from '@eso-status/forum-message';
+import ForumMessageUrl from '@eso-status/forum-message/const/ForumMessageUrl.const';
 
 // Homepage data
 const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData();
 
 // PTS category homepage data
-const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData(ForumMessagePTSURL);
+const esoStatusRawDataList: EsoStatusRawData[] = await ForumMessage.getData('https://forums.elderscrollsonline.com');
 ```
+
 ### Return exemple
+
 ```text
 [
-    {
-        source: 'https://forums.elderscrollsonline.com',
-        raw: '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        slug: 'server_pc_eu',
-        type: 'server',
-        support: 'pc',
-        zone: 'eu',
-        status: 'planned',
-        rawSlug: 'PC/Mac: NA and EU megaservers for',
-        rawDate: 'September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        dates: [ '2024-09-03T08:00:00Z', '2024-09-03T13:00:00Z' ]
-    },
-    {
-        source: 'https://forums.elderscrollsonline.com',
-        raw: '• PC/Mac: NA and EU megaservers for patch maintenance – September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        slug: 'server_pc_na',
-        type: 'server',
-        support: 'pc',
-        zone: 'na',
-        status: 'planned',
-        rawSlug: 'PC/Mac: NA and EU megaservers for',
-        rawDate: 'September 3, 4:00AM EDT (8:00 UTC) – 9:00AM EDT (13:00 UTC)',
-        dates: [ '2024-09-03T08:00:00Z', '2024-09-03T13:00:00Z' ]
-    },
-    {
-        source: 'https://forums.elderscrollsonline.com',
-        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        slug: 'server_xbox_eu',
-        type: 'server',
-        support: 'xbox',
-        zone: 'eu',
-        status: 'planned',
-        rawSlug: 'Xbox: NA and EU megaservers for',
-        rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ '2024-09-04T10:00:00Z', '2024-09-04T16:00:00Z' ]
-    },
-    {
-        source: 'https://forums.elderscrollsonline.com',
-        raw: '• Xbox: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        slug: 'server_xbox_na',
-        type: 'server',
-        support: 'xbox',
-        zone: 'na',
-        status: 'planned',
-        rawSlug: 'Xbox: NA and EU megaservers for',
-        rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ '2024-09-04T10:00:00Z', '2024-09-04T16:00:00Z' ]
-    },
-    {
-        source: 'https://forums.elderscrollsonline.com',
-        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        slug: 'server_ps_eu',
-        type: 'server',
-        support: 'ps',
-        zone: 'eu',
-        status: 'planned',
-        rawSlug: 'PlayStation®: NA and EU megaservers for',
-        rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ '2024-09-04T10:00:00Z', '2024-09-04T16:00:00Z' ]
-    },
-    {
-        source: 'https://forums.elderscrollsonline.com',
-        raw: '• PlayStation®: NA and EU megaservers for patch maintenance – September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        slug: 'server_ps_na',
-        type: 'server',
-        support: 'ps',
-        zone: 'na',
-        status: 'planned',
-        rawSlug: 'PlayStation®: NA and EU megaservers for',
-        rawDate: 'September 4, 6:00AM EDT (10:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ '2024-09-04T10:00:00Z', '2024-09-04T16:00:00Z' ]
-    },
-    {
-        source: 'https://forums.elderscrollsonline.com',
-        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        slug: 'service_store_eso',
-        type: 'service',
-        support: 'store',
-        zone: 'eso',
-        status: 'planned',
-        rawSlug: 'ESO Store and Account System for',
-        rawDate: 'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ '2024-09-04T14:00:00Z', '2024-09-04T16:00:00Z' ]
-    },
-    {
-        source: 'https://forums.elderscrollsonline.com',
-        raw: '• ESO Store and Account System for maintenance – September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        slug: 'service_system_account',
-        type: 'service',
-        support: 'system',
-        zone: 'account',
-        status: 'planned',
-        rawSlug: 'ESO Store and Account System for',
-        rawDate: 'September 4, 10:00AM EDT (14:00 UTC) - 12:00PM EDT (16:00 UTC)',
-        dates: [ '2024-09-04T14:00:00Z', '2024-09-04T16:00:00Z' ]
-    },
-    {
-        source: 'https://forums.elderscrollsonline.com/en/categories/pts',
-        raw: 'We will be performing maintenance on the PTS on Thursday at 9:00AM EDT (13:00 UTC).',
-        slug: 'server_pc_pts',
-        type: 'server',
-        support: 'pc',
-        zone: 'pts',
-        status: 'planned',
-        rawSlug: 'PTS',
-        rawDate: 'Thursday at 9:00AM EDT (13:00 UTC)',
-        rawStatus: 'We will be performing maintenance',
-        dates: [ '2024-09-05T13:00:00Z' ]
-    }
+  {
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '[IN PROGRESS] NA megaservers for patch maintenance - March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    pattern: '[IN PROGRESS] NA megaservers for maintenance - [month] [day number], [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone]) - [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
+    slug: 'server_pc_na',
+    type: 'server',
+    support: 'pc',
+    zone: 'na',
+    status: 'down',
+    rawStatus: '[IN PROGRESS]',
+    rawSlug: '[IN PROGRESS] NA megaservers',
+    rawDate: 'March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    dates: ['2026-03-09T08:00:00.000Z', '2026-03-09T16:00:00.000Z'],
+  },
+  {
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '[IN PROGRESS] NA megaservers for patch maintenance - March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    pattern: '[IN PROGRESS] NA megaservers for maintenance - [month] [day number], [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone]) - [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
+    slug: 'server_ps_na',
+    type: 'server',
+    support: 'ps',
+    zone: 'na',
+    status: 'down',
+    rawStatus: '[IN PROGRESS]',
+    rawSlug: '[IN PROGRESS] NA megaservers',
+    rawDate: 'March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    dates: ['2026-03-09T08:00:00.000Z', '2026-03-09T16:00:00.000Z'],
+  },
+  {
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '[IN PROGRESS] NA megaservers for patch maintenance - March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    pattern: '[IN PROGRESS] NA megaservers for maintenance - [month] [day number], [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone]) - [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
+    slug: 'server_xbox_na',
+    type: 'server',
+    support: 'xbox',
+    zone: 'na',
+    status: 'down',
+    rawStatus: '[IN PROGRESS]',
+    rawSlug: '[IN PROGRESS] NA megaservers',
+    rawDate: 'March 9, 4:00AM EDT (8:00 UTC) - 12:00PM EDT (16:00 UTC)',
+    dates: ['2026-03-09T08:00:00.000Z', '2026-03-09T16:00:00.000Z'],
+  },
+  {
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '[IN PROGRESS] EU megaservers for patch maintenance - March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+    pattern: '[IN PROGRESS] EU megaservers for maintenance - [month] [day number], [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone]) - [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone])',
+    slug: 'server_pc_eu',
+    type: 'server',
+    support: 'pc',
+    zone: 'eu',
+    status: 'down',
+    rawStatus: '[IN PROGRESS]',
+    rawSlug: '[IN PROGRESS] EU megaservers',
+    rawDate: 'March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+    dates: ['2026-03-09T08:00:00.000Z', '2026-03-09T16:00:00.000Z'],
+  },
+  {
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '[IN PROGRESS] EU megaservers for patch maintenance - March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+    pattern: '[IN PROGRESS] EU megaservers for maintenance - [month] [day number], [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone]) - [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone])',
+    slug: 'server_ps_eu',
+    type: 'server',
+    support: 'ps',
+    zone: 'eu',
+    status: 'down',
+    rawStatus: '[IN PROGRESS]',
+    rawSlug: '[IN PROGRESS] EU megaservers',
+    rawDate: 'March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+    dates: ['2026-03-09T08:00:00.000Z', '2026-03-09T16:00:00.000Z'],
+  },
+  {
+    source: 'https://forums.elderscrollsonline.com',
+    raw: '[IN PROGRESS] EU megaservers for patch maintenance - March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+    pattern: '[IN PROGRESS] EU megaservers for maintenance - [month] [day number], [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone]) - [hour]:[minute] [timezone] ([hour]:[minute][meridiem] [timezone])',
+    slug: 'server_xbox_eu',
+    type: 'server',
+    support: 'xbox',
+    zone: 'eu',
+    status: 'down',
+    rawStatus: '[IN PROGRESS]',
+    rawSlug: '[IN PROGRESS] EU megaservers',
+    rawDate: 'March 9, 8:00 UTC (4:00AM EDT) - 16:00 UTC (12:00PM EDT)',
+    dates: ['2026-03-09T08:00:00.000Z', '2026-03-09T16:00:00.000Z'],
+  },
+  {
+    source: 'https://forums.elderscrollsonline.com',
+    raw: 'ESO Store and Account System for maintenance - March 11, 9:00AM EDT (13:00 UTC) - 1:00PM EDT (17:00 UTC)',
+    pattern: 'ESO Store and Account System for maintenance - [month] [day number], [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone]) - [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
+    slug: 'service_store_eso',
+    type: 'service',
+    support: 'store',
+    zone: 'eso',
+    status: 'planned',
+    rawSlug: 'ESO Store',
+    rawDate: 'March 11, 9:00AM EDT (13:00 UTC) - 1:00PM EDT (17:00 UTC)',
+    dates: ['2026-03-11T13:00:00.000Z', '2026-03-11T17:00:00.000Z'],
+  },
+  {
+    source: 'https://forums.elderscrollsonline.com',
+    raw: 'ESO Store and Account System for maintenance - March 11, 9:00AM EDT (13:00 UTC) - 1:00PM EDT (17:00 UTC)',
+    pattern: 'ESO Store and Account System for maintenance - [month] [day number], [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone]) - [hour]:[minute][meridiem] [timezone] ([hour]:[minute] [timezone])',
+    slug: 'service_system_account',
+    type: 'service',
+    support: 'system',
+    zone: 'account',
+    status: 'planned',
+    rawSlug: 'Account System',
+    rawDate: 'March 11, 9:00AM EDT (13:00 UTC) - 1:00PM EDT (17:00 UTC)',
+    dates: ['2026-03-11T13:00:00.000Z', '2026-03-11T17:00:00.000Z'],
+  },
 ]
 ```

@@ -2,8 +2,9 @@
  * Different slugs of announcements concerning the European Xbox Megaserver
  */
 export type RemoteServerXboxEuRawSlug =
-  | 'Xbox: NA and EU megaservers for'
-  | 'Xbox: EU megaserver for'
-  | '] EU megaservers for'
-  | '• EU megaservers for'
+  | 'EU megaservers'
+  | 'Xbox: NA and EU megaservers'
+  | 'Xbox: EU megaserver'
+  | '[IN PROGRESS] EU megaservers'
+  | '[COMPLETE] EU megaservers'
   | 'Xbox Live™';
