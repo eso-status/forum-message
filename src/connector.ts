@@ -53,13 +53,13 @@ export default class Connector {
    * List of information from announcements by zone
    * @private
    */
-  private messagesZones: string[] = [];
+  private readonly messagesZones: string[] = [];
 
   /**
    * List of raw data from announcements
    * @private
    */
-  private messages: string[] = [];
+  private readonly messages: string[] = [];
 
   /**
    * List of sanitized data from announcements
@@ -141,18 +141,14 @@ export default class Connector {
    * @private
    */
   private getMessagesByType(type: MessageType): void {
-    [
-      ...this.remoteContent.matchAll(
-        new RegExp(
-          `<div class="DismissMessage ${type}">([\\s\\S]*?)<\\/div>`,
-          'g',
-        ),
-      ),
-    ]
-      .map(match => match[1])
-      .forEach((item: string): void => {
-        this.messagesZones.push(item);
-      });
+    const regex = new RegExp(
+      String.raw`<div[^>]*class="[^"]*DismissMessage ${type}[^"]*"[^>]*>([\s\S]*?)<\/div>`,
+      'g',
+    );
+
+    for (const match of this.remoteContent.matchAll(regex)) {
+      this.messagesZones.push(match[1]);
+    }
   }
 
   /**
