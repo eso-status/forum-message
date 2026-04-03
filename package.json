@@ -46,7 +46,7 @@
     ]
   },
   "dependencies": {
-    "@eso-status/types": "2.0.0-dev.20",
+    "@eso-status/types": "2.0.0-dev.21",
     "axios": "1.14.0",
     "moment": "2.30.1"
   },
