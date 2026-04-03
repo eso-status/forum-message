@@ -1,6 +1,6 @@
 const MessageReplacePattern: (string | RegExp)[][] = [
   [/\b(?:March|August|September|October|November)\b/g, 'M'],
-  [/\b(?:Monday|Tuesday|Wednesday|Thursday)\b/g, 'D'],
+  [/\b(?:Monday|Tuesday|Wednesday|Thursday|Friday)\b/g, 'D'],
   [/ patch /gi, ' '],
   [/\d{2}/g, 'X'],
   [/\d/g, 'X'],
