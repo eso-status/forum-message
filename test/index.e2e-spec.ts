@@ -28,40 +28,10 @@ describe('ForumMessage (e2e)', (): void => {
       jest
         .useFakeTimers()
         .setSystemTime(
-          new Date(
-            moment(patternData.date, 'YYYY-MM-DDTHH_mm_ss')
-              .utcOffset(0)
-              .set(
-                'years',
-                moment(patternData.date, 'YYYY-MM-DDTHH_mm_ss').get('years'),
-              )
-              .set(
-                'months',
-                moment(patternData.date, 'YYYY-MM-DDTHH_mm_ss').get('months'),
-              )
-              .set(
-                'days',
-                moment(patternData.date, 'YYYY-MM-DDTHH_mm_ss').get('days'),
-              )
-              .set(
-                'hour',
-                moment(patternData.date, 'YYYY-MM-DDTHH_mm_ss').get('hour'),
-              )
-              .set(
-                'hours',
-                moment(patternData.date, 'YYYY-MM-DDTHH_mm_ss').get('hours'),
-              )
-              .set(
-                'minutes',
-                moment(patternData.date, 'YYYY-MM-DDTHH_mm_ss').get('minutes'),
-              )
-              .set(
-                'seconds',
-                moment(patternData.date, 'YYYY-MM-DDTHH_mm_ss').get('seconds'),
-              )
-              .set('milliseconds', 0)
-              .toISOString(),
-          ),
+          moment
+            .utc(patternData.date, 'YYYY-MM-DDTHH_mm_ss')
+            .milliseconds(0)
+            .valueOf(),
         );
 
       expect(await ForumMessage.getData(patternData.url)).toStrictEqual(

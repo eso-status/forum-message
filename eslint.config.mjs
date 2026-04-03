@@ -9,7 +9,13 @@ import jestPlugin from 'eslint-plugin-jest';
 
 export default defineConfig([
   {
-    ignores: ['lib/', 'coverage/', 'node_modules/', 'eslint.config.mjs'],
+    ignores: [
+      'lib/',
+      'coverage/',
+      'node_modules/',
+      'eslint.config.mjs',
+      'jest.config.ts',
+    ],
   },
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
