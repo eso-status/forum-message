@@ -153,14 +153,15 @@ export default class DateFormatter {
    * @private
    */
   private formatSpecial(): string[] {
-    const date: Moment = this.getSpecialDate();
+    const hours: number = this.getRawHour();
+    const date: Moment = this.getSpecialDate(hours);
 
     return [
       DateFormatter.generateDate(
         date.get('years'),
         date.get('months'),
         date.get('dates'),
-        this.getRawHour(),
+        hours,
         this.getRawSpecialMinute(),
       ),
     ];
@@ -171,7 +172,7 @@ export default class DateFormatter {
    * Case #2 does not provide the month or day (i.e., no day number), only the name of the day (Monday, Tuesday, etc.). Therefore, you need to check if the day has already passed in the current week to determine whether to add a week to the maintenance date.
    * @private
    */
-  private getSpecialDate(): Moment {
+  private getSpecialDate(hours: number): Moment {
     const current: Moment = moment();
 
     const targetDayIndex: number = moment()
@@ -179,7 +180,11 @@ export default class DateFormatter {
       .get('days');
     current.set('days', targetDayIndex);
 
-    if (moment().get('days') > targetDayIndex) {
+    if (
+      moment().get('days') > targetDayIndex ||
+      (moment().get('days') === targetDayIndex &&
+        hours < moment().utc().get('hours'))
+    ) {
       current.add(1, 'week');
     }
 
