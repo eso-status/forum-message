@@ -10,9 +10,6 @@ import {
   ServiceSystemAccountSlug,
   ServiceWebSiteSlug,
   Slug,
-  Support,
-  Type,
-  Zone,
 } from '@eso-status/types';
 import { RemoteRawSlug } from '../type/remoteRawSlug.type';
 import { RemoteServerPcNaRawSlug } from '../type/remoteServerPcNaRawSlug.type';
@@ -186,8 +183,7 @@ export default class SlugIdentifier {
     return `${slug
       .split('_')
       .map(
-        (item: Type | Support | Zone): string =>
-          item.charAt(0).toUpperCase() + item.slice(1),
+        (item: string): string => item.charAt(0).toUpperCase() + item.slice(1),
       )
       .join('')}MatchesList` as MatchesList;
   }

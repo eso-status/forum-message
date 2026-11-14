@@ -92,7 +92,7 @@ export default class StatusIdentifier {
    * @private
    */
   private getMatchList(status: Status): RemoteRawStatus[] {
-    return this[`${status}MatchesList`] as RemoteRawStatus[];
+    return this[`${status}MatchesList`];
   }
 
   /**
