@@ -1,15 +1,11 @@
-import { AxiosResponse } from 'axios';
-import {
-  RawEsoStatus,
-  Slug,
-} from '@eso-status/types';
+import axios, { AxiosResponse } from 'axios';
+import { RawEsoStatus, Slug } from '@eso-status/types';
 import ForumMessageElement from '../classes/ForumMessageElement';
-
-const axios = require('axios');
 
 /**
  * Connector used to get data from https://forums.elderscrollsonline.com/ and https://forums.elderscrollsonline.com/en/categories/pts
  */
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class -- the published 1.x API exposes static methods, called as is by @eso-status/api 1.x
 export default class ForumMessageConnector {
   /**
    * Methode used to get the list of raw element from remote website
@@ -22,12 +18,20 @@ export default class ForumMessageConnector {
    * @return Promise<RawEsoStatus[]> List of raw element from remote website
    */
   public static async getRemoteContent(url: string): Promise<RawEsoStatus[]> {
-    const rawRemoteContent: string = await ForumMessageConnector.getRawRemoteContent(url);
-    const rawWarningMessage: string = ForumMessageConnector.getRawWarningMessage(rawRemoteContent);
-    const rawAlertMessage: string = ForumMessageConnector.getRawAlertMessage(rawRemoteContent);
-    const mergedRawMessage: string = ForumMessageConnector.mergeRawMessage(rawWarningMessage, rawAlertMessage);
-    const rawMessageSplit: string[] = ForumMessageConnector.splitRawMessage(mergedRawMessage);
-    const sortedRawMessageList: string[] = ForumMessageConnector.sortRawMessageList(rawMessageSplit);
+    const rawRemoteContent: string =
+      await ForumMessageConnector.getRawRemoteContent(url);
+    const rawWarningMessage: string =
+      ForumMessageConnector.getRawWarningMessage(rawRemoteContent);
+    const rawAlertMessage: string =
+      ForumMessageConnector.getRawAlertMessage(rawRemoteContent);
+    const mergedRawMessage: string = ForumMessageConnector.mergeRawMessage(
+      rawWarningMessage,
+      rawAlertMessage,
+    );
+    const rawMessageSplit: string[] =
+      ForumMessageConnector.splitRawMessage(mergedRawMessage);
+    const sortedRawMessageList: string[] =
+      ForumMessageConnector.sortRawMessageList(rawMessageSplit);
 
     return sortedRawMessageList.map((item: string): RawEsoStatus => ({
       sources: [url],
@@ -46,10 +50,9 @@ export default class ForumMessageConnector {
    * @return Promise<string> Raw content from remote specific url
    */
   public static async getRawRemoteContent(url: string): Promise<string> {
-    // @ts-ignore
     const response: AxiosResponse<string> = await axios.get<string>(url);
 
-    return response?.status === 200 && !(!response?.data) ? String(response?.data) : '';
+    return response.status === 200 && response.data ? response.data : '';
   }
 
   /**
@@ -62,7 +65,8 @@ export default class ForumMessageConnector {
    * @return string Raw warning message from raw content
    */
   public static getRawWarningMessage(rawRemoteContent: string): string {
-    return rawRemoteContent.split('<div class="DismissMessage WarningMessage">')
+    return rawRemoteContent
+      .split('<div class="DismissMessage WarningMessage">')
       .filter((item: string, index: number): boolean => index !== 0)
       .map((item: string): string => {
         const resultRemoveAfter: string[] = item.split('</div>');
@@ -86,7 +90,8 @@ export default class ForumMessageConnector {
    * @return string Raw alert message from raw content
    */
   public static getRawAlertMessage(rawRemoteContent: string): string {
-    return rawRemoteContent.split('<div class="DismissMessage AlertMessage">')
+    return rawRemoteContent
+      .split('<div class="DismissMessage AlertMessage">')
       .filter((item: string, index: number): boolean => index !== 0)
       .map((item: string): string => {
         const resultRemoveAfter: string[] = item.split('</div>');
@@ -142,10 +147,13 @@ export default class ForumMessageConnector {
    */
   public static sortRawMessageList(rawMessageSplit: string[]): string[] {
     return rawMessageSplit
-      .filter((item: string): boolean => item !== ''
-        && !item.includes('Maintenance for the week')
-        && !item.includes('No maintenance')
-        && !item.includes('PC/Mac: No NA megaserver maintenance'))
+      .filter(
+        (item: string): boolean =>
+          item !== '' &&
+          !item.includes('Maintenance for the week') &&
+          !item.includes('No maintenance') &&
+          !item.includes('PC/Mac: No NA megaserver maintenance'),
+      )
       .map((item: string): string => {
         let line: string = item;
         line = line.replace('\n', '');
@@ -163,7 +171,9 @@ export default class ForumMessageConnector {
    * @param remoteContent RawEsoStatus[] Raw content list without duplicate
    * @return RawEsoStatus[] Raw content list with slug list
    */
-  public static getRawContentWithSlug(remoteContent: RawEsoStatus[]): RawEsoStatus[] {
+  public static getRawContentWithSlug(
+    remoteContent: RawEsoStatus[],
+  ): RawEsoStatus[] {
     return remoteContent.map((item: RawEsoStatus): RawEsoStatus => ({
       sources: item.sources,
       raw: item.raw,
@@ -180,7 +190,9 @@ export default class ForumMessageConnector {
    * @param slugOfRawContent RawEsoStatus[] Raw content list with slug list
    * @return RawEsoStatus[] Raw content list foreach slug
    */
-  public static splitRawContentBySlug(slugOfRawContent: RawEsoStatus[]): RawEsoStatus[] {
+  public static splitRawContentBySlug(
+    slugOfRawContent: RawEsoStatus[],
+  ): RawEsoStatus[] {
     const list: RawEsoStatus[] = [];
     slugOfRawContent.forEach((item: RawEsoStatus): void => {
       item.slugs?.forEach((slug: Slug): void => {
@@ -204,7 +216,9 @@ export default class ForumMessageConnector {
    * @param rawContentBySlug RawEsoStatus[] Raw content list foreach slug
    * @return RawEsoStatus[] Raw content list with raw date
    */
-  public static getRawContentWithRawDate(rawContentBySlug: RawEsoStatus[]): RawEsoStatus[] {
+  public static getRawContentWithRawDate(
+    rawContentBySlug: RawEsoStatus[],
+  ): RawEsoStatus[] {
     return rawContentBySlug.map((item: RawEsoStatus): RawEsoStatus => ({
       sources: item.sources,
       raw: item.raw,
@@ -229,9 +243,15 @@ export default class ForumMessageConnector {
       slugs: item.slugs,
       rawDate: item.rawDate,
       dates: ForumMessageElement.getDate(item.rawDate ?? ''),
-      type: ForumMessageElement.getType(item.slugs ? item.slugs[0] : 'undefined'),
-      support: ForumMessageElement.getSupport(item.slugs ? item.slugs[0] : 'undefined'),
-      zone: ForumMessageElement.getZone(item.slugs ? item.slugs[0] : 'undefined'),
+      type: ForumMessageElement.getType(
+        item.slugs ? item.slugs[0] : 'undefined',
+      ),
+      support: ForumMessageElement.getSupport(
+        item.slugs ? item.slugs[0] : 'undefined',
+      ),
+      zone: ForumMessageElement.getZone(
+        item.slugs ? item.slugs[0] : 'undefined',
+      ),
       status: ForumMessageElement.getStatus(item.raw[0]),
     }));
   }
@@ -247,29 +267,58 @@ export default class ForumMessageConnector {
    */
   public static sortData(data: RawEsoStatus[]): RawEsoStatus[] {
     return data.filter((item: RawEsoStatus): boolean => {
-      if (data.filter((i: RawEsoStatus): boolean => JSON.stringify(i.slugs) === JSON.stringify(item.slugs)).length !== 1) {
-        if (item.raw.includes('will be taken offline for maintenance') && data.filter((i: RawEsoStatus): boolean => JSON.stringify(i.slugs) === JSON.stringify(item.slugs) && i.raw.includes('is currently unavailable')).length !== 0) {
+      if (
+        data.filter(
+          (i: RawEsoStatus): boolean =>
+            JSON.stringify(i.slugs) === JSON.stringify(item.slugs),
+        ).length !== 1
+      ) {
+        if (
+          item.raw.includes('will be taken offline for maintenance') &&
+          data.filter(
+            (i: RawEsoStatus): boolean =>
+              JSON.stringify(i.slugs) === JSON.stringify(item.slugs) &&
+              i.raw.includes('is currently unavailable'),
+          ).length !== 0
+        ) {
           return false;
         }
 
-        if (item.raw.includes('[IN PROGRESS]') && data.filter((i: RawEsoStatus): boolean => JSON.stringify(i.slugs) === JSON.stringify(item.slugs) && i.raw.includes('[COMPLETE]')).length !== 0) {
+        if (
+          item.raw.includes('[IN PROGRESS]') &&
+          data.filter(
+            (i: RawEsoStatus): boolean =>
+              JSON.stringify(i.slugs) === JSON.stringify(item.slugs) &&
+              i.raw.includes('[COMPLETE]'),
+          ).length !== 0
+        ) {
           return false;
         }
 
-        if (item.status === 'planned' && data.filter((i: RawEsoStatus): boolean => JSON.stringify(i.slugs) === JSON.stringify(item.slugs) && i.raw.includes('[IN PROGRESS]')).length !== 0) {
+        if (
+          item.status === 'planned' &&
+          data.filter(
+            (i: RawEsoStatus): boolean =>
+              JSON.stringify(i.slugs) === JSON.stringify(item.slugs) &&
+              i.raw.includes('[IN PROGRESS]'),
+          ).length !== 0
+        ) {
           return false;
         }
 
-        if (item.raw.includes('resolved at this time') && data.filter((i: RawEsoStatus): boolean => JSON.stringify(i.slugs) === JSON.stringify(item.slugs) && i.raw.includes('[IN PROGRESS]')).length !== 0) {
+        if (
+          item.raw.includes('resolved at this time') &&
+          data.filter(
+            (i: RawEsoStatus): boolean =>
+              JSON.stringify(i.slugs) === JSON.stringify(item.slugs) &&
+              i.raw.includes('[IN PROGRESS]'),
+          ).length !== 0
+        ) {
           return false;
         }
       }
 
-      if (item.raw.includes('<a')) {
-        return false;
-      }
-
-      return true;
+      return !item.raw.includes('<a');
     });
   }
 }
