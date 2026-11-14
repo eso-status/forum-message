@@ -131,7 +131,8 @@ export default class Connector {
    * @private
    */
   private getMessages(): void {
-    ['AlertMessage', 'WarningMessage'].forEach((type: MessageType): void => {
+    const messageTypes: MessageType[] = ['AlertMessage', 'WarningMessage'];
+    messageTypes.forEach((type: MessageType): void => {
       this.getMessagesByType(type);
     });
   }
