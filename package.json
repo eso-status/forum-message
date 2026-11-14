@@ -1,6 +1,6 @@
 {
   "name": "@eso-status/forum-message",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Library used to get servers status of The elders scrolls Online game with https://forums.elderscrollsonline.com/ and https://forums.elderscrollsonline.com/en/categories/pts",
   "main": "lib/index.js",
   "scripts": {
@@ -44,7 +44,7 @@
   "homepage": "https://github.com/eso-status/forum-message#readme",
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@eso-status/types": "1.0.8",
+    "@eso-status/types": "1.0.9",
     "@types/jest": "30.0.0",
     "@types/node": "26.6.6",
     "eslint": "10.15.0",
@@ -65,7 +65,7 @@
     "moment": "2.31.0"
   },
   "overrides": {
-    "glob": "14.0.6",
-    "minimatch": "11.0.8"
+    "minimatch@>=7.0.0 <11.0.1": "11.0.1",
+    "glob@>=9.0.0 <=14.0.1": "14.0.2"
   }
 }
